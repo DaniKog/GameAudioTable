@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{524BB252-8554-41B1-8FC7-D0CC69A12E25}" SchemaVersion="69">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{524BB252-8554-41B1-8FC7-D0CC69A12E25}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="SFX_PitchMod" ID="{4011B470-BCFB-4D72-B4FF-12FDD4826A8E}">
+					<PropertyList>
+						<Property Name="Max" Type="Real64" Value="4800"/>
+						<Property Name="Min" Type="Real64" Value="-4800"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

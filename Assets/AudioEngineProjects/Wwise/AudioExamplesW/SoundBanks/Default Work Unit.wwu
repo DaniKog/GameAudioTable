@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{49B34A5A-520B-4E7D-B267-07F5CE244CF5}" SchemaVersion="69">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{49B34A5A-520B-4E7D-B267-07F5CE244CF5}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="ExampleBank" ID="{57F2A678-86AF-44C7-ADA5-54137C0801C8}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Spike_Explode1" ID="{31A51E81-19FD-45B7-ADB7-ABB4866AFD39}" WorkUnitID="{252AC2A3-37F3-4A83-A275-D76DE0E80B09}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_RoboSound" ID="{907340F2-EC73-4153-8D45-FC1A3A96D0E4}" WorkUnitID="{252AC2A3-37F3-4A83-A275-D76DE0E80B09}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

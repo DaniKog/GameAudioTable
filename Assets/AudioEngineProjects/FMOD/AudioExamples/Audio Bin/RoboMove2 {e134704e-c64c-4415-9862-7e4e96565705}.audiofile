@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.05.00">
+    <object class="AudioFile" id="{e134704e-c64c-4415-9862-7e4e96565705}">
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.14104308390022677</value>
+        </property>
+        <property name="lastModifiedDate">
+            <value>0</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/RoboMove2 {c5114e83-3076-403b-8b44-27980d7dce6b}.wav</value>
+        </property>
+        <relationship name="container">
+            <destination>{83b9144c-c384-4469-bf52-125f84ff2246}</destination>
+        </relationship>
+    </object>
+</objects>

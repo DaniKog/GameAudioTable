@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{252AC2A3-37F3-4A83-A275-D76DE0E80B09}" SchemaVersion="69">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{252AC2A3-37F3-4A83-A275-D76DE0E80B09}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_RoboSound" ID="{907340F2-EC73-4153-8D45-FC1A3A96D0E4}">
+					<ChildrenList>
+						<Action Name="Play" ID="{D4F5F19E-23E0-4B44-AE82-7B063D474F3F}" ShortID="1045342379" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{F6237174-D6A8-451A-9DA0-882E9E42BFB2}" Global="false">
+									<ObjectRef Name="RoboSound" ID="{2EFBDE2B-D153-410D-BB31-450C98505E42}" WorkUnitID="{26364BB6-96ED-41D7-9F70-965F8B19A5B8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Spike_Explode1" ID="{31A51E81-19FD-45B7-ADB7-ABB4866AFD39}">
+					<ChildrenList>
+						<Action Name="Play" ID="{14EB0E0C-D20F-42BB-A183-2A12EF514DB7}" ShortID="528402594" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B70E53DF-AE18-4D1D-9337-4D6BC51CB73C}" Global="false">
+									<ObjectRef Name="Spike_Explode1" ID="{AD3AC373-F4A2-4FBD-82BD-38DACC8AA93C}" WorkUnitID="{26364BB6-96ED-41D7-9F70-965F8B19A5B8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

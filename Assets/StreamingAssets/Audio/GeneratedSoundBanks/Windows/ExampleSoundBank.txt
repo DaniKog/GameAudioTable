@@ -1,0 +1,9 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2184268219	Play_RoboSound			\Default Work Unit\Play_RoboSound	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	287000170	RoboMove3	D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove3_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\RoboSound\RoboMove3		27784
+	553287242	RoboMove4	D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove4_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\RoboSound\RoboMove4		26952
+	841858983	RoboMove2	D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove2_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\RoboSound\RoboMove2		24944
+	892999675	RoboMove1	D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove1_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\RoboSound\RoboMove1		23420
+

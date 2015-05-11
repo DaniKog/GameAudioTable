@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" SchemaVersion="10" SoundbankVersion="112">
+	<RootPaths>
+		<ProjectRoot>D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\</ProjectRoot>
+		<SourceFilesRoot>D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1466516599" Language="SFX">
+			<ShortName>ExampleBank</ShortName>
+			<Path>ExampleBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2184268219" Name="Play_RoboSound"/>
+				<Event Id="3782658767" Name="Play_Spike_Explode1"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="127584658" Language="SFX">
+					<ShortName>RoboMove3.wav</ShortName>
+					<Path>SFX\RoboMove3_DDC98EF4.wem</Path>
+				</File>
+				<File Id="246073244" Language="SFX">
+					<ShortName>RoboMove1.wav</ShortName>
+					<Path>SFX\RoboMove1_DDC98EF4.wem</Path>
+				</File>
+				<File Id="413910431" Language="SFX">
+					<ShortName>RoboMove2.wav</ShortName>
+					<Path>SFX\RoboMove2_DDC98EF4.wem</Path>
+				</File>
+				<File Id="429172880" Language="SFX">
+					<ShortName>Spike_Explode1.wav</ShortName>
+					<Path>SFX\Spike_Explode1_DDC98EF4.wem</Path>
+				</File>
+				<File Id="541153656" Language="SFX">
+					<ShortName>RoboMove4.wav</ShortName>
+					<Path>SFX\RoboMove4_DDC98EF4.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

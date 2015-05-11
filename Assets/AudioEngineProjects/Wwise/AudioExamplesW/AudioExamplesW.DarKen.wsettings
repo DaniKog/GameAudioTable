@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="UserProjectSettings" SchemaVersion="69">
+	<UserProjectSettingsInfo>
+		<UserProjectSettings Name="" ID="{D0F6EEEB-5F6A-4CBC-A86E-CE22E25463E3}">
+			<PropertyList>
+				<Property Name="ExternalSourcesInputPath" Type="string">
+					<ValueList>
+						<Value Platform="Linux"></Value>
+						<Value Platform="WindowsPhone"></Value>
+						<Value Platform="XboxOne"></Value>
+						<Value Platform="VitaSW"></Value>
+						<Value Platform="Windows"></Value>
+						<Value Platform="Wii"></Value>
+						<Value Platform="WiiUSW"></Value>
+						<Value Platform="Xbox360"></Value>
+						<Value Platform="3DS"></Value>
+						<Value Platform="PS3"></Value>
+						<Value Platform="iOS"></Value>
+						<Value Platform="PS4"></Value>
+						<Value Platform="Mac"></Value>
+						<Value Platform="Android"></Value>
+						<Value Platform="VitaHW"></Value>
+					</ValueList>
+				</Property>
+				<Property Name="ExternalSourcesOutputPath" Type="string">
+					<ValueList>
+						<Value Platform="Linux">GeneratedSoundBanks\Linux</Value>
+						<Value Platform="WindowsPhone">GeneratedSoundBanks\WindowsPhone</Value>
+						<Value Platform="XboxOne">GeneratedSoundBanks\XboxOne</Value>
+						<Value Platform="VitaSW">GeneratedSoundBanks\VitaSW</Value>
+						<Value Platform="Windows">GeneratedSoundBanks\Windows</Value>
+						<Value Platform="Wii">GeneratedSoundBanks\Wii</Value>
+						<Value Platform="WiiUSW">GeneratedSoundBanks\WiiUSW</Value>
+						<Value Platform="Xbox360">GeneratedSoundBanks\XBox360</Value>
+						<Value Platform="3DS">GeneratedSoundBanks\3DS</Value>
+						<Value Platform="PS3">GeneratedSoundBanks\PS3</Value>
+						<Value Platform="iOS">GeneratedSoundBanks\iOS</Value>
+						<Value Platform="PS4">GeneratedSoundBanks\PS4</Value>
+						<Value Platform="Mac">GeneratedSoundBanks\Mac</Value>
+						<Value Platform="Android">GeneratedSoundBanks\Android</Value>
+						<Value Platform="VitaHW">GeneratedSoundBanks\VitaHW</Value>
+					</ValueList>
+				</Property>
+				<Property Name="SettingsUserOverride" Type="bool" Value="True"/>
+				<Property Name="SoundBankGenerateHeaderFile" Type="bool" Value="True"/>
+				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks\"/>
+				<Property Name="SoundBankPaths" Type="string">
+					<ValueList>
+						<Value Platform="Linux">GeneratedSoundBanks\Linux\</Value>
+						<Value Platform="WindowsPhone">GeneratedSoundBanks\WindowsPhone\</Value>
+						<Value Platform="XboxOne">GeneratedSoundBanks\XboxOne\</Value>
+						<Value Platform="VitaSW">GeneratedSoundBanks\VitaSW\</Value>
+						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+						<Value Platform="Wii">GeneratedSoundBanks\Wii\</Value>
+						<Value Platform="WiiUSW">GeneratedSoundBanks\WiiUSW\</Value>
+						<Value Platform="Xbox360">GeneratedSoundBanks\XBox360\</Value>
+						<Value Platform="3DS">GeneratedSoundBanks\3DS\</Value>
+						<Value Platform="PS3">GeneratedSoundBanks\PS3\</Value>
+						<Value Platform="iOS">GeneratedSoundBanks\iOS\</Value>
+						<Value Platform="PS4">GeneratedSoundBanks\PS4\</Value>
+						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
+						<Value Platform="Android">GeneratedSoundBanks\Android\</Value>
+						<Value Platform="VitaHW">GeneratedSoundBanks\VitaHW\</Value>
+					</ValueList>
+				</Property>
+				<Property Name="SoundBankPostGenerateCustomCmdDescription" Type="string">
+					<ValueList>
+						<Value Platform="Linux">Copy Streamed Files</Value>
+						<Value Platform="WindowsPhone">Copy Streamed Files</Value>
+						<Value Platform="XboxOne">Copy Streamed Files</Value>
+						<Value Platform="VitaSW">Copy Streamed Files</Value>
+						<Value Platform="Windows">Copy Streamed Files</Value>
+						<Value Platform="Wii">Copy Streamed Files</Value>
+						<Value Platform="WiiUSW">Copy Streamed Files</Value>
+						<Value Platform="Xbox360">Copy Streamed Files</Value>
+						<Value Platform="3DS">Copy Streamed Files</Value>
+						<Value Platform="PS3">Copy Streamed Files</Value>
+						<Value Platform="iOS">Copy Streamed Files</Value>
+						<Value Platform="PS4">Copy Streamed Files</Value>
+						<Value Platform="Mac">Copy Streamed Files</Value>
+						<Value Platform="Android">Copy Streamed Files</Value>
+						<Value Platform="VitaHW">Copy Streamed Files</Value>
+					</ValueList>
+				</Property>
+				<Property Name="SoundBankPostGenerateCustomCmdLines" Type="string">
+					<ValueList>
+						<Value Platform="Linux">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="WindowsPhone">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="XboxOne">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="VitaSW">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="Windows">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="Wii">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="WiiUSW">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="Xbox360">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="3DS">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="PS3">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="iOS">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="PS4">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="Mac">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="Android">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+						<Value Platform="VitaHW">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+					</ValueList>
+				</Property>
+				<Property Name="SoundBankPreGenerateCustomCmdDescription" Type="string">
+					<ValueList>
+						<Value Platform="Linux"></Value>
+						<Value Platform="WindowsPhone"></Value>
+						<Value Platform="XboxOne"></Value>
+						<Value Platform="VitaSW"></Value>
+						<Value Platform="Windows"></Value>
+						<Value Platform="Wii"></Value>
+						<Value Platform="WiiUSW"></Value>
+						<Value Platform="Xbox360"></Value>
+						<Value Platform="3DS"></Value>
+						<Value Platform="PS3"></Value>
+						<Value Platform="iOS"></Value>
+						<Value Platform="PS4"></Value>
+						<Value Platform="Mac"></Value>
+						<Value Platform="Android"></Value>
+						<Value Platform="VitaHW"></Value>
+					</ValueList>
+				</Property>
+				<Property Name="SoundBankPreGenerateCustomCmdLines" Type="string">
+					<ValueList>
+						<Value Platform="Linux"></Value>
+						<Value Platform="WindowsPhone"></Value>
+						<Value Platform="XboxOne"></Value>
+						<Value Platform="VitaSW"></Value>
+						<Value Platform="Windows"></Value>
+						<Value Platform="Wii"></Value>
+						<Value Platform="WiiUSW"></Value>
+						<Value Platform="Xbox360"></Value>
+						<Value Platform="3DS"></Value>
+						<Value Platform="PS3"></Value>
+						<Value Platform="iOS"></Value>
+						<Value Platform="PS4"></Value>
+						<Value Platform="Mac"></Value>
+						<Value Platform="Android"></Value>
+						<Value Platform="VitaHW"></Value>
+					</ValueList>
+				</Property>
+			</PropertyList>
+		</UserProjectSettings>
+	</UserProjectSettingsInfo>
+</WwiseDocument>
