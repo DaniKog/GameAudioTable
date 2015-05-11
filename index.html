@@ -1,0 +1,226 @@
+<html>
+<body>
+<style>
+table {
+    width:100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+
+table#t01 th	{
+	background: rgb(92,92,92);
+    color: white;
+}
+table#t01 th:nth-child(0)) { text-align: left; }
+h1{ text-align: center; }
+
+p.TableFeature
+{
+text-align: center;
+color: white;
+font-size: 15px;
+font-weight: lighter;
+}
+p.Yes
+{
+text-align: center;
+background-color: #80CC80;
+//Green
+
+}
+p.WorkAround
+{
+text-align: center;
+background-color: #FFDB4D;
+//Yellow
+}
+p.No
+{
+text-align: center;
+background-color: #FF7171;
+//Red
+}
+
+</style>
+
+<h1>Audio Feature Implantation Comparison</h1>
+<p align="center">By Dani Kogan</p><br>
+<p class="Yes"> Feature Exists</p><p class="WorkAround"> A Workaround</p><p class="No"> Doesn't Exist As Far As I Know</p>
+<table id="t01">
+  <tr>
+	<th colspan="2"><p align="right"><font size="4">Engine</font></p></th>
+    <th rowspan="2">Wwise</th>
+    <th rowspan="2">FMOD</th>		
+	<th rowspan="2">Unity4</th>
+	<th rowspan="2">Unity5</th>
+  </tr>
+  <tr>
+    <th colspan="2"><p align="left"><font size="4">Feature</font></p></td>
+  </tr>
+<!--SFX-->
+  <tr>
+    <th rowspan ="3">SFX</th>
+	<td bgcolor="#808080"><p class="TableFeature">Variation</p></td>
+	<td><p class="Yes">Random Container</p></td>	
+	<td><p class="Yes">Multi Sound</p></td>
+	<td><p class="WorkAround">AudioClip[]</p></td>
+	<td><p class="WorkAround">AudioClip[]</p></td>
+  </tr>
+  <tr>
+    <td bgcolor="#808080"><p class="TableFeature">Pitch Modulation</p></td>
+    <td><p class="Yes">Randomizer</p></td>		
+    <td><p class="Yes">Modulation -> Random</p></td>
+	<td><p class="WorkAround">audio.pitch = Random.Range(Min,Max)]</p></td>		
+	<td><p class="WorkAround">audio.pitch = Random.Range(Min,Max)]</p></td>	
+  </tr>
+  <tr>
+	<td bgcolor="#808080"><p class="TableFeature">Variation Priority / Probability</p></td>
+	<td><p class="Yes">Weight</p></td>		
+	<td><p class="Yes">Play Percentage</p></td>
+	<td><p class="No">Code Yourself</p></td>		
+	<td><p class="No">Code Yourself</p></td>	
+	</tr>
+<!--3D-->
+  <tr>
+    <th rowspan ="6">3D</th>
+	<td bgcolor="#808080"><p class="TableFeature">3D Sounds</p></td>
+	<td><p class="Yes">Positioning -> 3D</p></td>	
+	<td><p class="Yes">Master Track -> 3D Panner</p></td>
+	<td><p class="Yes">SoundSource -> 3D Settings</p></td>
+	<td><p class="Yes">SoundSource -> 3D Settings</p></td>
+  </tr>
+  <tr>
+  	<td bgcolor="#808080"><p class="TableFeature">Pre-set Attenuation Support</p></td>
+	<td><p class="Yes">Yes</p></td>	
+	<td><p class="No">Not That I Know Of</p></td>
+	<td><p class="WorkAround">Prefabs</p></td>
+	<td><p class="WorkAround">Prefabs</p></td>
+  </tr>
+	  <tr>
+  	<td bgcolor="#808080"><p class="TableFeature">Draw Curves</p></td>
+	<td><p class="Yes">Yes</p></td>	
+	<td><p class="No">Not That I Know Of</p></td>
+	<td><p class="Yes">Yes</p></td>
+	<td><p class="Yes">Yes</p></td>
+  </tr>
+      <tr>
+  	<td bgcolor="#808080"><p class="TableFeature">Pre-set Roll Off Curves</p></td>
+	<td><p class="Yes">10</p></td>	
+	<td><p class="Yes">5</p></td>
+	<td><p class="Yes">3</p></td>
+	<td><p class="Yes">3</p></td>
+  </tr>
+      <tr>
+  	<td bgcolor="#808080"><p class="TableFeature">3D Sound Visualization</p></td>
+	<td><p class="Yes">Yes</p></td>	
+	<td><p class="No">Not That I Know Of</p></td>
+	<td><p class="No">Not That I Know Of</p></td>
+	<td><p class="Yes">Yes</p></td>
+  </tr>
+      <tr>
+  	<td bgcolor="#808080"><p class="TableFeature">Distance Driven Parameters<br>(Besides Panning and Volume)</p></td>
+	<td><p class="Yes">Any</p></td>
+	<td><p class="No">Not That I Know Of</p></td>
+	<td><p class="WorkAround">Spread <br>(Code Yourself - Pitch and Doppler)</p></td>
+	<td><p class="WorkAround">Spread, Reverb <br>(Code Yourself - Any)</p></td>
+  </tr>
+  <!--Music-->
+      <tr>
+	<th rowspan ="6">Music</th>
+  	<td bgcolor="#808080"><p class="TableFeature">Dynamic Music <br> Individual Instrument Mix </p></td>
+	<td><p class="Yes">Music Segment -> Multiple Music Tracks</p></td>
+	<td><p class="Yes">New Parameter -> Multiple Logic Tracks</p></td>
+	<td><p class="No">Code Yourself (Hard to keep in Sync)</p></td>
+	<td><p class="No">Code Yourself (Hard to keep in Sync)</p></td>
+  </tr>
+      <tr>
+  	<td bgcolor="#808080"><p class="TableFeature">Dynamic Music <br> Intensity Level Based </p></td>
+	<td><p class="Yes">Music Switch Container</p></td>
+	<td><p class="Yes">Loop Regions Controlled by Parameters</p></td>
+	<td><p class="WorkAround">Multiple Audio Sources Different Volumes <br> All Mute and One is Full Volume</p></td>
+	<td><p class="WorkAround">Interpolate Between Mixer Snapshots</p></td>
+  </tr>
+      <tr>
+  	<td bgcolor="#808080"><p class="TableFeature">Music Intros and Outros</p></td>
+	<td><p class="Yes">Move Entry Cue and Exit Cue</p></td>
+	<td><p class="Yes">Arrange in Event Logic</p></td>
+	<td><p class="No">Not That I Know Of</p></td>
+	<td><p class="No">Not That I Know Of</p></td>
+  </tr>
+      <tr>
+  	<td bgcolor="#808080"><p class="TableFeature">On Beat Transitions</p></td>
+	<td><p class="Yes">Grid, Beat, Bar, Custom cue</p></td>
+	<td><p class="Yes">Quantizable Intervals(Notes &Bars)</p></td>
+	<td><p class="No">Not That I Know Of</p></td>
+	<td><p class="No">Not That I Know Of</p></td>
+  </tr>
+      <tr>
+  	<td bgcolor="#808080"><p class="TableFeature">Entering a Loop Chance to Play</p></td>
+	<td><p class="Yes">Music Sequence -> Weight</p></td>
+	<td><p class="Yes">Play Percentage</p></td>
+	<td><p class="No">Code Yourself</p></td>
+	<td><p class="No">Code Yourself</p></td>
+  </tr>
+     <tr>
+  	<td bgcolor="#808080"><p class="TableFeature">Edit Transitions</p></td>
+	<td><p class="Yes">Specific Transitions/ Fade In or Out/ Stingers</p></td>
+	<td><p class="Yes">Arrange In Event Logic</p></td>
+	<td><p class="No">Not That I Know Of</p></td>
+	<td><p class="No">Not That I Know Of</p></td>
+  </tr>
+  <!--Mixing-->
+	 <tr>
+	 <th rowspan ="4">Mixing</th>
+  	<td bgcolor="#808080"><p class="TableFeature">Side Chaining / Ducking</p></td>
+	<td><p class="Yes">Yes</p></td>
+	<td><p class="Yes">Yes</p></td>
+	<td><p class="No">Not That I Know Of</p></td>
+	<td><p class="Yes">Yes</p></td>
+  </tr>
+	<tr>
+	<td bgcolor="#808080"><p class="TableFeature">Mixing Snapshots</p></td>
+	<td><p class="Yes">Yes</p></td>
+	<td><p class="Yes">Yes</p></td>
+	<td><p class="No">Not That I Know Of</p></td>
+	<td><p class="Yes">Yes</p></td>
+  </tr>
+  <tr>
+	<td bgcolor="#808080"><p class="TableFeature">Audio Debugging</p></td>
+	<td><p class="Yes">F6 -> Profiler</p></td>
+	<td><p class="No">Not That I Know Of</p></td>
+	<td><p class="WorkAround">Debug.Log();</p></td>
+	<td><p class="WorkAround">Debug.Log();</p></td>
+  </tr>
+    <tr>
+	<td bgcolor="#808080"><p class="TableFeature">Real Time Mixing</p></td>
+	<td><p class="Yes">Yes</p></td>
+	<td><p class="Yes">Yes</p></td>
+	<td><p class="No">Not That I Know Of</p></td>
+	<td><p class="Yes">Yes</p></td>
+  </tr>
+  <!--Mixing-->
+  	 <tr>
+	 <th rowspan ="2">Design</th>
+  	<td bgcolor="#808080"><p class="TableFeature">Parameters</p></td>
+	<td><p class="Yes">RTPC (Real Time Parameter Controller)</p></td>
+	<td><p class="Yes">Parameters</p></td>
+	<td><p class="Yes">audio.</p></td>
+	<td><p class="Yes">audio.</p></td>
+  </tr>
+	<tr>
+  	<td bgcolor="#808080"><p class="TableFeature">Design Approach</p></td>
+	<td><p class="Yes">Event Based System ( Most Logic is Written in Code)</p></td>
+	<td><p class="Yes">Visual Logic Tracks ( Most Logic is Done Visually)</p></td>
+	<td><p class="Yes">C#/JavaScript</p></td>
+	<td><p class="Yes">C#/JavaScript</p></td>
+  </tr>
+</table>
+
+</body>
+</html>
