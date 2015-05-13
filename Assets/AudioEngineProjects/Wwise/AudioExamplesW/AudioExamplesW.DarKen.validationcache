@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="69">
-	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3050900125" DateHigh="30443800"/>
+	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3558253376" DateHigh="30444991"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Attenuations\Default Work Unit.wwu" DateLow="3467700967" DateHigh="30443591"/>
-	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\AudioExamplesW.DarKen.wsettings" DateLow="853461034" DateHigh="30443815"/>
+	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\AudioExamplesW.DarKen.wsettings" DateLow="3181890399" DateHigh="30444991"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\AudioExamplesW.wproj" DateLow="615558630" DateHigh="30443594"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Control Surface Sessions\Default Work Unit.wwu" DateLow="3467621109" DateHigh="30443591"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Conversion Settings\Default Work Unit.wwu" DateLow="3467580894" DateHigh="30443591"/>
@@ -11,7 +11,7 @@
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Effects\Default Work Unit.wwu" DateLow="3467660939" DateHigh="30443591"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Effects\Factory Effects.wwu" DateLow="3896057600" DateHigh="30419400"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Effects\Factory McDSP Effects.wwu" DateLow="3356057600" DateHigh="30419400"/>
-	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Events\Default Work Unit.wwu" DateLow="917467691" DateHigh="30443797"/>
+	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Events\Default Work Unit.wwu" DateLow="3558263366" DateHigh="30444991"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Game Parameters\Default Work Unit.wwu" DateLow="3969450229" DateHigh="30443796"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="3356057600" DateHigh="30419400"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="3467690958" DateHigh="30443591"/>
@@ -21,7 +21,7 @@
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Presets\Default Work Unit.wwu" DateLow="3467651037" DateHigh="30443591"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Queries\Default Work Unit.wwu" DateLow="3467680953" DateHigh="30443591"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Queries\Factory Queries.wwu" DateLow="3896057600" DateHigh="30419400"/>
-	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\SoundBanks\Default Work Unit.wwu" DateLow="3050970336" DateHigh="30443800"/>
+	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\SoundBanks\Default Work Unit.wwu" DateLow="3562036018" DateHigh="30444991"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Soundcaster Sessions\Default Work Unit.wwu" DateLow="3467660939" DateHigh="30443591"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\States\Default Work Unit.wwu" DateLow="3467720982" DateHigh="30443591"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Switches\Default Work Unit.wwu" DateLow="3467520852" DateHigh="30443591"/>
