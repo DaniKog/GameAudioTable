@@ -21,11 +21,11 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if(canMove == true)
 		{
-			if(Input.GetKeyDown(KeyCode.LeftArrow))
+			if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
 			{
 				moveChar(currentWall-1); // calling the move function when the key is pressed
 			}
-			if(Input.GetKeyDown(KeyCode.RightArrow))
+			if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
 			{
 				moveChar(currentWall+1); // calling the move function when the key is pressed
 			}

@@ -15,7 +15,7 @@ public class MenuLogic : MonoBehaviour
 	}
 	public void GoTo3DMenu()
 	{
-		
+		Application.LoadLevel ("3DMenu");
 	}
 	public void GoToMusicMenu()
 	{
@@ -40,6 +40,14 @@ public class MenuLogic : MonoBehaviour
 	{
 		Application.LoadLevel("SFX_PitchMod_Native");
 	}
+	#endregion
+
+	#region 3D Menu
+	public void D_ChooseDistanceParameters()
+	{
+		Application.LoadLevel("3D_DistanceDrivenParameters_Native");
+	}
+
 	#endregion
 
 }

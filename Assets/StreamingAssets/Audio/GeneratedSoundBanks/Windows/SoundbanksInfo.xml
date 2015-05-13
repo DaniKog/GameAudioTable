@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" SchemaVersion="10" SoundbankVersion="112">
 	<RootPaths>
-		<ProjectRoot>D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\</ProjectRoot>
-		<SourceFilesRoot>D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\</ProjectRoot>
+		<SourceFilesRoot>D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -20,6 +20,7 @@
 			<IncludedEvents>
 				<Event Id="2184268219" Name="Play_RoboSound"/>
 				<Event Id="3782658767" Name="Play_Spike_Explode1"/>
+				<Event Id="3422684491" Name="Play_Tetris_Remix"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="127584658" Language="SFX">
@@ -41,6 +42,10 @@
 				<File Id="541153656" Language="SFX">
 					<ShortName>RoboMove4.wav</ShortName>
 					<Path>SFX\RoboMove4_DDC98EF4.wem</Path>
+				</File>
+				<File Id="1070197169" Language="SFX">
+					<ShortName>Tetris_Remix.wav</ShortName>
+					<Path>SFX\Tetris_Remix_8BD76F1E.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

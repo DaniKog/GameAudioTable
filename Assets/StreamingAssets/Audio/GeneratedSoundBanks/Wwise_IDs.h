@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID PLAY_ROBOSOUND = 2184268219U;
         static const AkUniqueID PLAY_SPIKE_EXPLODE1 = 3782658767U;
+        static const AkUniqueID PLAY_TETRIS_REMIX = 3422684491U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
@@ -24,7 +25,7 @@ namespace AK
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
         static const AkUniqueID SS_AIR_FURY = 1029930033U;
         static const AkUniqueID SS_AIR_MONTH = 2648548617U;
-        static const AkUniqueID SS_AIR_PREscene = 3847924954U;
+        static const AkUniqueID SS_AIR_PRESENCE = 3847924954U;
         static const AkUniqueID SS_AIR_RPM = 822163944U;
         static const AkUniqueID SS_AIR_SIZE = 3074696722U;
         static const AkUniqueID SS_AIR_STORM = 3715662592U;

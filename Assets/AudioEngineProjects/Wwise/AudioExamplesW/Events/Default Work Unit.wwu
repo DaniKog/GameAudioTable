@@ -25,6 +25,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Tetris_Remix" ID="{869D9E25-87B2-4C07-8D57-99D19374F5B3}">
+					<ChildrenList>
+						<Action Name="Play" ID="{E5A1BE45-E540-44D0-A52D-B23A6B0796DD}" ShortID="840605731" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{36A5E38F-1EE4-4AE9-AA85-37EC1841D1B4}" Global="false">
+									<ObjectRef Name="Tetris_Remix" ID="{C454BA39-2A9E-4CD4-AE81-B84A63F427EE}" WorkUnitID="{26364BB6-96ED-41D7-9F70-965F8B19A5B8}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

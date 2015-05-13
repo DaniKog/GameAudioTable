@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.05.00">
+    <object class="AudioFile" id="{c9ca58ea-25fe-49d9-897a-12fd9c010dbc}">
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>109.76653061224489</value>
+        </property>
+        <property name="lastModifiedDate">
+            <value>0</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/Tetris_Remix {7838b1ee-fd7d-4e16-b3a3-2a1201514fa2}.mp3</value>
+        </property>
+        <relationship name="container">
+            <destination>{83b9144c-c384-4469-bf52-125f84ff2246}</destination>
+        </relationship>
+    </object>
+</objects>

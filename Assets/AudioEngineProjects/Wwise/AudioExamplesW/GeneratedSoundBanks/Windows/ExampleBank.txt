@@ -1,14 +1,16 @@
 Event	ID	Name			Wwise Object Path	Notes
 	2184268219	Play_RoboSound			\Default Work Unit\Play_RoboSound	
+	3422684491	Play_Tetris_Remix			\Default Work Unit\Play_Tetris_Remix	
 	3782658767	Play_Spike_Explode1			\Default Work Unit\Play_Spike_Explode1	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	999429379	SFX_PitchMod			\Default Work Unit\SFX_PitchMod	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	127584658	RoboMove3	D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove3_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\RoboSound\RoboMove3		27784
-	246073244	RoboMove1	D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove1_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\RoboSound\RoboMove1		23420
-	413910431	RoboMove2	D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove2_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\RoboSound\RoboMove2		24944
-	429172880	Spike_Explode1	D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\Spike_Explode1_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spike_Explode1		352864
-	541153656	RoboMove4	D:\Projects\AudioEnignesTable\Examples\AudioExamples\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove4_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\RoboSound\RoboMove4		26952
+	127584658	RoboMove3	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove3_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\RoboSound\RoboMove3		27784
+	246073244	RoboMove1	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove1_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\RoboSound\RoboMove1		23420
+	413910431	RoboMove2	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove2_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\RoboSound\RoboMove2		24944
+	429172880	Spike_Explode1	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\Spike_Explode1_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Spike_Explode1		352864
+	541153656	RoboMove4	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove4_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\RoboSound\RoboMove4		26952
+	1070197169	Tetris_Remix	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\Tetris_Remix_8BD76F1E.wem		\Actor-Mixer Hierarchy\Default Work Unit\3D\Tetris_Remix		19358272
 

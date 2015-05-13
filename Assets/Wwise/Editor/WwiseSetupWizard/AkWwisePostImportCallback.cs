@@ -201,6 +201,7 @@ public class AkWwisePostImportCallback
 			AkAudioListener[] akAudioListeners = UnityEngine.Object.FindObjectsOfType(typeof(AkAudioListener)) as AkAudioListener[];
             if (akAudioListeners.Length == 0)
             {
+
                 // Remove the audio listener script
                 if (Camera.main != null && settings.CreateWwiseListener == true)
                 {
@@ -209,7 +210,6 @@ public class AkWwisePostImportCallback
                     {
                         Component.DestroyImmediate(listener);
                     }
-
                     // Add the AkAudioListener script
                     if (Camera.main.gameObject.GetComponent<AkAudioListener>() == null)
                     {
@@ -224,7 +224,7 @@ public class AkWwisePostImportCallback
 					AkAudioListener akListener = Camera.main.gameObject.GetComponent<AkAudioListener>();
 					if (akListener != null)
 					{
-						Component.DestroyImmediate(akListener);
+						Component.DestroyImmediate(akListener); // When working with mulipule aduio engines it continusly destroies the Audiolistener
 					}
                 }
             }
