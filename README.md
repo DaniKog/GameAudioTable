@@ -1,7 +1,7 @@
 # Audio Engines Markdown
 A hub of information for developers to get modern audio engine related info and open source implementation code.
 <br>
-<h2>Latest Build - V0.3</h2>
+<h2>Latest Build - v0.3</h2>
 https://drive.google.com/file/d/0ByAWSt6YOwb0S0NQdDA3Nm56dnM/view?usp=sharing
 <br>
 <h2> Implemintation Tutorials</h2>
