@@ -1,4 +1,4 @@
-# Audio Engines Markdown "#AudioMD"
+# Audio Engines Markdown #AudioMD
 A hub of information for developers to get modern audio engine related info and open source implementation code.
 http://danikog.github.io/AudioEnginesMarkdown/
 <br>
