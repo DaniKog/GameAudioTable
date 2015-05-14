@@ -20,6 +20,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID D_DISTANCE = 1618969883U;
         static const AkUniqueID SFX_PITCHMOD = 999429379U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;

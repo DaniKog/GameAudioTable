@@ -9,6 +9,13 @@
 						<Property Name="Min" Type="Real64" Value="-4800"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="D_Distance" ID="{7309C4B8-260A-4B5D-8754-4AB226124854}">
+					<PropertyList>
+						<Property Name="BindToBuiltInParam" Type="int16" Value="1"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="40"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

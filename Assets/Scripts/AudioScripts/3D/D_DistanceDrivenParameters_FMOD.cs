@@ -38,7 +38,7 @@ public class D_DistanceDrivenParameters_FMOD : MonoBehaviour
 		// Because this script is on the sound source we need to use Vector3.Dot
 		// Vector3.Dor allows you to determine where a object is in relation to another object.
 		// The Angle is also calcualted inside the FMOD mode engine. Add Build in Parameter -> Event Cone Angle.
-		// Vector3.Dot here is only for Display
+		// Vector3.Dot is here only for to display text on the camera.
 		Vector3 vecDistace = (player.transform.position - transform.position); 
 		Vector3 forward = transform.TransformDirection(Vector3.forward);
 		if (Vector3.Dot(forward,vecDistace) < 0 )
@@ -55,32 +55,5 @@ public class D_DistanceDrivenParameters_FMOD : MonoBehaviour
 	{
 		musicEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);// Stops the music event
 	}
-	
-	//When the player crosses to the other side of the Sound source
-	//Could do this with Vector3.Dot but this code is about Audio Vector.Dot might just confuse some people.
-//	void OnTriggerEnter(Collider col)
-//	{
-//		print("Entered Trigger");
-//		if(col.gameObject.name == "BackSide")
-//		{
-//			print("Trigger is true");
-//			if(engineInit == true)// check if the parameters have been initilized
-//			{
-//				//delayParameter.setValue(1); // Turns on the delay
-//				//displayDelay.text = c("Delay : On");
-//				print("Called the Change the fucntion");
-//			}
-//		}
-//	}
-//	void OnTriggerExit(Collider col)
-//	{
-//		if(col.gameObject.name == "BackSide")
-//		{
-//			if(engineInit == true) // check if the parameters have been initilized
-//			{
-//				delayParameter.setValue(0); // Turns off the delay
-//				displayDelay.text = ("Delay : Off");
-//			}
-//		}
-//	}
+
 }

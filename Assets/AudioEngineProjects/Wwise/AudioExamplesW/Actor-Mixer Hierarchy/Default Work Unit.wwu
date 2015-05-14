@@ -159,6 +159,34 @@
 						<Sound Name="Tetris_Remix" ID="{C454BA39-2A9E-4CD4-AE81-B84A63F427EE}" ShortID="294539708" Type="SoundFX">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{BA1A7D81-1CCC-4DA7-9E3C-4603015EFD8D}" ShortID="171782052">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="D_Distance" ID="{7309C4B8-260A-4B5D-8754-4AB226124854}" WorkUnitID="{524BB252-8554-41B1-8FC7-D0CC69A12E25}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{374D1933-E949-48AB-9790-A92B5F9DB536}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-150</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>40</XPos>
+														<YPos>4769</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 								<Property Name="PositioningType" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -263,7 +291,7 @@
 													</CurveUsageInfo>
 												</LowPassFilterUsage>
 												<HighPassFilterUsage>
-													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+													<CurveUsageInfo Platform="Linked" CurveToUse="None">
 														<Curve Name="HighPassFilter" ID="{56EF0ADF-CF38-400D-983C-D8415B7FEBD3}">
 															<PropertyList>
 																<Property Name="Flags" Type="int32" Value="65537"/>

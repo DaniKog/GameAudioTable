@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	999429379	SFX_PitchMod			\Default Work Unit\SFX_PitchMod	
+	1618969883	D_Distance			\Default Work Unit\D_Distance	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	127584658	RoboMove3	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove3_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\RoboSound\RoboMove3		27784

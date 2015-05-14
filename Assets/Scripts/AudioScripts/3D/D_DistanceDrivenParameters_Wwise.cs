@@ -28,7 +28,7 @@ public class D_DistanceDrivenParameters_Wwise : MonoBehaviour {
 		distanceToSource = Vector3.Distance (soundSourceObj.transform.position, gameObject.transform.position); // Calculating the distance to between the player and the soundsource and assigning it to a variable
 		displayDistance.text = ("Distance To Source: " + distanceToSource.ToString("##.##")); // Display Distance
 		// The Distance is Calculated inside the Wwise engine. It is between the GameObject sound sound and the Gameobject that has the AkListener attached to.
-		// In this case it is The main camera and soundSourceObj. All the parameters are set in engine Positioning tab -> 3D. Assgin an Attenuation and click on edit.
+		// In this case it is The main camera and soundSourceObj. Any Game Parameter can be set to work with distance. Create a new Parameter and click on Blind to Built-In Parameters. // Thanks @AKMikeD
 	}
 
 	void OnDestroy()
@@ -36,9 +36,10 @@ public class D_DistanceDrivenParameters_Wwise : MonoBehaviour {
 		AkSoundEngine.StopAll(); // Stops all events that are playing.
 	}
 
-	//When the player crosses to the other side of the Sound source
-	//Could do this with Vector3.Dot but this code is about Audio Vector.Dot might just confuse some people.
-	//This is only for the 
+	// When the player crosses to the other side of the Sound source
+	// The Angle is actually calulated in Wwise. But we are not using the Build-In Parameters for this one.
+	// We are useing the one in the positioning tab -> Attenuation -> Custom -> Edit -> Cone Attentuation.
+	// The Trigger are here only for display
 	void OnTriggerEnter(Collider col)
 	{
 		if(col.gameObject.name == "BackSide")
