@@ -30,23 +30,24 @@ public class D_DistanceDrivenParameters_FMOD : MonoBehaviour
 	void Update ()
 	{
 		distanceToSource = Vector3.Distance (player.transform.position, gameObject.transform.position); // Calculating the distance to between the player and the soundsource and assigning it to a variable
-		flangerRateParameter.setValue(distanceToSource); // Assign distance to the flanger rate parameter. The parameter set in FMOD to be from 0 - 40 which fits the same size of the platform.
-		displayFlanger.text = ("Flanger Rate : " + distanceToSource); // Display pitch Value the distacne and the value of the Flanger is 1 to 1
 		displayDistance.text = ("Distance To Source: " + distanceToSource.ToString("##.##")); // Display Distance
-
+		// The Distance is Calculated inside the FMOD engine. It is between the GameObject sound sound and the Gameobject that has the FMOD_Listener attached to 
+		// In this case it is The FPS Controller and the music source. All the parameters are set in engine. Click on Add Parameter -> add build in Parameters -> Distance
+		// Thanks. @redbluemonkey. 
 
 		// Because this script is on the sound source we need to use Vector3.Dot
 		// Vector3.Dor allows you to determine where a object is in relation to another object.
+		// The Angle is also calcualted inside the FMOD mode engine. Add Build in Parameter -> Event Cone Angle.
+		// Vector3.Dot here is only for Display
 		Vector3 vecDistace = (player.transform.position - transform.position); 
 		Vector3 forward = transform.TransformDirection(Vector3.forward);
 		if (Vector3.Dot(forward,vecDistace) < 0 )
 		{
-			delayParameter.setValue(1f); // Turns on the delay
 			displayDelay.text = ("Delay : On");
+			//The Delay is afully exagurated so it will be obvious when it is On.
 		}
 		else
 		{
-			delayParameter.setValue(0f); // Turns off the delay
 			displayDelay.text = ("Delay : Off");
 		}
 	}

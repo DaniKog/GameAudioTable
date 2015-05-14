@@ -46,9 +46,7 @@ public class PlayerMovement : MonoBehaviour
 				break;
 			}
 
-		}
-
-
+		}		
 	}
 
 	private IEnumerator MovePlayer(Vector3 _posToReach)

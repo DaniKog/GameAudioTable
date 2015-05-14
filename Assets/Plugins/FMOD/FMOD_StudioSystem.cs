@@ -1,3 +1,4 @@
+#define FMOD_LIVEUPDATE
 using UnityEngine;
 using System;
 using System.Collections;
