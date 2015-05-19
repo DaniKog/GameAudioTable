@@ -1,10 +1,10 @@
 # Audio Engines Markdown #AudioMD
-A hub of information for developers to get modern audio engine related info and open source implementation code.
+A hub of information for developers to get audio engine related info and open source implementation code.
 <br>
 http://danikog.github.io/AudioEnginesMarkdown/
 <br> Follow for updates <br> <a href="https://twitter.com/Dani_Kogan" target="_blank"> @Dani_Kogan </a>
-<h2>Latest Build - v0.5</h2>
-https://docs.google.com/uc?id=0ByAWSt6YOwb0NUZUXzRmejhyRXM&export=download
+<h2>Latest Build - v0.6</h2>
+https://docs.google.com/uc?id=0ByAWSt6YOwb0OHNTazdmX1NrbUE&export=download
 <br>
 <h2> Implemintation Tutorials</h2>
 Wwise + Unity : https://www.youtube.com/watch?v=MowqJCNfv7k
