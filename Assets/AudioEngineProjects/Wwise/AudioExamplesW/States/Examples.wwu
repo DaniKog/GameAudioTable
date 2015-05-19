@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{DCB116CF-F21B-4789-9DAA-6744EB31BE19}" SchemaVersion="69">
+	<States>
+		<WorkUnit Name="Examples" ID="{DCB116CF-F21B-4789-9DAA-6744EB31BE19}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="DynamicMusicIntensity" ID="{F36C1D3A-9EDC-4100-B2AE-823670CC718D}">
+					<ChildrenList>
+						<State Name="None" ID="{ADE0F990-3723-49A5-9C46-95C68A1FE45E}"/>
+						<State Name="Int1" ID="{C83C8448-2833-4F91-A990-8E5D68AE8B54}"/>
+						<State Name="Int2" ID="{01E33E2A-6A70-4993-855F-5D5E6EC2165B}"/>
+						<State Name="Int3" ID="{97F4F072-63D7-4E6B-ADD4-5D51971A885C}"/>
+						<State Name="Int4" ID="{0FC2D384-8E07-453C-A73F-FD98F6F541AB}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

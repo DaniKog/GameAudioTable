@@ -19,7 +19,7 @@ public class MenuLogic : MonoBehaviour
 	}
 	public void GoToMusicMenu()
 	{
-		
+		Application.LoadLevel("MusicMenu");
 	}
 
 	public void BackToMain()
@@ -48,6 +48,14 @@ public class MenuLogic : MonoBehaviour
 		Application.LoadLevel("3D_DistanceDrivenParameters_Native");
 	}
 
+	#endregion
+
+	#region 3D Menu
+	public void Music_ChooseDynamicIntensity()
+	{
+		Application.LoadLevel("Music_DynamicIntensity_Native4.6");
+	}
+	
 	#endregion
 
 }

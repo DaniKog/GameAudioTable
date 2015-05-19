@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C32AB2F3-05E3-41E1-8FEC-C7B0862B15CC}" SchemaVersion="69">
+	<Triggers>
+		<WorkUnit Name="Examples" ID="{C32AB2F3-05E3-41E1-8FEC-C7B0862B15CC}" PersistMode="Standalone">
+			<ChildrenList>
+				<Trigger Name="Music_Intesity_Fill" ID="{F5095AC6-C73F-427E-8866-728C04CA52C9}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Triggers>
+</WwiseDocument>

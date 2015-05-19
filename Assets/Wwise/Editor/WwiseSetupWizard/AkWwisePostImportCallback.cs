@@ -224,7 +224,7 @@ public class AkWwisePostImportCallback
 					AkAudioListener akListener = Camera.main.gameObject.GetComponent<AkAudioListener>();
 					if (akListener != null)
 					{
-						Component.DestroyImmediate(akListener); // When working with mulipule aduio engines it continusly destroies the Audiolistener
+						//Component.DestroyImmediate(akListener); // When working with mulipule aduio engines it continusly destroies the Audiolistener
 					}
                 }
             }

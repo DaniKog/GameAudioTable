@@ -1,3 +1,13 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	947482084	DynamicMusicIntensity			\Examples\DynamicMusicIntensity	
+
+State	ID	Name	State Group			Notes
+	748895195	None	DynamicMusicIntensity			
+	1405501217	Int1	DynamicMusicIntensity			
+	1405501218	Int2	DynamicMusicIntensity			
+	1405501219	Int3	DynamicMusicIntensity			
+	1405501220	Int4	DynamicMusicIntensity			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	

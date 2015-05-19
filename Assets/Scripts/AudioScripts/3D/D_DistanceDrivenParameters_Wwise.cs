@@ -6,7 +6,7 @@ public class D_DistanceDrivenParameters_Wwise : MonoBehaviour {
 
 	//Some audio engines allows you to define Parameters that will be driven by Distance. 
 	//In Wwise it is defined inside the sound it self in the Positioning tab -> 3D. Assgin an Attenuation and click on edit.
-	uint bankID; // an Uint (double positive intigatre) to save to Sound bank ID to
+	uint bankID; // an Uint (double positive integer) to save to Sound bank ID to
 	public GameObject soundSourceObj; // A reference to the soundsource's GameObject to get the distance
 	float distanceToSource; // flaot to save the distance between the audio source and the player
 	public Text displayDistance; // Referance to a Text UI on screen to display the distance
@@ -17,7 +17,7 @@ public class D_DistanceDrivenParameters_Wwise : MonoBehaviour {
 		AkSoundEngine.LoadBank ("ExampleBank", AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID); //Load the sound bank, need to happened only once in a scene no reason to add this on every single script
 		//Side note - my recommendation is to create your own handler Class and that will handle all Play and Stop SFX functions.
 		//For more information watch https://www.youtube.com/watch?v=j5Aq5hg1dcA
-		AkSoundEngine.PostEvent ("Play_Tetris_Remix",soundSourceObj); //Play an event from the Wwise engine
+		AkSoundEngine.PostEvent ("Play_Tetris_Remix",soundSourceObj); //Play an event from the Wwise engine from the soundSourceObj Game Object 
 		//On Tetris_Remix sound in Wwise the Max distance is set to 30. Which is the size of the platform in the scene
 
 	}

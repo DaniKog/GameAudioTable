@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BFEEB667-BB49-4D90-BCD0-687DBF8F7603}" SchemaVersion="69">
+	<Events>
+		<WorkUnit Name="Examples" ID="{BFEEB667-BB49-4D90-BCD0-687DBF8F7603}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Tetris_Remix" ID="{4E769191-0CA1-416B-8B71-2214021DDB63}">
+					<ChildrenList>
+						<Action Name="Play" ID="{55B7DF99-CA9B-4AFB-8EA0-A8A2402827F3}" ShortID="840605732" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{36A5E38F-1EE4-4AE9-AA85-37EC1841D1B4}" Global="false">
+									<ObjectRef Name="Tetris_Remix" ID="{C454BA39-2A9E-4CD4-AE81-B84A63F427EE}" WorkUnitID="{CF8FB11B-BD90-434A-9D2C-872656BD1440}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_RoboSound" ID="{1A422A63-D20F-4728-A057-F957C5A97C0B}">
+					<ChildrenList>
+						<Action Name="Play" ID="{84D5CDC2-1DA9-4962-B430-6CEA12E165B1}" ShortID="1045342380" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{F6237174-D6A8-451A-9DA0-882E9E42BFB2}" Global="false">
+									<ObjectRef Name="RoboSound" ID="{2EFBDE2B-D153-410D-BB31-450C98505E42}" WorkUnitID="{CF8FB11B-BD90-434A-9D2C-872656BD1440}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Spike_Explode1" ID="{7B7E4D81-4088-42B5-941F-2000B0FEDF3C}">
+					<ChildrenList>
+						<Action Name="Play" ID="{E4A91888-4DAA-4B5A-8336-DC0BEC4860F4}" ShortID="528402595" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{B70E53DF-AE18-4D1D-9337-4D6BC51CB73C}" Global="false">
+									<ObjectRef Name="Spike_Explode1" ID="{AD3AC373-F4A2-4FBD-82BD-38DACC8AA93C}" WorkUnitID="{CF8FB11B-BD90-434A-9D2C-872656BD1440}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MusicDynamicIntensity" ID="{8BDC56EE-42C0-4054-A195-BD477A081552}">
+					<ChildrenList>
+						<Action Name="Play" ID="{BCFE98C3-E1EB-4030-BD30-B6C66708787D}" ShortID="932908079" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{D0477DEB-5DD2-4CA3-AA3E-9876C4A5C5FA}" Global="false">
+									<ObjectRef Name="MusicDynamicIntensity" ID="{5AC8FCCE-1C34-4EF9-9CF8-E89414D594DB}" WorkUnitID="{93BB672B-261F-4A6C-8986-EFDA877ED1AF}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{042CE2AA-AFD1-4968-A162-BEE9EEAB03FF}" SchemaVersion="69">
+	<SoundBanks>
+		<WorkUnit Name="Examples" ID="{042CE2AA-AFD1-4968-A162-BEE9EEAB03FF}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="ExampleBank" ID="{57F2A678-86AF-44C7-ADA5-54137C0801C8}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_RoboSound" ID="{1A422A63-D20F-4728-A057-F957C5A97C0B}" WorkUnitID="{BFEEB667-BB49-4D90-BCD0-687DBF8F7603}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Spike_Explode1" ID="{7B7E4D81-4088-42B5-941F-2000B0FEDF3C}" WorkUnitID="{BFEEB667-BB49-4D90-BCD0-687DBF8F7603}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Tetris_Remix" ID="{4E769191-0CA1-416B-8B71-2214021DDB63}" WorkUnitID="{BFEEB667-BB49-4D90-BCD0-687DBF8F7603}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_MusicDynamicIntensity" ID="{8BDC56EE-42C0-4054-A195-BD477A081552}" WorkUnitID="{BFEEB667-BB49-4D90-BCD0-687DBF8F7603}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

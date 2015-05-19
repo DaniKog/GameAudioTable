@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.05.00">
+    <object class="AudioFile" id="{c245f733-fe7a-4488-9b45-aa8bb2efcc16}">
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>16</value>
+        </property>
+        <property name="lastModifiedDate">
+            <value>1431823594</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/Sphinx_Int_2 {5ab42c21-dcd7-4a6c-826f-aec6c97f98f6}.wav</value>
+        </property>
+        <relationship name="container">
+            <destination>{83b9144c-c384-4469-bf52-125f84ff2246}</destination>
+        </relationship>
+    </object>
+</objects>

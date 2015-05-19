@@ -1,16 +1,36 @@
 Event	ID	Name			Wwise Object Path	Notes
-	2184268219	Play_RoboSound			\Default Work Unit\Play_RoboSound	
-	3422684491	Play_Tetris_Remix			\Default Work Unit\Play_Tetris_Remix	
-	3782658767	Play_Spike_Explode1			\Default Work Unit\Play_Spike_Explode1	
+	760848685	Play_MusicDynamicIntensity			\Examples\Play_MusicDynamicIntensity	
+	2184268219	Play_RoboSound			\Examples\Play_RoboSound	
+	3422684491	Play_Tetris_Remix			\Examples\Play_Tetris_Remix	
+	3782658767	Play_Spike_Explode1			\Examples\Play_Spike_Explode1	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	947482084	DynamicMusicIntensity			\Examples\DynamicMusicIntensity	
+
+State	ID	Name	State Group			Notes
+	748895195	None	DynamicMusicIntensity			
+	1405501217	Int1	DynamicMusicIntensity			
+	1405501218	Int2	DynamicMusicIntensity			
+	1405501219	Int3	DynamicMusicIntensity			
+	1405501220	Int4	DynamicMusicIntensity			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	999429379	SFX_PitchMod			\Default Work Unit\SFX_PitchMod	
+	999429379	SFX_PitchMod			\Examples\SFX_PitchMod	
+	1618969883	D_Distance			\Examples\D_Distance	
+
+Trigger	ID	Name			Wwise Object Path	Notes
+	1407678264	Music_Intesity_Fill			\Examples\Music_Intesity_Fill	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	127584658	RoboMove3	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove3_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\RoboSound\RoboMove3		27784
-	246073244	RoboMove1	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove1_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\RoboSound\RoboMove1		23420
-	413910431	RoboMove2	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove2_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\RoboSound\RoboMove2		24944
-	429172880	Spike_Explode1	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\Spike_Explode1_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Spike_Explode1		352864
-	541153656	RoboMove4	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove4_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\RoboSound\RoboMove4		26952
-	1070197169	Tetris_Remix	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\Tetris_Remix_8BD76F1E.wem		\Actor-Mixer Hierarchy\Default Work Unit\3D\Tetris_Remix		19358272
+	60965063	Sphinx_Int_3	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\Sphinx_Int_3_8BD76F1E.wem		\Interactive Music Hierarchy\Examples\MusicDynamicIntensity\Int3\int3\Sphinx_Int_3		2822464
+	127584658	RoboMove3	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove3_DDC98EF4.wem		\Actor-Mixer Hierarchy\Examples\SFX\RoboSound\RoboMove3		27784
+	246073244	RoboMove1	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove1_DDC98EF4.wem		\Actor-Mixer Hierarchy\Examples\SFX\RoboSound\RoboMove1		23420
+	411653575	Sphinx_Int_2	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\Sphinx_Int_2_8BD76F1E.wem		\Interactive Music Hierarchy\Examples\MusicDynamicIntensity\Int2\Int2\Sphinx_Int_2		2822464
+	413910431	RoboMove2	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove2_DDC98EF4.wem		\Actor-Mixer Hierarchy\Examples\SFX\RoboSound\RoboMove2		24944
+	429172880	Spike_Explode1	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\Spike_Explode1_DDC98EF4.wem		\Actor-Mixer Hierarchy\Examples\SFX\Spike_Explode1		352864
+	541153656	RoboMove4	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\RoboMove4_DDC98EF4.wem		\Actor-Mixer Hierarchy\Examples\SFX\RoboSound\RoboMove4		26952
+	543105579	Sphinx_Int_1	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\Sphinx_Int_1_8BD76F1E.wem		\Interactive Music Hierarchy\Examples\MusicDynamicIntensity\Int1\Int1\Sphinx_Int_1		1411264
+	704409962	Sphinx_Fill5	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\Sphinx_Fill5_8BD76F1E.wem		\Interactive Music Hierarchy\Examples\Sphinx_Fill5\Sphinx_Fill5		1058464
+	723751096	Sphinx_Int_4	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\Sphinx_Int_4_8BD76F1E.wem		\Interactive Music Hierarchy\Examples\MusicDynamicIntensity\Int4\int4\Sphinx_Int_4		2822464
+	1070197169	Tetris_Remix	D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\.cache\Windows\SFX\Tetris_Remix_8BD76F1E.wem		\Actor-Mixer Hierarchy\Examples\3D\Tetris_Remix		19358272
 

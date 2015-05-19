@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5163CFCA-1922-4FF6-AF6B-88E616FFE3BB}" SchemaVersion="69">
+	<GameParameters>
+		<WorkUnit Name="Examples" ID="{5163CFCA-1922-4FF6-AF6B-88E616FFE3BB}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="D_Distance" ID="{7309C4B8-260A-4B5D-8754-4AB226124854}">
+					<PropertyList>
+						<Property Name="BindToBuiltInParam" Type="int16" Value="1"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="40"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="SFX_PitchMod" ID="{4011B470-BCFB-4D72-B4FF-12FDD4826A8E}">
+					<PropertyList>
+						<Property Name="Max" Type="Real64" Value="4800"/>
+						<Property Name="Min" Type="Real64" Value="-4800"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

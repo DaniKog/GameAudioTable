@@ -18,11 +18,16 @@
 			<ShortName>ExampleBank</ShortName>
 			<Path>ExampleBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="760848685" Name="Play_MusicDynamicIntensity"/>
 				<Event Id="2184268219" Name="Play_RoboSound"/>
 				<Event Id="3782658767" Name="Play_Spike_Explode1"/>
 				<Event Id="3422684491" Name="Play_Tetris_Remix"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="60965063" Language="SFX">
+					<ShortName>Sphinx_Int_3.wav</ShortName>
+					<Path>SFX\Sphinx_Int_3_8BD76F1E.wem</Path>
+				</File>
 				<File Id="127584658" Language="SFX">
 					<ShortName>RoboMove3.wav</ShortName>
 					<Path>SFX\RoboMove3_DDC98EF4.wem</Path>
@@ -30,6 +35,10 @@
 				<File Id="246073244" Language="SFX">
 					<ShortName>RoboMove1.wav</ShortName>
 					<Path>SFX\RoboMove1_DDC98EF4.wem</Path>
+				</File>
+				<File Id="411653575" Language="SFX">
+					<ShortName>Sphinx_Int_2.wav</ShortName>
+					<Path>SFX\Sphinx_Int_2_8BD76F1E.wem</Path>
 				</File>
 				<File Id="413910431" Language="SFX">
 					<ShortName>RoboMove2.wav</ShortName>
@@ -42,6 +51,18 @@
 				<File Id="541153656" Language="SFX">
 					<ShortName>RoboMove4.wav</ShortName>
 					<Path>SFX\RoboMove4_DDC98EF4.wem</Path>
+				</File>
+				<File Id="543105579" Language="SFX">
+					<ShortName>Sphinx_Int_1.wav</ShortName>
+					<Path>SFX\Sphinx_Int_1_8BD76F1E.wem</Path>
+				</File>
+				<File Id="704409962" Language="SFX">
+					<ShortName>Sphinx_Fill5.wav</ShortName>
+					<Path>SFX\Sphinx_Fill5_8BD76F1E.wem</Path>
+				</File>
+				<File Id="723751096" Language="SFX">
+					<ShortName>Sphinx_Int_4.wav</ShortName>
+					<Path>SFX\Sphinx_Int_4_8BD76F1E.wem</Path>
 				</File>
 				<File Id="1070197169" Language="SFX">
 					<ShortName>Tetris_Remix.wav</ShortName>

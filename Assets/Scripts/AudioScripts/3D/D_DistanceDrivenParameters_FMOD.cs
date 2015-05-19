@@ -18,7 +18,7 @@ public class D_DistanceDrivenParameters_FMOD : MonoBehaviour
 	bool engineInit = false; // A bool that tell us when the parameters are loaded. Because before OnTiriggerEnter would happend before Start could finish assigning the Parameters.
 	void Start ()
 	{
-		print(musicEvent = FMOD_StudioSystem.instance.GetEvent ("event:/Tetris_Remix")); // Get an instance of the event
+		musicEvent = FMOD_StudioSystem.instance.GetEvent ("event:/Tetris_Remix"); // Get an instance of the event
 		musicEvent.getParameter ("Tetris_Flanger", out flangerRateParameter); // Use the instance of the event to access the parameter on that even
 		musicEvent.getParameter ("Bool_Delay", out delayParameter); // Use the instance of the event to access the parameter on that even. This will act like a bool, it will enable and disable the delay
 		// when the player is going behind the object.

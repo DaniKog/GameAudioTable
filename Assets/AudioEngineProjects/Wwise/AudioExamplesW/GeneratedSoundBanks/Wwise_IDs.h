@@ -13,26 +13,39 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_MUSICDYNAMICINTENSITY = 760848685U;
         static const AkUniqueID PLAY_ROBOSOUND = 2184268219U;
         static const AkUniqueID PLAY_SPIKE_EXPLODE1 = 3782658767U;
         static const AkUniqueID PLAY_TETRIS_REMIX = 3422684491U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace DYNAMICMUSICINTENSITY
+        {
+            static const AkUniqueID GROUP = 947482084U;
+
+            namespace STATE
+            {
+                static const AkUniqueID INT1 = 1405501217U;
+                static const AkUniqueID INT2 = 1405501218U;
+                static const AkUniqueID INT3 = 1405501219U;
+                static const AkUniqueID INT4 = 1405501220U;
+            } // namespace STATE
+        } // namespace DYNAMICMUSICINTENSITY
+
+    } // namespace STATES
+
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID D_DISTANCE = 1618969883U;
         static const AkUniqueID SFX_PITCHMOD = 999429379U;
-        static const AkUniqueID SS_AIR_FEAR = 1351367891U;
-        static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
-        static const AkUniqueID SS_AIR_FURY = 1029930033U;
-        static const AkUniqueID SS_AIR_MONTH = 2648548617U;
-        static const AkUniqueID SS_AIR_PRESENCE = 3847924954U;
-        static const AkUniqueID SS_AIR_RPM = 822163944U;
-        static const AkUniqueID SS_AIR_SIZE = 3074696722U;
-        static const AkUniqueID SS_AIR_STORM = 3715662592U;
-        static const AkUniqueID SS_AIR_TIMEOFDAY = 3203397129U;
-        static const AkUniqueID SS_AIR_TURBULENCE = 4160247818U;
     } // namespace GAME_PARAMETERS
+
+    namespace TRIGGERS
+    {
+        static const AkUniqueID MUSIC_INTESITY_FILL = 1407678264U;
+    } // namespace TRIGGERS
 
     namespace BANKS
     {

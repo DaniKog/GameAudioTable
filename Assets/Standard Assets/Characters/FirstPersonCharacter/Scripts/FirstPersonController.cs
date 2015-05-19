@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 namespace UnityStandardAssets.Characters.FirstPerson
 {
     [RequireComponent(typeof (CharacterController))]
-    [RequireComponent(typeof (AudioSource))]
+//    [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
         [SerializeField] private bool m_IsWalking;
@@ -24,9 +24,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
-        [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
-        [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
-        [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+//        [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
+//        [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
+//        [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -53,7 +54,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_StepCycle = 0f;
             m_NextStep = m_StepCycle/2f;
             m_Jumping = false;
-            m_AudioSource = GetComponent<AudioSource>();
+//            m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
         }
 
@@ -71,7 +72,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
                 StartCoroutine(m_JumpBob.DoBobCycle());
-                PlayLandingSound();
+//                PlayLandingSound();
                 m_MoveDir.y = 0f;
                 m_Jumping = false;
             }
@@ -86,9 +87,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayLandingSound()
         {
-            m_AudioSource.clip = m_LandSound;
-            m_AudioSource.Play();
-            m_NextStep = m_StepCycle + .5f;
+//            m_AudioSource.clip = m_LandSound;
+//            m_AudioSource.Play();
+//            m_NextStep = m_StepCycle + .5f;
         }
 
 
@@ -116,7 +117,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (m_Jump)
                 {
                     m_MoveDir.y = m_JumpSpeed;
-                    PlayJumpSound();
+//                    PlayJumpSound();
                     m_Jump = false;
                     m_Jumping = true;
                 }
@@ -132,11 +133,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void PlayJumpSound()
-        {
-            m_AudioSource.clip = m_JumpSound;
-            m_AudioSource.Play();
-        }
+//        private void PlayJumpSound()
+//        {
+//            m_AudioSource.clip = m_JumpSound;
+//            m_AudioSource.Play();
+//        }
 
 
         private void ProgressStepCycle(float speed)
@@ -165,13 +166,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             // pick & play a random footstep sound from the array,
-            // excluding sound at index 0
-            int n = Random.Range(1, m_FootstepSounds.Length);
-            m_AudioSource.clip = m_FootstepSounds[n];
-            m_AudioSource.PlayOneShot(m_AudioSource.clip);
-            // move picked sound to index 0 so it's not picked next time
-            m_FootstepSounds[n] = m_FootstepSounds[0];
-            m_FootstepSounds[0] = m_AudioSource.clip;
+//            // excluding sound at index 0
+//            int n = Random.Range(1, m_FootstepSounds.Length);
+//            m_AudioSource.clip = m_FootstepSounds[n];
+//            m_AudioSource.PlayOneShot(m_AudioSource.clip);
+//            // move picked sound to index 0 so it's not picked next time
+//            m_FootstepSounds[n] = m_FootstepSounds[0];
+//            m_FootstepSounds[0] = m_AudioSource.clip;
         }
 
 
