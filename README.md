@@ -15,8 +15,6 @@ FMOD + Unity: https://www.youtube.com/watch?v=p14Hx_jLGEA
 Huge thanks to contributors which helped fix problems and pointed to inconsistencies in the table
 <br>
 <br>
-<a href="https://twitter.com/Dani_Kogan" target="_blank"> @Dani_Kogan </a>
-<br>
 <a href="https://twitter.com/AKMikeDn" target="_blank">@AKMikeD</a>
 <br>
 <a href="https://twitter.com/redbluemonkey" target="_blank">@redbluemonkey</a>
