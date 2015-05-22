@@ -10,9 +10,6 @@ Wwise + Unity : https://www.youtube.com/watch?v=MowqJCNfv7k
 <br>
 FMOD + Unity: https://www.youtube.com/watch?v=p14Hx_jLGEA
 <br>
-<h2> Feedback, Contributions and Critiques Are Most Welcome </h2>
-<br>
-Send to: dani.kogandk@gmail.com
 <h2>Thanks</h2>
 Huge thanks to contributors which helped fix problems and pointed to inconsistencies in the table
 <br>
