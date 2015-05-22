@@ -19,27 +19,28 @@ table#t01 th	{
 table#t01 th:nth-child(0)) { text-align: left; }
 h1{ text-align: center; }
 
-p.TableFeature
+td.TableFeature
 {
 text-align: center;
 color: white;
 font-size: 15px;
 font-weight: lighter;
+background-color: #808080;
 }
-p.Yes
+td.Yes
 {
 text-align: center;
 background-color: #80CC80;
 //Green
 
 }
-p.WorkAround
+td.WorkAround
 {
 text-align: center;
 background-color: #FFDB4D;
 //Yellow
 }
-p.No
+td.No
 {
 text-align: center;
 background-color: #FF8080;
@@ -50,192 +51,195 @@ background-color: #FF8080;
 
 <h1>Audio Feature Implantation Comparison</h1>
 <p align="center"><a href="https://github.com/DaniKog/AudioEnginesMarkdown" target="_blank">GitHub Repository with Source Code</a></p>
-<p class="Yes"> Feature Exists</p><p class="WorkAround"> A Workaround</p><p class="No"> Doesn't Exist As Far As I Know</p>
+<table align="center"><tr>
+<td class="Yes"> Feature Exists</td>
+<tr><td class="WorkAround"> A Workaround</td>
+<tr><td class="No"> Doesn't Exist As Far As I Know</td></tr></table>
+<br>
 <table id="t01" align="Center">
   <tr>
-	<th colspan="2"><p align="right"><font size="4">Engine</font></p></th>
+	<th colspan="2"><p align="right"><font size="4" align="right">Engine</font></p></th>
     <th rowspan="2">Wwise</th>
     <th rowspan="2">FMOD</th>		
 	<th rowspan="2">Unity4</th>
 	<th rowspan="2">Unity5</th>
   </tr>
   <tr>
-    <th colspan="2"><p align="left"><font size="4">Feature</font></p></td>
+    <th colspan="2"><p align="left"><font size="4">Feature</font></td>
   </tr>
 <!--SFX-->
   <tr>
     <th rowspan ="3">SFX</th>
-	<td bgcolor="#808080"><p class="TableFeature">Variation</p></td>
-	<td><p class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_Wwise.cs" target="_blank">Random Container</a></p></td>	
-	<td><p class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_FMOD.cs" target="_blank">Multi Sound</a></p></td>
-	<td><p class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFXVariation_Native.cs" target="_blank">AudioClip[]</a></p></td>
-	<td><p class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFXVariation_Native.cs" target="_blank">AudioClip[]</a></p></td>
+	<td class="TableFeature">Variation</td>
+	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_Wwise.cs" target="_blank">Random Container</a></td>	
+	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_FMOD.cs" target="_blank">Multi Sound</a></td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFXVariation_Native.cs" target="_blank">AudioClip[]</a></td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFXVariation_Native.cs" target="_blank">AudioClip[]</a></td>
   </tr>
   <tr>
-    <td bgcolor="#808080"><p class="TableFeature">Pitch Modulation</p></td>
-	 <td><p class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Wwise.cs" target="_blank">Randomizer</a></p></td>		
-	 <td><p class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_FMOD.cs" target="_blank">Modulation -> Random</a></p></td>
-	<td><p class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Native.cs" target="_blank">audio.pitch = Random.Range(Min,Max)]</a></p></td>		
-	<td><p class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Native.cs" target="_blank">audio.pitch = Random.Range(Min,Max)]</a></p></td>	
+    <td class="TableFeature">Pitch Modulation</td>
+	 <td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Wwise.cs" target="_blank">Randomizer</a></td>		
+	 <td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_FMOD.cs" target="_blank">Modulation -> Random</a></td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Native.cs" target="_blank">audio.pitch = Random.Range(Min,Max)]</a></td>		
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Native.cs" target="_blank">audio.pitch = Random.Range(Min,Max)]</a></td>	
   </tr>
   <tr>
-	<td bgcolor="#808080"><p class="TableFeature">Variation Priority / Probability</p></td>
-	<td><p class="Yes">Weight</p></td>		
-	<td><p class="Yes">Play Percentage</p></td>
-	<td><p class="No">Code Yourself</p></td>		
-	<td><p class="No">Code Yourself</p></td>	
+	<td class="TableFeature">Variation Priority / Probability</td>
+	<td class="Yes">Weight</td>		
+	<td class="Yes">Play Percentage</td>
+	<td class="No">Code Yourself</td>		
+	<td class="No">Code Yourself</td>	
 	</tr>
 <!--3D-->
   <tr>
     <th rowspan ="6">3D</th>
-	<td bgcolor="#808080"><p class="TableFeature">3D Sounds</p></td>
-	<td><p class="Yes">Positioning -> 3D</p></td>	
-	<td><p class="Yes">Master Track -> 3D Panner</p></td>
-	<td><p class="Yes">Audio Asset -> 3D/2D</p></td>
-	<td><p class="Yes">SoundSource -> Spatial Blend</p></td>
+	<td class="TableFeature">3D Sounds</td>
+	<td class="Yes">Positioning -> 3D</td>	
+	<td class="Yes">Master Track -> 3D Panner</td>
+	<td class="Yes">Audio Asset -> 3D/2D</td>
+	<td class="Yes">SoundSource -> Spatial Blend</td>
   </tr>
   <tr>
-  	<td bgcolor="#808080"><p class="TableFeature">Pre-set Attenuation Support</p></td>
-	<td><p class="Yes">Yes</p></td>	
-	<td><p class="No">Not That I Know Of</p></td>
-	<td><p class="WorkAround">Prefabs</p></td>
-	<td><p class="WorkAround">Prefabs</p></td>
+  	<td class="TableFeature">Pre-set Attenuation Support</td>
+	<td class="Yes">Yes</td>	
+	<td class="No">Not That I Know Of</td>
+	<td class="WorkAround">Prefabs</td>
+	<td class="WorkAround">Prefabs</td>
   </tr>
 	  <tr>
-  	<td bgcolor="#808080"><p class="TableFeature">Draw Curves</p></td>
-	<td><p class="Yes">Yes</p></td>	
-	<td><p class="No">Not That I Know Of</p></td>
-	<td><p class="Yes">Yes</p></td>
-	<td><p class="Yes">Yes</p></td>
+  	<td class="TableFeature">Draw Curves</td>
+	<td class="Yes">Yes</td>	
+	<td class="No">Not That I Know Of</td>
+	<td class="Yes">Yes</td>
+	<td class="Yes">Yes</td>
   </tr>
       <tr>
-  	<td bgcolor="#808080"><p class="TableFeature">Pre-set Roll Off Curves</p></td>
-	<td><p class="Yes">10</p></td>	
-	<td><p class="Yes">5</p></td>
-	<td><p class="Yes">3</p></td>
-	<td><p class="Yes">3</p></td>
+  	<td class="TableFeature">Pre-set Roll Off Curves</td>
+	<td class="Yes">10</td>	
+	<td class="Yes">5</td>
+	<td class="Yes">3</td>
+	<td class="Yes">3</td>
   </tr>
       <tr>
-  	<td bgcolor="#808080"><p class="TableFeature">3D Sound in Engine Visualization</p></td>
-	<td><p class="Yes">Yes</p></td>	
-	<td><p class="No">Not That I Know Of</p></td>
-	<td><p class="No">Not That I Know Of</p></td>
-	<td><p class="Yes">Yes</p></td>
+  	<td class="TableFeature">3D Sound in Engine Visualization</td>
+	<td class="Yes">Yes</td>	
+	<td class="No">Not That I Know Of</td>
+	<td class="No">Not That I Know Of</td>
+	<td class="Yes">Yes</td>
   </tr>
       <tr>
-  	<td bgcolor="#808080"><p class="TableFeature">Distance Driven Parameters<br>(Besides Panning and Volume)</p></td>
-	<td><p class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Wwise.cs" target="_blank">New Game Parameter<br>-> Bind to Build-In Parameter -> Distance</a></p></td>
-	<td><p class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_FMOD.cs" target="_blank">Add Parameter <br> Add Built-in Parameter -> Distance</a></p></td>
-	<td><p class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Native.cs" target="_blank">Spread <br>(Code Yourself - Pitch and Doppler)</a></p></td>
-	<td><p class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Native.cs" target="_blank">Spread, Reverb <br>(Code Yourself - Any)</a></p></td>
+  	<td class="TableFeature">Distance Driven Parameters<br>(Besides Panning and Volume)</td>
+	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Wwise.cs" target="_blank">New Game Parameter<br>-> Bind to Build-In Parameter -> Distance</a></td>
+	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_FMOD.cs" target="_blank">Add Parameter <br> Add Built-in Parameter -> Distance</a></td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Native.cs" target="_blank">Spread <br>(Code Yourself - Pitch and Doppler)</a></td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Native.cs" target="_blank">Spread, Reverb <br>(Code Yourself - Any)</a></td>
   </tr>
   <!--Music-->
       <tr>
 	<th rowspan ="6">Music</th>
-  	<td bgcolor="#808080"><p class="TableFeature">Dynamic Music <br> Individual Instrument Mix </p></td>
-	<td><p class="Yes">Music Segment <br>-> Multiple Music Tracks</p></td>
-	<td><p class="Yes">New Parameter <br>-> Multiple Logic Tracks</p></td>
-	<td><p class="No">Code Yourself<br>(Hard to keep in Sync)</p></td>
-	<td><p class="No">Code Yourself<br>(Hard to keep in Sync)</p></td>
+  	<td class="TableFeature">Dynamic Music <br> Individual Instrument Mix</td>
+	<td class="Yes">Music Segment <br>-> Multiple Music Tracks</td>
+	<td class="Yes">New Parameter <br>-> Multiple Logic Tracks</td>
+	<td class="No">Code Yourself<br>(Hard to keep in Sync)</td>
+	<td class="No">Code Yourself<br>(Hard to keep in Sync)</td>
   </tr>
       <tr>
-  	<td bgcolor="#808080"><p class="TableFeature">Dynamic Music <br> Intensity Level Based </p></td>
-	<td><p class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Wwise.cs" target="_blank">Music<br>Switch Container</a></p></td>
-	<td><p class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_FMOD.cs" target="_blank">Loop Regions<br>Controlled by Parameters</a></p></td>
-	<td><p class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native4.cs" target="_blank">Multiple Audio Sources Different Volumes <br> All Mute and One is Full Volume</a></p></td>
-	<td><p class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native5.cs" target="_blank">Interpolate Between<br>Mixer Screenshots</a></p></td>
+  	<td class="TableFeature">Dynamic Music <br> Intensity Level Based </td>
+	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Wwise.cs" target="_blank">Music<br>Switch Container</a></td>
+	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_FMOD.cs" target="_blank">Loop Regions<br>Controlled by Parameters</a></td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native4.cs" target="_blank">Multiple Audio Sources Different Volumes <br> All Mute and One is Full Volume</a></td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native5.cs" target="_blank">Interpolate Between<br>Mixer Screenshots</a></td>
   </tr>
       <tr>
-  	<td bgcolor="#808080"><p class="TableFeature">Music Intros and Outros</p></td>
-	<td><p class="Yes">Move Entry Cue and Exit Cue</p></td>
-	<td><p class="Yes">Arrange in Event Logic</p></td>
-	<td><p class="No">Not That I Know Of</p></td>
-	<td><p class="No">Not That I Know Of</p></td>
+  	<td class="TableFeature">Music Intros and Outros</td>
+	<td class="Yes">Move Entry Cue and Exit Cue</td>
+	<td class="Yes">Arrange in Event Logic</td>
+	<td class="No">Not That I Know Of</td>
+	<td class="No">Not That I Know Of</td>
   </tr>
       <tr>
-  	<td bgcolor="#808080"><p class="TableFeature">On Beat Transitions</p></td>
-	<td><p class="Yes">Grid, Beat, Bar, Custom cue</p></td>
-	<td><p class="Yes">Quantizable Intervals(Notes &Bars)</p></td>
-	<td><p class="No">Not That I Know Of</p></td>
-	<td><p class="No">Not That I Know Of</p></td>
+  	<td class="TableFeature">On Beat Transitions</td>
+	<td class="Yes">Grid, Beat, Bar, Custom cue</td>
+	<td class="Yes">Quantizable Intervals(Notes &Bars)</td>
+	<td class="No">Not That I Know Of</td>
+	<td class="No">Not That I Know Of</td>
   </tr>
       <tr>
-  	<td bgcolor="#808080"><p class="TableFeature">Entering a Loop Chance to Play</p></td>
-	<td><p class="Yes">Music Sequence -> Weight</p></td>
-	<td><p class="Yes">Play Percentage</p></td>
-	<td><p class="No">Code Yourself</p></td>
-	<td><p class="No">Code Yourself</p></td>
+  	<td class="TableFeature">Entering a Loop Chance to Play</td>
+	<td class="Yes">Music Sequence -> Weight</td>
+	<td class="Yes">Play Percentage</td>
+	<td class="No">Code Yourself</td>
+	<td class="No">Code Yourself</td>
   </tr>
      <tr>
-  	<td bgcolor="#808080"><p class="TableFeature">Edit Transitions</p></td>
-	<td><p class="Yes">Specific Transitions/ Fade In or Out/ Stingers</p></td>
-	<td><p class="Yes">Arrange In Event Logic</p></td>
-	<td><p class="No">Not That I Know Of</p></td>
-	<td><p class="No">Not That I Know Of</p></td>
+  	<td class="TableFeature">Edit Transitions</td>
+	<td class="Yes">Specific Transitions/ Fade In or Out/ Stingers</td>
+	<td class="Yes">Arrange In Event Logic</td>
+	<td class="No">Not That I Know Of</td>
+	<td class="No">Not That I Know Of</td>
   </tr>
   <!--Mixing-->
 	 <tr>
 	 <th rowspan ="4">Mixing</th>
-  	<td bgcolor="#808080"><p class="TableFeature">Side Chaining / Ducking</p></td>
-	<td><p class="Yes">Yes</p></td>
-	<td><p class="Yes">Yes</p></td>
-	<td><p class="No">Not That I Know Of</p></td>
-	<td><p class="Yes">Yes</p></td>
+  	<td class="TableFeature">Side Chaining / Ducking</td>
+	<td class="Yes">Yes</td>
+	<td class="Yes">Yes</td>
+	<td class="No">Not That I Know Of</td>
+	<td class="Yes">Yes</td>
   </tr>
 	<tr>
-	<td bgcolor="#808080"><p class="TableFeature">Mixing Snapshots</p></td>
-	<td><p class="Yes">Yes</p></td>
-	<td><p class="Yes">Yes</p></td>
-	<td><p class="No">Not That I Know Of</p></td>
-	<td><p class="Yes">Yes</p></td>
+	<td class="TableFeature">Mixing Snapshots</td>
+	<td class="Yes">Yes</td>
+	<td class="Yes">Yes</td>
+	<td class="No">Not That I Know Of</td>
+	<td class="Yes">Yes</td>
   </tr>
   <tr>
-	<td bgcolor="#808080"><p class="TableFeature">Audio Debugging</p></td>
-	<td><p class="Yes">F6 -> Profiler</p></td>
-	<td><p class="Yes"> Window -> Profiler</p></td>
-	<td><p class="WorkAround">Debug.Log();</p></td>
-	<td><p class="WorkAround">Debug.Log();</p></td>
+	<td class="TableFeature">Audio Debugging</td>
+	<td class="Yes">F6 -> Profiler</td>
+	<td class="Yes"> Window -> Profiler</td>
+	<td class="WorkAround">Debug.Log();</td>
+	<td class="WorkAround">Debug.Log();</td>
   </tr>
     <tr>
-	<td bgcolor="#808080"><p class="TableFeature">Real Time Mixing</p></td>
-	<td><p class="Yes">Yes</p></td>
-	<td><p class="Yes">Yes</p></td>
-	<td><p class="No">Not That I Know Of</p></td>
-	<td><p class="Yes">Yes</p></td>
+	<td class="TableFeature">Real Time Mixing</td>
+	<td class="Yes">Yes</td>
+	<td class="Yes">Yes</td>
+	<td class="No">Not That I Know Of</td>
+	<td class="Yes">Yes</td>
   </tr>
   <!--System-->
   	 <tr>
 	 <th rowspan ="4">System</th>
-  	<td bgcolor="#808080"><p class="TableFeature">Parameters</p></td>
-	<td><p class="Yes">RTPC (Real Time Parameter Controller)</p></td>
-	<td><p class="Yes">Parameters</p></td>
-	<td><p class="Yes">audio.</p></td>
-	<td><p class="Yes">audio.</p></td>
+  	<td class="TableFeature">Parameters</td>
+	<td class="Yes">RTPC (Real Time Parameter Controller)</td>
+	<td class="Yes">Parameters</td>
+	<td class="Yes">audio.</td>
+	<td class="Yes">audio.</td>
   </tr>
 	<tr>
-  	<td bgcolor="#808080"><p class="TableFeature">Design Approach</p></td>
-	<td><p class="Yes">Event Based System ( Most Logic is Written in Code)</p></td>
-	<td><p class="Yes">Visual Logic Tracks ( Most Logic is Done Visually)</p></td>
-	<td><p class="Yes">C#/JavaScript</p></td>
-	<td><p class="Yes">C#/JavaScript</p></td>
+  	<td class="TableFeature">Design Approach</td>
+	<td class="Yes">Event Based System ( Most Logic is Written in Code)</td>
+	<td class="Yes">Visual Logic Tracks ( Most Logic is Done Visually)</td>
+	<td class="Yes">C#/JavaScript</td>
+	<td class="Yes">C#/JavaScript</td>
   </tr>
   	<tr>
-  	<td bgcolor="#808080"><p class="TableFeature">Web Build Support</p></td>
-	<td><p class="No">No (Using System.IO)</p></td>
-	<td><p class="No">No (Using System.IO)</p></td>
-	<td><p class="Yes">Yes</p></td>
-	<td><p class="Yes">Yes</p></td>
+  	<td class="TableFeature">Web Build Support</td>
+	<td class="No">No (Using System.IO)</td>
+	<td class="No">No (Using System.IO)</td>
+	<td class="Yes">Yes</td>
+	<td class="Yes">Yes</td>
   </tr>
   	<tr>
-  	<td bgcolor="#808080"><p class="TableFeature">MP3 Support</p></td>
-	<td><p class="No">Not That I Know Of</p></td>
-	<td><p class="Yes">Yes</p></td>
-	<td><p class="Yes">Yes</p></td>
-	<td><p class="Yes">Yes</p></td>
+  	<td class="TableFeature">MP3 Support</td>
+	<td class="No">Not That I Know Of</td>
+	<td class="Yes">Yes</td>
+	<td class="Yes">Yes</td>
+	<td class="Yes">Yes</td>
   </tr>
 </table>
 <br> <br>
-<h2>Feedback, Contributions and Critiques Are Most Welcome</h2>
-Send to: dani.kogandk@gmail.com
+<h4 align="center">Feedback, contributions and critiques are most welcome, send to dani.kogandk@gmail.com</h4>
 </body>
 </html>
