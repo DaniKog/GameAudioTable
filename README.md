@@ -17,4 +17,6 @@ Huge thanks to contributors which helped fix problems and pointed to inconsisten
 <a href="https://twitter.com/AKMikeD" target="_blank">@AKMikeD</a>
 <br>
 <a href="https://twitter.com/redbluemonkey" target="_blank">@redbluemonkey</a>
+<br>
+<a href="https://twitter.com/SimonDSchmidt" target="_blank">@SimonDSchmidt</a>
 
