@@ -3,7 +3,7 @@
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3187723199" DateHigh="30445773"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Actor-Mixer Hierarchy\Examples.wwu" DateLow="3741856845" DateHigh="30445773"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Attenuations\Default Work Unit.wwu" DateLow="3467700967" DateHigh="30443591"/>
-	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\AudioExamplesW.DarKen.wsettings" DateLow="1456505367" DateHigh="30446014"/>
+	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\AudioExamplesW.DarKen.wsettings" DateLow="716991455" DateHigh="30446045"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\AudioExamplesW.wproj" DateLow="615558630" DateHigh="30443594"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Control Surface Sessions\Default Work Unit.wwu" DateLow="3467621109" DateHigh="30443591"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Conversion Settings\Default Work Unit.wwu" DateLow="3467580894" DateHigh="30443591"/>
@@ -13,12 +13,12 @@
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Effects\Factory Effects.wwu" DateLow="3896057600" DateHigh="30419400"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Effects\Factory McDSP Effects.wwu" DateLow="3356057600" DateHigh="30419400"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Events\Default Work Unit.wwu" DateLow="3018453635" DateHigh="30445782"/>
-	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Events\Examples.wwu" DateLow="3018523926" DateHigh="30445782"/>
+	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Events\Examples.wwu" DateLow="2448675073" DateHigh="30446023"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Game Parameters\Default Work Unit.wwu" DateLow="3741256424" DateHigh="30445773"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Game Parameters\Examples.wwu" DateLow="3741836834" DateHigh="30445773"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="3356057600" DateHigh="30419400"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="3286652771" DateHigh="30445773"/>
-	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Interactive Music Hierarchy\Examples.wwu" DateLow="4084506462" DateHigh="30446002"/>
+	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Interactive Music Hierarchy\Examples.wwu" DateLow="2528630696" DateHigh="30446023"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3467550932" DateHigh="30443591"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Mixing Sessions\Default Work Unit.wwu" DateLow="3467720982" DateHigh="30443591"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Modulators\Default Work Unit.wwu" DateLow="3467601087" DateHigh="30443591"/>
@@ -26,10 +26,10 @@
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Queries\Default Work Unit.wwu" DateLow="3467680953" DateHigh="30443591"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Queries\Factory Queries.wwu" DateLow="3896057600" DateHigh="30419400"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\SoundBanks\Default Work Unit.wwu" DateLow="3490067553" DateHigh="30445773"/>
-	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\SoundBanks\Examples.wwu" DateLow="3018613707" DateHigh="30445782"/>
+	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\SoundBanks\Examples.wwu" DateLow="2448855193" DateHigh="30446023"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Soundcaster Sessions\Default Work Unit.wwu" DateLow="3467660939" DateHigh="30443591"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\States\Default Work Unit.wwu" DateLow="3877299956" DateHigh="30445773"/>
-	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\States\Examples.wwu" DateLow="3791035082" DateHigh="30445784"/>
+	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\States\Examples.wwu" DateLow="2528510657" DateHigh="30446023"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Switches\Default Work Unit.wwu" DateLow="3467520852" DateHigh="30443591"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Triggers\Default Work Unit.wwu" DateLow="3292419187" DateHigh="30445791"/>
 	<ValidationCacheItem File="D:\GIT\AudioEnginesMarkdown\Assets\AudioEngineProjects\Wwise\AudioExamplesW\Triggers\Examples.wwu" DateLow="3292359175" DateHigh="30445791"/>
