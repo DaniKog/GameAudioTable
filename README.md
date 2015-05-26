@@ -5,7 +5,7 @@ http://danikog.github.io/AudioEnginesMarkdown/
 <h2>Latest Build - v0.6</h2>
 https://docs.google.com/uc?id=0ByAWSt6YOwb0OHNTazdmX1NrbUE&export=download
 <br>
-<h2> implementation Tutorials</h2>
+<h2> Implementation Tutorials</h2>
 Wwise + Unity : https://www.youtube.com/watch?v=MowqJCNfv7k
 <br>
 FMOD + Unity: https://www.youtube.com/watch?v=p14Hx_jLGEA
