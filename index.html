@@ -1,3 +1,4 @@
+
 <html>
 <body>
 <style>
@@ -9,7 +10,7 @@ font-weight: bold;
 text-shadow: .05em .05em .05em rgba(0,0,0,0.5);
 }
 a {text-decoration: none;}
-a:hover {color: #AAA;}
+a:hover {color: #FFFFFF;}
 table {
     width:80%;
 }
@@ -80,7 +81,8 @@ tr:hover {
   <tr>
 	<th colspan="2"><p align="right"><font size="4" align="right">Engine</font></p></th>
    <th rowspan="2"><a href="https://unity3d.com/" target="_blank"><h2>Unity4</h2></th>
-    <th rowspan="2"><a href="https://unity3d.com/" target="_blank"><h2>Unity5</h2></th>		
+    <th rowspan="2"><a href="https://unity3d.com/" target="_blank"><h2>Unity5</h2></th>	
+    <th rowspan="2"><a href="https://www.unrealengine.com/" target="_blank"><h2>Unreal 4</h2></th>		
 	<th rowspan="2"><a href="https://www.audiokinetic.com/" target="_blank"><h2>Wwise</h2></th>
 	<th rowspan="2"> <a href="http://www.fmod.org"><h2>Fmod</h2></a></th>
 	</tr>
@@ -94,6 +96,7 @@ tr:hover {
 	<td class="SubFeature" title="On each play, plays a different sound effect">Variation</td>
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFXVariation_Native.cs" target="_blank">AudioClip[]</a></td>
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFXVariation_Native.cs" target="_blank">AudioClip[]</a></td>
+	<td class="Yes">Blueprints -> Random Node</td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_Wwise.cs" target="_blank">Random Container</a></td>	
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_FMOD.cs" target="_blank">Multi Sound</a></td>
   </tr>
@@ -101,13 +104,15 @@ tr:hover {
     <td class="SubFeature" title="On each play, changes the pitch of the sound">Pitch Modulation</td>
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Native.cs" target="_blank">audio.pitch = Random.Range(Min,Max)]</a></td>		
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Native.cs" target="_blank">audio.pitch = Random.Range(Min,Max)]</a></td>	
+	<td class="Yes">Blueprints -> Modulator Node</td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Wwise.cs" target="_blank">Randomizer</a></td>		
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_FMOD.cs" target="_blank">Modulation -> Random</a></td>
   </tr>
   <tr>
 	<td class="SubFeature" title="Prioritizing and assigning probability for each sound effect">Variation Priority / Probability</td>
 	<td class="No">Code Yourself</td>		
-	<td class="No">Code Yourself</td>	
+	<td class="No">Code Yourself</td>
+	<td class="Yes">Blueprints -> Modulator Node -> Weights</td>	
 	<td class="Yes">Weight</td>		
 	<td class="Yes">Play Percentage</td>
 	</tr>
@@ -117,6 +122,7 @@ tr:hover {
 	<td class="SubFeature" title="3D aware sounds, changing volume and panning depends on player's location">3D Sounds</td>
 	<td class="Yes">Audio Asset -> 3D/2D</td>
 	<td class="Yes">SoundSource -> Spatial Blend</td>
+	<td class="Yes">3D -> Set Attenuation</td>	
 	<td class="Yes">Positioning -> 3D</td>	
 	<td class="Yes">Master Track -> 3D Panner</td>
   </tr>
@@ -124,6 +130,7 @@ tr:hover {
   	<td class="SubFeature" title="Drawing your own Rolloff/ Attenuation Curves on a 3D sound">Custom Rolloff / Attenuation Curve </td>
 	<td class="Yes">Audio Source -> 3D Settings</td>
 	<td class="Yes">Audio Source -> 3D Settings</td>
+	<td class="Yes"><a href="https://docs.unrealengine.com/latest/INT/Engine/Audio/DistanceModelAttenuation/index.html" target="_blank">Blueprints -> Attenuation Node -> Size Adjustments</a></td>	
 	<td class="Yes">Positioning -> Attenuation -> Edit</td>	
 	<td class="Yes">3D Panner -> Off -> Add Built-in Parameter <br> -> Distance</td>
   </tr>
@@ -131,20 +138,23 @@ tr:hover {
   	<td class="SubFeature" title="Save Custom created Rolloff/ Attenuation Curves for later use">Save Custom Made Rolloff /  Attenuation Curve</td>
 	<td class="WorkAround">Prefabs</td>
 	<td class="WorkAround">Prefabs</td>
+	<td class="WorkAround">Copy and Paste Existing Attenuation Nodes</td>
 	<td class="Yes">Positioning -> 3D -> <br> Attenuation -> Edit -> Save Pre-set </td>	
 	<td class="No">Not That I Know Of</td>
   </tr>
       <tr>
-  	<td class="SubFeature" title="Drawing a sphere in the game engine according to the Rolloff/ Attenuation of a sound">3D Sound in Game Engine Visualization</td>
+  	<td class="SubFeature" title="Drawing a sphere in the game engine according to the Rolloff/ Attenuation of a sound">3D Sound in Engine Visualization</td>
 	<td class="Yes">Audio Source -> 3D settings -> Max Distance <br> (casts a sphere in editor on change)</td>
 	<td class="Yes">Audio Source -> 3D settings -> Max Distance <br> (casts a sphere in editor on change)</td>
-	<td class="WorkAround">Researching...</td>	
-	<td class="WorkAround">Researching...</td>
+	<td class="Yes"></td>
+	<td class="Yes"></td>	
+	<td class="Yes">Profiler -> 3D view</td>
   </tr>
       <tr>
   	<td class="SubFeature" title="Built in Parameters that allow you to control aspects of a sound based on the player's location">Distance Driven Parameters<br>(Besides Panning and Volume)</td>
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Native.cs" target="_blank">Spread <br>(Code Yourself - Pitch and Doppler)</a></td>
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Native.cs" target="_blank">Spread, Reverb <br>(Code Yourself - Any)</a></td>
+	<td class="WorkAround">Can Be Done In Blueprints - Attenuation Node</td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Wwise.cs" target="_blank">New Game Parameter<br>-> Bind to Build-In Parameter -> Distance</a></td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_FMOD.cs" target="_blank">Add Parameter <br> Add Built-in Parameter -> Distance</a></td>
   </tr>
@@ -154,6 +164,7 @@ tr:hover {
   	<td class="SubFeature" title="Each layer represents an instrument and each instrument is dynamically mixed based on player's actions / location">Dynamic Music <br> Individual Instrument Mix</td>
 	<td class="No">Code Yourself<br>(Hard to keep in Sync)</td>
 	<td class="No">Code Yourself<br>(Hard to keep in Sync)</td>
+	<td class="WorkAround">Can Be Done In Blueprints - Attenuation Node</td>
 	<td class="Yes">Music Segment <br>-> Multiple Music Tracks</td>
 	<td class="Yes">New Parameter <br>-> Multiple Logic Tracks</td>
   </tr>
@@ -161,6 +172,7 @@ tr:hover {
   	<td class="SubFeature" title="The music changes based on the player's actions / location">Dynamic Music <br> Intensity Level Based </td>
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native4.cs" target="_blank">Multiple Audio Sources Different Volumes <br> All Mute and One is Full Volume</a></td>
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native5.cs" target="_blank">Interpolate Between<br>Mixer Screen-shots</a></td>
+	<td class="No">Not that I am aware of</td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Wwise.cs" target="_blank">Music<br>Switch Container</a></td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_FMOD.cs" target="_blank">Loop Regions<br>Controlled by Parameters</a></td>
   </tr>
@@ -168,13 +180,15 @@ tr:hover {
   	<td class="SubFeature" title="Playing a into before entering a loop and playing an outro when exiting" >Music Intros and Outros</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="No">Not That I Know Of</td>
+	<td class="WorkAround">Can Be Done in Blueprints</td>
 	<td class="Yes">Move Entry Cue and Exit Cue</td>
 	<td class="Yes">Arrange In Event's Logic Timelines</td>
   </tr>
       <tr>
   	<td class="SubFeature" title="Trigger transitions on beat with the music">On Beat Transitions</td>
-	<td class="No">Not That I Know Of</td>
-	<td class="No">Not That I Know Of</td>
+	<td class="No"><a href="http://docs.unity3d.com/ScriptReference/AudioSource.GetSpectrumData.html" target="_blank">GetSpectrumData </a> <br> Code Yourself</td>
+	<td class="No"><a href="http://docs.unity3d.com/ScriptReference/AudioSource.GetSpectrumData.html" target="_blank">GetSpectrumData </a> <br> Code Yourself</td>
+	<td class="WorkAround"><a href="https://forums.unrealengine.com/showthread.php?15791-Music-Timing-SystemCan" target="_blank">Can Be Done in Blueprints</a></td>
 	<td class="Yes">Transitions - > Source -> Exit Source At</td>
 	<td class="Yes">Logic Tracks -> Transition -> Quantizable Intervals</td>
   </tr>
@@ -182,11 +196,13 @@ tr:hover {
   	<td class="SubFeature" title="Change to play upon entering a loop">Entering a Loop Chance to Play</td>
 	<td class="No">Code Yourself</td>
 	<td class="No">Code Yourself</td>
+	<td class="No">Can Be Done In Blueprints - Random Node</td>
 	<td class="Yes">Music Sequence -> Weight</td>
 	<td class="Yes">Play Percentage</td>
   </tr>
      <tr>
   	<td class="SubFeature" title="Edit transitions between different music states ">Edit Transitions</td>
+	<td class="No">Not That I Know Of</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Specific Transitions/ Fade In or Out/ Stingers</td>
@@ -198,6 +214,7 @@ tr:hover {
   	<td class="SubFeature" title="control one sound's signal based on the other">Side Chaining / Ducking</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Yes</td>
+	<td class="Yes">Blueprints -> Sound Class -> Blueprints -> Ducking</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
   </tr>
@@ -205,6 +222,7 @@ tr:hover {
 	<td class="SubFeature" title="Save the current values and state of the mixing deck (and load it)">Mixing Snapshots</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Yes</td>
+	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
   </tr>
@@ -212,6 +230,7 @@ tr:hover {
 	<td class="SubFeature" title="Mixing while the game is running">Real Time Mixing</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Yes</td>
+	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Remote... -> Connect</td>
 	<td class="Yes">File -> Connect to Game </td>
   </tr>
@@ -221,6 +240,7 @@ tr:hover {
 	<td class="SubFeature" title="Profiler that allows you see information about the audio system and the audio events">Audio Debugging</td>
 	<td class="WorkAround">Debug.Log();</td>
 	<td class="WorkAround">Debug.Log();</td>
+	<td class="Yes"><a href="https://forums.unrealengine.com/showthread.php?15791-Music-Timing-SystemCan" target="_blank">Blueprint Debugger</a></td>
 	<td class="Yes">F6 -> Profiler</td>
 	<td class="Yes"> Window -> Profiler</td>
   </tr>
@@ -229,12 +249,14 @@ tr:hover {
 	<td class="No">N/A</td>
 	<td class="No">N/A</td>
 	<td class="WorkAround">Researching</td>
-	<td class="Yes">Instant Replay</td>
+	<td class="WorkAround">Researching</td>
+	<td class="Yes"><a href="https://www.youtube.com/watch?v=4G0IHefO4v8" target="_blank">Instant Replay</td>
   </tr>
    <tr>
   	<td class="SubFeature" title="The way the game engine is effecting the sounds in the audio engine">Parameters</td>
 	<td class="Yes">audio.</td>
 	<td class="Yes">audio.</td>
+	<td class="Yes">Blueprint Nodes</td>
 	<td class="Yes">RTPC (Real Time Parameter Controller)</td>
 	<td class="Yes">Parameters</td>
   </tr>
@@ -242,6 +264,7 @@ tr:hover {
   	<td class="SubFeature" title="The logical mind set and approach of each engine">Design Approach</td>
 	<td class="Yes">C#/JavaScript</td>
 	<td class="Yes">C#/JavaScript</td>
+	<td class="Yes">C# / Blueprints</td>
 	<td class="Yes">Event Based System ( Most Logic is Written in Code)</td>
 	<td class="Yes">Visual Logic Tracks ( Most Logic is Done Visually)</td>
   </tr>
@@ -249,6 +272,7 @@ tr:hover {
   	<td class="SubFeature" title="Can create an executable that will run in a web browser">Web Build Support</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
+	<td class="WorkAround">Researching</td>
 	<td class="No">No (Using System.IO)</td>
 	<td class="No">No (Using System.IO)</td>
   </tr>
@@ -256,6 +280,7 @@ tr:hover {
   	<td class="SubFeature" title=" Can use mp3 in the engine">MP3 Support</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
+	<td class="No">Not That I Know Of</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Yes</td>
   </tr>
@@ -268,6 +293,10 @@ tr:hover {
 <h1>Thanks</h1>
 <p align="center"> Huge thanks to contributors which helped fix problems and pointed to inconsistencies in the table
 <br>
+<br>
+<a href="https://twitter.com/ShriekStudios" target="_blank">@ShriekStudios </a> - "Starter of The Unreal 4 Column"
+<br>
+<a href="https://twitter.com/MattRyanSound" target="_blank">@MattRyanSound</a>
 <br>
 <a href="https://twitter.com/AKMikeD" target="_blank">@AKMikeD</a>
 <br>
