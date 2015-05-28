@@ -63,10 +63,10 @@ tr:hover {
     opacity: 0.9;
 }
 </style>
-Last Update - 26.05.2015
+Last Update - 28.05.2015 
 <br>
-- Added Fabric's engine first pass.
-<h1>Audio Feature Implementation  Comparison Table <br> #AudioTable V1.6</h1>
+- Refined Fabric's Column.
+<h1>Audio Feature Implementation  Comparison Table <br> #AudioTable V1.7</h1>
 <p align="center"><a href="https://github.com/DaniKog/AudioEnginesMarkdown" target="_blank">GitHub Repository with Source Code</a></p>
 <table align="center"><tr>
 <td class="Yes"> Feature Exists</td>
@@ -105,7 +105,7 @@ Last Update - 26.05.2015
 	<td class="Yes">Blueprints -> Modulator Node</td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Wwise.cs" target="_blank">Randomizer</a></td>		
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_FMOD.cs" target="_blank">Modulation -> Random</a></td>
-	<td class="Yes"><a href="" target="_blank">RTP Parameter Modulators</a></td>
+	<td class="WorkAround">Researching...(In the meantime<br> Fabric.AudioComponent audio.pitch)</td>
   </tr>
   <tr>
 	<td class="SubFeature" title="Prioritizing and assigning probability for each sound effect">Variation Priority / Probability</td>
@@ -114,7 +114,7 @@ Last Update - 26.05.2015
 	<td class="Yes">Blueprints -> Modulator Node -> Weights</td>	
 	<td class="Yes">Weight</td>		
 	<td class="Yes">Play Percentage</td>
-	<td class="Yes">Weight, Event Based Probability</td>
+	<td class="Yes">Event Trigger -> Probability</td>
 	</tr>
 <!--3D-->
   <tr>
@@ -161,7 +161,7 @@ Last Update - 26.05.2015
 	<td class="WorkAround">Can Be Done In Blueprints - Attenuation Node</td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Wwise.cs" target="_blank">New Game Parameter<br>-> Bind to Build-In Parameter -> Distance</a></td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_FMOD.cs" target="_blank">Add Parameter <br> Add Built-in Parameter -> Distance</a></td>
-	<td class="WorkAround">Researching...</td>
+	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/287978-runtimeparameter" target="_blank">Window -> Fabric -> Run Time Parameters <br>-> Parameter -> Distance</td>
   </tr>
   <!--Music-->
       <tr>
@@ -181,7 +181,7 @@ Last Update - 26.05.2015
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Wwise.cs" target="_blank">Music<br>Switch Container</a></td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_FMOD.cs" target="_blank">Loop Regions<br>Controlled by Parameters</a></td>
-	<td class="WorkAround">Researching...</td>
+	<td class="Yes"><a href="https://www.youtube.com/watch?v=joV2LpShX14" target="_blank">Switch, Sequence, Timeline Components <br>Controlled by Parameters/EventActions</td>
   </tr>
       <tr>
   	<td class="SubFeature" title="Playing a into before entering a loop and playing an outro when exiting" >Music Intros and Outros</td>
@@ -208,7 +208,7 @@ Last Update - 26.05.2015
 	<td class="No">Can Be Done In Blueprints - Random Node</td>
 	<td class="Yes">Music Sequence -> Weight</td>
 	<td class="Yes">Play Percentage</td>
-	<td class="WorkAround">Researching...</td>
+	<td class="Yes">Event Trigger -> Probability</td>
   </tr>
      <tr>
   	<td class="SubFeature" title="Edit transitions between different music states ">Edit Transitions</td>
@@ -259,7 +259,7 @@ Last Update - 26.05.2015
 	<td class="WorkAround"><a href="https://forums.unrealengine.com/showthread.php?15791-Music-Timing-SystemCan" target="_blank">Blueprint Debugger</a></td>
 	<td class="Yes">F6 -> Profiler</td>
 	<td class="Yes"> Window -> Profiler</td>
-	<td class="Yes">EventLog, EventMonitor, DebugLog</td>
+	<td class="Yes"> Window -> Fabric -> (EventLog / EventMonitor)<br> Or Debug.Log();</td>
   </tr>
      <tr>
   	<td class="SubFeature" title="The Ability to record an profiler session change some events replay the recording and compare the two">Editable Profiler Replays</td>
@@ -313,7 +313,7 @@ Last Update - 26.05.2015
 
 <h4 align="center">This table is a based on personal experiences. <br>Feedback, contributions and critiques are most welcome, send to dani.kogandk at gmail.com, or <a href="https://twitter.com/Dani_Kogan" target="_blank">@Dani_Kogan</a> </h4>
 <h1>Thanks</h1>
-<p align="center"> Huge thanks to contributors which helped fix problems and pointed to inconsistencies in the table
+<p align="center"> Huge thanks to contributors which added information, helped fix problems and pointed to inconsistencies in the table.
 <br>
 <br>
 <a href="https://twitter.com/ShriekStudios" target="_blank">@ShriekStudios </a> - "Starter of The Unreal 4 Column"
