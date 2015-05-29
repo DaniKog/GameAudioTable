@@ -1,3 +1,4 @@
+
 <html>
 <body>
 <style>
@@ -63,10 +64,11 @@ tr:hover {
     opacity: 0.9;
 }
 </style>
-Last Update - 28.05.2015 
+Last Update - 29.05.2015 
 <br>
-- Refined Fabric's Column.
-<h1>Audio Feature Implementation  Comparison Table <br> #AudioTable V1.7</h1>
+- Refined Unreal's Column.
+- Added Documentation Row.
+<h1>Audio Feature Implementation  Comparison Table <br> #AudioTable V1.8</h1>
 <p align="center"><a href="https://github.com/DaniKog/AudioEnginesMarkdown" target="_blank">GitHub Repository with Source Code</a></p>
 <table align="center"><tr>
 <td class="Yes"> Feature Exists</td>
@@ -86,14 +88,23 @@ Last Update - 28.05.2015
 	  <tr>
     <th colspan="2"><p align="left"><font size="4">Feature</font></td>
   </tr>
-
+  <!--Documentation-->
+  <tr>
+   <th  colspan = "2">Documentation</th> 
+   	<td class="Yes"><a href="http://docs.unity3d.com/460/Documentation/Manual/Audio.html" target="_blank">Click Here</a></td>
+	<td class="Yes"><a href="http://docs.unity3d.com/460/Documentation/Manual/Audio.html" target="_blank">Click Here</a></td>
+	<td class="Yes"><a href="https://docs.unrealengine.com/latest/INT/Engine/Audio/index.html" target="_blank">Click Here</a></td>
+	<td class="Yes"><a href="https://www.audiokinetic.com/download/documents/" target="_blank">Click Here</a></td>
+	<td class="Yes"><a href="http://www.fmod.org/documentation/" target="_blank">Click Here</a></td>
+	<td class="Yes"><a href="http://fabric-manual.com/s/Docs/m/Fabric" target="_blank">Click Here</a></td>
+	</tr>
 <!--SFX-->
   <tr>
     <th rowspan ="3" >SFX</th>
 	<td class="SubFeature" title="On each play, plays a different sound effect">Variation</td>
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_Native.cs" target="_blank">AudioClip[]</a></td>
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_Native.cs" target="_blank">AudioClip[]</a></td>
-	<td class="Yes">Blueprints -> Random Node</td>
+	<td class="Yes">SoundCue -> Random Node</td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_Wwise.cs" target="_blank">Random Container</a></td>	
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_FMOD.cs" target="_blank">Multi Sound</a></td>
 	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/287975-randomcomponent" target="_blank">Random Component</a></td>
@@ -102,7 +113,7 @@ Last Update - 28.05.2015
     <td class="SubFeature" title="On each play, changes the pitch of the sound">Pitch Modulation</td>
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Native.cs" target="_blank">audio.pitch = Random.Range(Min,Max)]</a></td>		
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Native.cs" target="_blank">audio.pitch = Random.Range(Min,Max)]</a></td>	
-	<td class="Yes">Blueprints -> Modulator Node</td>
+	<td class="Yes">SoundCue -> Modulator Node</td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Wwise.cs" target="_blank">Randomizer</a></td>		
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_FMOD.cs" target="_blank">Modulation -> Random</a></td>
 	<td class="WorkAround">Researching...(In the meantime<br> Fabric.AudioComponent audio.pitch)</td>
@@ -111,7 +122,7 @@ Last Update - 28.05.2015
 	<td class="SubFeature" title="Prioritizing and assigning probability for each sound effect">Variation Priority / Probability</td>
 	<td class="No">Code Yourself</td>		
 	<td class="No">Code Yourself</td>
-	<td class="Yes">Blueprints -> Modulator Node -> Weights</td>	
+	<td class="Yes">SoundCue -> Modulator Node -> Weights</td>	
 	<td class="Yes">Weight</td>		
 	<td class="Yes">Play Percentage</td>
 	<td class="Yes">Event Trigger -> Probability</td>
@@ -149,7 +160,7 @@ Last Update - 28.05.2015
   	<td class="SubFeature" title="Drawing a sphere in the game engine according to the Rolloff/ Attenuation of a sound">3D Sound in Game Engine Visualization</td>
 	<td class="Yes">Audio Source -> 3D settings -> Max Distance <br> (casts a sphere in editor on change)</td>
 	<td class="Yes">Audio Source -> 3D settings -> Max Distance <br> (casts a sphere in editor on change)</td>
-	<td class="WorkAround">Researching...</td>
+	<td class="Yes">SoundCue -> Debug |<br> In Game -> <br> (command stat sounds -Debug)</td>
 	<td class="WorkAround">Researching...</td>	
 	<td class="WorkAround">Researching...</td>
 	<td class="WorkAround">Researching...</td>
@@ -158,7 +169,7 @@ Last Update - 28.05.2015
   	<td class="SubFeature" title="Built in Parameters that allow you to control aspects of a sound based on the player's location">Distance Driven Parameters<br>(Besides Panning and Volume)</td>
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Native.cs" target="_blank">Spread <br>(Code Yourself - Pitch and Doppler)</a></td>
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Native.cs" target="_blank">Spread, Reverb <br>(Code Yourself - Any)</a></td>
-	<td class="WorkAround">Can Be Done In Blueprints - Attenuation Node</td>
+	<td class="Yes">SoundCue -> Corssfade by Distance Node</td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Wwise.cs" target="_blank">New Game Parameter<br>-> Bind to Build-In Parameter -> Distance</a></td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_FMOD.cs" target="_blank">Add Parameter <br> Add Built-in Parameter -> Distance</a></td>
 	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/287978-runtimeparameter" target="_blank">Window -> Fabric -> Run Time Parameters <br>-> Parameter -> Distance</td>
@@ -226,7 +237,7 @@ Last Update - 28.05.2015
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
-	<!--Unreal4<td class="Yes">Blueprints -> Sound Class -> Blueprints -> Ducking</td>-->
+	<!--Unreal4<td class="Yes">Sound Class -> Add Passive Sound Mix</td>-->
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
@@ -235,7 +246,8 @@ Last Update - 28.05.2015
 	<td class="SubFeature" title="Save the current values and state of the mixing deck (and load it)">Mixing Snapshots</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Yes</td>
-	<td class="No">Not That I Know Of</td>
+	<td class="Yes">Yes</td>
+	<!--Unreal4<td class="Yes">Save SoundClasses</td>-->
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
@@ -256,16 +268,16 @@ Last Update - 28.05.2015
 	<td class="SubFeature" title="Profiler that allows you see information about the audio system and the audio events">Audio Debugging</td>
 	<td class="WorkAround">Debug.Log();</td>
 	<td class="WorkAround">Debug.Log();</td>
-	<td class="WorkAround"><a href="https://forums.unrealengine.com/showthread.php?15791-Music-Timing-SystemCan" target="_blank">Blueprint Debugger</a></td>
+	<td class="Yes"><a href="https://answers.unrealengine.com/questions/121899/console-commands-for-audio-broken.html" target="_blank">Blueprint Debugger / stat sounds -debug</a></td>
 	<td class="Yes">F6 -> Profiler</td>
 	<td class="Yes"> Window -> Profiler</td>
 	<td class="Yes"> Window -> Fabric -> (EventLog / EventMonitor)<br> Or Debug.Log();</td>
   </tr>
      <tr>
   	<td class="SubFeature" title="The Ability to record an profiler session change some events replay the recording and compare the two">Editable Profiler Replays</td>
-	<td class="No">N/A</td>
-	<td class="No">N/A</td>
-	<td class="WorkAround">Researching</td>
+	<td class="No">Not That I Know Of</td>
+	<td class="No">Not That I Know Of</td>
+	<td class="No">Not That I Know Of</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes"><a href="https://www.youtube.com/watch?v=4G0IHefO4v8" target="_blank">Instant Replay</td>
 	<td class="No">Not That I Know Of</td>
@@ -301,13 +313,11 @@ Last Update - 28.05.2015
   	<td class="SubFeature" title=" Can use mp3 in the engine">MP3 Support</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
-	<td class="No">Not That I Know Of</td>
+	<td class="No">iOS only</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
   </tr>
-  
-
 </table>
 <br> 
 
@@ -316,9 +326,9 @@ Last Update - 28.05.2015
 <p align="center"> Huge thanks to contributors which added information, helped fix problems and pointed to inconsistencies in the table.
 <br>
 <br>
-<a href="https://twitter.com/AnastasiaDevana" target="_blank">@AnastasiaDevana </a> - "Owner of a Tutorial Sword"
-<br>
 <a href="https://twitter.com/ShriekStudios" target="_blank">@ShriekStudios </a> - "Starter of The Unreal 4 Column"
+<br>
+<a href="https://twitter.com/AnastasiaDevana" target="_blank">@AnastasiaDevana </a>	
 <br>
 <a href="https://twitter.com/MattRyanSound" target="_blank">@MattRyanSound</a>
 <br>
