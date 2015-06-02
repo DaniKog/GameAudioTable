@@ -10,11 +10,12 @@ Wwise + Unity : https://www.youtube.com/watch?v=MowqJCNfv7k
 <br>
 FMOD + Unity: https://www.youtube.com/watch?v=p14Hx_jLGEA
 <br>
-<p align="center">
-<h1>Thanks</h1>
+
+<h2>Thanks</h2>
 Huge thanks to contributors which added information, helped fix problems and pointed to inconsistencies in the table.
 <br>
 <br>
+<p align="center">
 <a href="https://twitter.com/Tazman_Audio" target="_blank"> @Tazman_Audio </a> 
 <br>
 <a href="https://twitter.com/ShriekStudios" target="_blank">@ShriekStudios </a> 
