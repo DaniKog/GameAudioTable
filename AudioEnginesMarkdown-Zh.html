@@ -1,0 +1,390 @@
+
+<!-- saved from url=(0046)http://danikog.github.io/AudioEnginesMarkdown/ -->
+<html class="hb-loaded" version="g42dymwpi--nx"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head><body huaban_collector_injected="true"><div id="StayFocusd-infobar" style="display: none; top: 68px;">
+    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
+    <span id="StayFocusd-infobar-msg"></span>
+    <span id="StayFocusd-infobar-links">
+        <a id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a id="StayFocusd-infobar-hide">hide once</a>
+    </span>
+</div>
+<style>
+h2 {
+font-family: Arial,Helvetica,sans-serif;
+color: #FFF;
+font-weight: bold;
+text-shadow: .05em .05em .05em rgba(0,0,0,0.5);
+}
+a {text-decoration: none;}
+
+a:hover {color: FFFFFF;}
+
+
+table {
+table-layout: fixed;
+    width:90%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: center;
+}
+table#t01 th	{
+	background: rgb(92,92,92);
+    color: white;
+}
+table#t01 th:nth-child(0)) { text-align: left; }
+h1{ text-align: center; }
+td.SubFeature
+{
+text-align: center;
+color: white;
+font-size: 15px;
+font-weight: lighter;
+background-color: #808080;
+}
+td.Feature
+{
+text-align: center;
+color: white;
+font-size: 15px;
+font-weight: lighter;
+background-color: #808080;
+}
+td.是
+{
+text-align: center;
+background-color: #80CC80;
+//Green
+}
+td.WorkAround
+{
+text-align: center;
+background-color: #FFDB4D;
+//Yellow
+}
+td.No
+{
+text-align: center;
+background-color: #FF8080;
+//Red
+}
+tr:hover {
+    opacity: 0.9;
+}
+th.norightborder
+{ 
+border-right: 0;
+border-bottom: 0;
+}
+th.noleftborder
+{ 
+border-left: 0;
+border-bottom: 0;
+}
+</style>
+<div align="left">上次更新 - 1.06.2015 <div align="right"> <a href="Index.html">English Version</a> </div>
+- 提炼闪避 / 旁链效果 <br>
+- 增加了教程的链接
+<h1>游戏引擎音频插件-特性对照表 <br> #GameAudioTable V2.0</h1>
+<p align="center"><a href="https://github.com/DaniKog/AudioEnginesMarkdown" target="_blank">GitHub 仓库（附源代码）</a></p>
+<table align="center"><tbody><tr>
+<td class="是"> 绿色：具备特性</td>
+</tr><tr><td class="WorkAround"> 黄色：存在变通的办法</td>
+</tr><tr><td class="No"> 红色：据我所知不存在</td></tr></tbody></table>
+<br>
+<table id="t01" align="Center">
+  <tbody><tr>
+	<th colspan="1" width="4%" class="norightborder"><p align="right"></p></th>
+	<th colspan="1" width="13%" class="noleftborder"><p align="right"><font size="4" align="right">引擎</font></p></th>
+	<th rowspan="2"><a href="https://unity3d.com/" target="_blank"><h2>Unity4</h2></a></th>
+    <th rowspan="2"><a href="https://unity3d.com/" target="_blank"><h2>Unity5</h2></a></th>	
+    <th rowspan="2"><a href="https://www.unrealengine.com/" target="_blank"><h2>Unreal 4</h2></a></th>		
+	<th rowspan="2"><a href="https://www.audiokinetic.com/" target="_blank"><h2>Wwise</h2></a></th>
+	<th rowspan="2"> <a href="http://www.fmod.org/"><h2>FMOD</h2></a></th>
+	<th rowspan="2"> <a href="http://www.tazman-audio.co.uk/"><h2>Fabric</h2></a></th>
+	</tr>
+	  <tr>
+    <th colspan="2"><p align="left"><font size="4">特性</font>
+  </p></th></tr>
+  <!--Documentation-->
+  <tr>
+   <th colspan="2">官方文档</th> 
+   	<td class="是"><a href="http://docs.unity3d.com/460/Documentation/Manual/Audio.html" target="_blank">点击此处</a></td>
+	<td class="是"><a href="http://docs.unity3d.com/460/Documentation/Manual/Audio.html" target="_blank">点击此处</a></td>
+	<td class="是"><a href="https://docs.unrealengine.com/latest/INT/Engine/Audio/index.html" target="_blank">点击此处</a></td>
+	<td class="是"><a href="https://www.audiokinetic.com/download/documents/" target="_blank">点击此处</a></td>
+	<td class="是"><a href="http://www.fmod.org/documentation/" target="_blank">点击此处</a></td>
+	<td class="是"><a href="http://fabric-manual.com/s/Docs/m/Fabric" target="_blank">点击此处</a></td>
+	</tr>
+<!--SFX-->
+  <tr>
+    <th rowspan="3">音效</th>
+	<td class="SubFeature" title="每次播放时，播放不同的音效">变量</td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_Native.cs" target="_blank">AudioClip[]</a></td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_Native.cs" target="_blank">AudioClip[]</a></td>
+	<td class="是">SoundCue -&gt; Random Node</td>
+	<td class="是"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_Wwise.cs" target="_blank">Random Container</a></td>	
+	<td class="是"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_FMOD.cs" target="_blank">Multi Sound</a></td>
+	<td class="是"><a href="http://fabric-manual.com/m/Fabric/l/287975-randomcomponent" target="_blank">Random Component</a></td>
+  </tr>
+  <tr>
+    <td class="SubFeature" title="每次播放时，改变音高">音高控制</td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Native.cs" target="_blank">audio.pitch = Random.Range(Min,Max)]</a></td>		
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Native.cs" target="_blank">audio.pitch = Random.Range(Min,Max)]</a></td>	
+	<td class="是">SoundCue -&gt; Modulator Node</td>
+	<td class="是"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Wwise.cs" target="_blank">Randomizer</a></td>		
+	<td class="是"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_FMOD.cs" target="_blank">Modulation -&gt; Random</a></td>
+	<td class="是">Audio Component -&gt; Rand Pitch (+/-)</td>
+  </tr>
+  <tr>
+	<td class="SubFeature" title="为每个音效确定优先级，分配播放概率">变量优先级 / 概率</td>
+	<td class="WorkAround">自己敲代码实现</td>		
+	<td class="WorkAround">自己敲代码实现</td>
+	<td class="是">SoundCue -&gt; Modulator Node -&gt; Weights</td>	
+	<td class="是">Weight</td>		
+	<td class="是">Play Percentage</td>
+	<td class="是">Event Trigger -&gt; Probability</td>
+	</tr>
+<!--3D-->
+  <tr>
+    <th rowspan="5">3D</th>
+	<td class="SubFeature" title="三维的声音，根据玩家的位置改变声像和音量">3D 声音</td>
+	<td class="是">Audio Asset -&gt; 3D/2D</td>
+	<td class="是">SoundSource -&gt; Spatial Blend</td>
+	<td class="是">3D -&gt; Set Attenuation</td>	
+	<td class="是">Positioning -&gt; 3D</td>	
+	<td class="是">Master Track -&gt; 3D Panner</td>
+	<td class="是">Audio Component -&gt; <br>Unity's Audio Source 3D Settings</td>
+  </tr>
+  	  <tr>
+  	<td class="SubFeature" title="为 3D 声音绘制你自己的滚边 / 衰减曲线">自定义滚边 / 衰减曲线 </td>
+	<td class="是">Audio Source -&gt; 3D Settings</td>
+	<td class="是">Audio Source -&gt; 3D Settings</td>
+	<td class="是"><a href="https://docs.unrealengine.com/latest/INT/Engine/Audio/DistanceModelAttenuation/index.html" target="_blank">Blueprints -&gt; Attenuation Node -&gt; Size Adjustments</a></td>	
+	<td class="是">Positioning -&gt; Attenuation -&gt; Edit</td>	
+	<td class="是">3D Panner -&gt; Off -&gt; Add Built-in Parameter <br> -&gt; Distance</td>
+	<td class="是">Runtime Parameter -&gt;  Parameter <br> - &gt; Distance, Property Volume. <br>&amp; Audio Component -&gt; Override Unity's 3D -&gt; Max Distance = Min Parameter Value</td>
+  </tr>
+  <tr>
+  	<td class="SubFeature" title="将创建的自定义滚边 / 衰减曲线保存下来，以便后续的使用">保存自定义滚边 / 衰减曲线</td>
+	<td class="WorkAround">Prefabs</td>
+	<td class="WorkAround">Prefabs</td>
+	<td class="是">Audio Component -&gt; Attenuation  Settting -&gt; Create New Attenuation Class</td>
+	<td class="是">Positioning -&gt; 3D -&gt; <br> Attenuation -&gt; Edit -&gt; Save Pre-set </td>	
+	<td class="WorkAround">复制然后粘贴曲线</td>
+	<td class="是">Prefabs &amp; XML Support</td>
+  </tr>
+      <tr>
+  	<td class="SubFeature" title="在游戏引擎中，根据滚边 / 衰减来绘制一个球体">3D 声音在游戏引擎中的可视化</td>
+	<td class="是">Audio Source -&gt; 3D settings -&gt; Max Distance <br> (casts a sphere in editor on change)</td>
+	<td class="是">Audio Source -&gt; 3D settings -&gt; Max Distance <br> (casts a sphere in editor on change)</td>
+	<td class="是">SoundCue -&gt; Debug |<br> In Game -&gt; <br> (command stat sounds -Debug)</td>
+	<td class="WorkAround">正在研究...</td>	
+	<td class="WorkAround">正在研究...</td>
+	<td class="WorkAround">正在研究...</td>
+  </tr>
+      <tr>
+  	<td class="SubFeature" title="允许你根据玩家的位置来控制内建参数的各部分">(除声场与音量之外的)<br>距离驱动的参数</td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Native.cs" target="_blank">Spread <br>(自己敲代码实现 - Pitch and Doppler)</a></td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Native.cs" target="_blank">Spread, Reverb <br>(自己敲代码实现 - Any)</a></td>
+	<td class="是">Continuous Modulator Node <br> (pitch only)</td>
+	<td class="是"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Wwise.cs" target="_blank">New Game Parameter<br>-&gt; Bind to Build-In Parameter -&gt; Distance</a></td>
+	<td class="是"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_FMOD.cs" target="_blank">Add Parameter <br> Add Built-in Parameter -&gt; Distance</a></td>
+	<td class="是"><a href="http://fabric-manual.com/m/Fabric/l/287978-runtimeparameter" target="_blank">Window -&gt; Fabric -&gt; Run Time Parameters <br>-&gt; Parameter -&gt; Distance</a></td>
+  </tr>
+  <!--Music-->
+      <tr>
+	<th rowspan="6">音乐</th>
+  	<td class="SubFeature" title="每个层代表一种乐器，每个乐器都能根据玩家的动作 / 位置动态混音">动态音乐 <br> 独立的乐器混音</td>
+	<td class="WorkAround">自己敲代码实现<br>(很难保持同步)</td>
+	<td class="WorkAround">自己敲代码实现<br>(很难保持同步)</td>
+	<td class="是">Can Be Done In Blueprints or via SoundMix changes</td>
+	<td class="是">Music Segment <br>-&gt; Multiple Music Tracks</td>
+	<td class="是">New Parameter <br>-&gt; Multiple Logic Tracks</td>
+	<td class="是">Music Component <br>-&gt; Multiple Components Sync to Master Tempo</td>
+  </tr>
+      <tr>
+  	<td class="SubFeature" title="基于玩家的动作 / 位置改变音乐">动态音乐 <br> （基于强度级别） </td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native4.cs" target="_blank">多个声源，音量不同<br> （所有的都是静音，只有一个满音量）</a></td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native5.cs" target="_blank">Interpolate Between<br>Mixer Screen-shots</a></td>
+	<td class="是">Alter Volume Parameter or SoundMix change</td>
+	<td class="是"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Wwise.cs" target="_blank">Music<br>Switch Container</a></td>
+	<td class="是"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_FMOD.cs" target="_blank">Loop Regions<br>Controlled by Parameters</a></td>
+	<td class="是"><a href="https://www.youtube.com/watch?v=joV2LpShX14" target="_blank">Timeline Components <br>Controlled by Parameters/EventActions</a></td>
+  </tr>
+      <tr>
+  	<td class="SubFeature" title="（如果存在前/尾奏）在进入循环前，播放前奏 / 在退出循环后，播放尾奏">音乐前奏与尾奏</td>
+	<td class="No">据我所知不存在</td>
+	<td class="No">据我所知不存在</td>
+	<td class="WorkAround">Can Be Done in Blueprints</td>
+	<td class="是">Move Entry Cue and Exit Cue</td>
+	<td class="是">Arrange In Event's Logic Timelines</td>
+	<td class="是">Intro Loop Outro, Sequence<br>Timeline and Music Components</td>
+  </tr>
+      <tr>
+  	<td class="SubFeature" title="Trigger transitions on beat with the music">On Beat Transitions</td>
+	<td class="WorkAround"><a href="http://docs.unity3d.com/ScriptReference/AudioSource.GetSpectrumData.html" target="_blank">GetSpectrumData </a> <br> 自己敲代码实现</td>
+	<td class="WorkAround"><a href="http://docs.unity3d.com/ScriptReference/AudioSource.GetSpectrumData.html" target="_blank">GetSpectrumData </a> <br> 自己敲代码实现</td>
+	<td class="WorkAround"><a href="https://forums.unrealengine.com/showthread.php?15791-Music-Timing-SystemCan" target="_blank">Can Be Done in Blueprints</a></td>
+	<td class="是">Transitions - &gt; Source -&gt; Exit Source At</td>
+	<td class="是">Logic Tracks -&gt; Transition -&gt; Quantizable Intervals</td>
+	<td class="是">Music Component Transition -&gt; Transitions -&gt; Sync On</td>
+  </tr>
+      <tr>
+  	<td class="SubFeature" title="在进入循环的时候改变">Entering a Loop Chance to Play</td>
+	<td class="WorkAround">自己敲代码实现</td>
+	<td class="WorkAround">自己敲代码实现</td>
+	<td class="WorkAround">Can Be Done In Blueprints - Random Node</td>
+	<td class="是">Music Sequence -&gt; Weight</td>
+	<td class="是">Play Percentage</td>
+	<td class="是">Event Trigger -&gt; Probability</td>
+  </tr>
+     <tr>
+  	<td class="SubFeature" title="在不同的音乐状态之间编辑过渡 ">编辑过渡</td>
+	<td class="No">据我所知不存在</td>
+	<td class="No">据我所知不存在</td>
+	<td class="No">据我所知不存在</td>
+	<td class="是">Specific Transitions/ Fade In or Out/ Stingers</td>
+	<td class="是">Arrange In Event's Transition Timelines <br> Double Click on a Transition to Customize </td>
+	<td class="是">Music Component -&gt; Transitions</td>
+  </tr>
+  <!--Mixing-->
+	 <tr>
+	 <th rowspan="3">混音</th>
+  	<td class="SubFeature" title="基于其他声音控制一个声音的信号量">旁链 / 闪避</td>
+	<td class="No">据我所知不存在</td>
+	<td class="是"><a href="https://www.youtube.com/watch?v=UJYN4_jUIQs&index=5&list=PLW6fMWQDKB27fVKi0APpACG6bujAvYMAI" target="_blank">Mixer -&gt; Add Duck Volume Effect -&gt; Send to Duck Vol Effect </a></td>
+		<td class="是"><a href="https://docs.unrealengine.com/latest/INT/Engine/Audio/Overview/index.html" target="_blank">Sound Class -&gt; Passive Sound Mix </a></td>
+	<td class="是"><a href="https://www.youtube.com/watch?v=TSA-q4dzvd8" target="_blank">Add Effect -&gt; Wwise Meter -&gt; Assign Parameter to Volume</a></td>
+	<td class="是"><a href="https://www.youtube.com/watch?v=C_smYg1vphc" target="_blank">Add Effect -&gt; Compressor -&gt; Sidechain ON <br> Add Sidechain  </a> </td>
+	<td class="是"><a href="http://fabric-manual.com/m/Fabric/l/290568-sidechain" target="_blank">ADD Component -&gt; Sidechain </a></td>
+
+  </tr>
+	<tr>
+	<td class="SubFeature" title="保存当前混音面板的所有值和状态（并且能够加载）">混音截图</td>
+	<td class="No">据我所知不存在</td>
+	<td class="是">是</td>
+	<td class="是">是</td>
+	<!--Unreal4<td class="是">Save SoundClasses</td>-->
+	<td class="是">是</td>
+	<td class="是">是</td>
+	<td class="是">是</td>
+  </tr>
+    <tr>
+	<td class="SubFeature" title="在游戏运行时混音">实时混音</td>
+	<td class="No">据我所知不存在</td>
+	<td class="是">是</td>
+	<td class="No">据我所知不存在</td>
+	<td class="是">Remote... -&gt; Connect</td>
+	<td class="是">File -&gt; Connect to Game </td>
+	<td class="是"><a href="http://fabric-manual.com/m/Fabric/c/101744" target="_blank">Play mode Persistence in Editor, OSC Server/Listener Components </a></td>
+  </tr>
+  <!--System-->
+  	 <tr>
+	 <th rowspan="6">系统</th> 
+	<td class="SubFeature" title="允许你看到关于声音系统和声音事件相关信息的分析器">音频调试信息</td>
+	<td class="WorkAround">Debug.Log();</td>
+	<td class="WorkAround">Debug.Log();</td>
+	<td class="是"><a href="https://answers.unrealengine.com/questions/121899/console-commands-for-audio-broken.html" target="_blank">Blueprint Debugger / stat sounds -debug</a></td>
+	<td class="是">F6 -&gt; Profiler</td>
+	<td class="是"> Window -&gt; Profiler</td>
+	<td class="是"> Window -&gt; Fabric -&gt; (EventLog / EventMonitor)<br> Or Debug.Log();</td>
+  </tr>
+     <tr>
+  	<td class="SubFeature" title="是否能记录一段分析器活动，改变一些事件后再次记录，然后回放并对比两者">可编辑的分析器回放</td>
+	<td class="No">据我所知不存在</td>
+	<td class="No">据我所知不存在</td>
+	<td class="No">据我所知不存在</td>
+	<td class="No">据我所知不存在</td>
+	<td class="是"><a href="https://www.youtube.com/watch?v=4G0IHefO4v8" target="_blank">Instant Replay <br> Profiler -&gt; Toggle API button</a></td>
+	<td class="No">据我所知不存在</td>
+  </tr>
+   <tr>
+  	<td class="SubFeature" title="游戏引擎在音频引擎中影响效果的方式">参数</td>
+	<td class="是">audio.</td>
+	<td class="是">audio.</td>
+	<td class="是">Blueprint Nodes</td>
+	<td class="是">RTPC (Real Time Parameter Controller)</td>
+	<td class="是">Parameters</td>
+	<td class="是"><a href="http://fabric-manual.com/m/Fabric/l/287978-runtimeparameter" target="_blank">Parameters</a></td>
+  </tr>
+	<tr>
+  	<td class="SubFeature" title="The logical mind set and approach of each engine">设计方法（所用语言）</td>
+	<td class="是">C#/JavaScript</td>
+	<td class="是">C#/JavaScript</td>
+	<td class="是">C# / Blueprints</td>
+	<td class="是">基于事件的系统 ( 大多数逻辑写在代码里 )</td>
+	<td class="是">可视化逻辑轨道 ( 大多数逻辑在视觉交互界面中完成)</td>
+	<td class="是"><a href="http://fabric-manual.com/m/Fabric/l/288095-eventtrigger" target="_blank">基于事件的系统( 逻辑在 Unity 的 Hierachy 中完成)</a></td>
+  </tr>
+  	<tr>
+  	<td class="SubFeature" title="是否能创建运行于网页浏览器上的可执行对象">是否支持网站构建</td>
+	<td class="是">是</td>
+	<td class="是">是</td>
+	<td class="No">据我所知不存在</td>
+	<td class="No">否 (使用系统的 IO 设备)</td>
+	<td class="No">否 (使用系统的 IO 设备)</td>
+	<td class="是">是</td>
+  </tr>
+  	<tr>
+  	<td class="SubFeature" title=" 在引擎中使用 Mp3 音频">是否支持 MP3 格式</td>
+	<td class="是">是</td>
+	<td class="是">是</td>
+	<td class="Workaround">只有 iOS 支持</td>
+	<td class="No">据我所知不存在</td>
+	<td class="是">是</td>
+	<td class="是">是</td>
+  </tr>
+</tbody></table>
+<br> 
+
+<p>&nbsp;译者注：表中引擎/源代码的原生单词（例如 Unity 的 Prefab（预设）、AudioClip（程序中的声音剪辑对象）以及各项设置名称等）未予以翻译，这类词汇直接用英文在软件里找反而方便。</p>
+<p>原文地址：<a href>http://danikog.github.io/AudioEnginesMarkdown/</a></p>
+<p>瞬时分析器回访的更详细的介绍（表格中的链接只是演示）：<a href>https://www.youtube.com/watch?v=4G0IHefO4v8</a></p>
+<p align="center">&nbsp;</p>
+<h4 align="center">这个对照表基于个人经验整理而成。<br>若你有相关的反馈、贡献和评论，非常欢迎！请发送邮件至 <a href="MailTo:dani.kogandk@gmail.com">Dani Kongan 的谷歌邮箱</a>，或在 Twitter 上联系我：<a href="https://twitter.com/Dani_Kogan" target="_blank">@Dani_Kogan</a> </h4>
+<h1>特别感谢：</h1>
+<p align="center"> 向下列贡献者报以十分的感谢，他（她）们为此表增加信息、帮助修复问题并且指出了表中的矛盾之处。
+<br>
+<br>
+<a href="https://twitter.com/bpaterson2000" target="_blank"> @bpaterson2000 </a> 
+<br>
+<a href="https://twitter.com/Tazman_Audio" target="_blank"> @Tazman_Audio </a> 
+<br>
+<a href="https://twitter.com/ShriekStudios" target="_blank">@ShriekStudios </a> 
+<br>
+<a href="https://twitter.com/GameAudioInst" target="_blank">@GameAudioInst </a>	
+<br>
+<a href="https://twitter.com/AnastasiaDevana" target="_blank">@AnastasiaDevana </a>	
+<br>
+<a href="https://twitter.com/MattRyanSound" target="_blank">@MattRyanSound</a>
+<br>
+<a href="https://twitter.com/AKMikeD" target="_blank">@AKMikeD</a>
+<br>
+<a href="https://twitter.com/redbluemonkey" target="_blank">@redbluemonkey</a>
+<br>
+<a href="https://twitter.com/JayMFernandes" target="_blank">@JayMFernandes</a>
+<br>
+<a href="https://twitter.com/SimonDSchmidt" target="_blank">@SimonDSchmidt</a>
+<br>
+<a href="https://twitter.com/depanther" target="_blank">@DePanther</a>
+</p>
+
+
+<div class="vimiumReset vimiumHUD" style="right: 150px; display: none;"></div><div id="HUABAN_WIDGETS"><div class="HUABAN-f-button" style="display: none;">采集</div><style>#HUABAN_WIDGETS  {font-family: "helvetica neue",arial,sans-serif; color: #444; font-size: 14px;} #HUABAN_WIDGETS * {box-sizing: content-box;} #HUABAN_WIDGETS .HUABAN-main {position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #e5e5e5; background: rgba(229,229,229,.95); max-height: 100%; overflow: hidden; z-index: 9999999999999;} #HUABAN_WIDGETS a img {border: 0;} #HUABAN_WIDGETS .HUABAN-header {height: 50px; background: white; box-shadow: 0 0 4px rgba(0,0,0,.2); width: 100%; left: 0; top: 0; position: absolute;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-inner {margin: 0 auto; position: relative;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-close {width: 60px; height: 50px; border-left: 1px solid #ddd; position: absolute; right: 0; top: 0; background: url(//huaban.com/img/widgets/btn_close.png) 20px 14px no-repeat; cursor: pointer;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-close:hover {background-position: 20px -26px;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-close:active {background-position: 20px -66px;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-logo {display: block; position: absolute; top: 12px;} #HUABAN_WIDGETS .HUABAN-waterfall-holder {position: relative; overflow-y: auto; height: 100%;} #HUABAN_WIDGETS .HUABAN-waterfall {position: relative; margin-top: 50px;} #HUABAN_WIDGETS .HUABAN-waterfall .HUABAN-empty {position: absolute; left: 50%; top: 30px; height: 36px; line-height: 36px; width: 216px; text-align: left; margin-left: -128px; color: #777; background: url(//huaban.com/img/widgets/icon_notice.png) 12px 8px no-repeat white; padding-left: 40px; font-size: 15px;} #HUABAN_WIDGETS .HUABAN-btn {display: inline-block; border-radius: 2px; font-size: 14px; padding: 0 12px; height: 30px; line-height: 30px; cursor: pointer; text-decoration: none; white-space: nowrap; -moz-user-select: none; -webkit-user-select: none; user-select: none; text-align: center; background: #D53939; color: white;} #HUABAN_WIDGETS .HUABAN-btn:hover {background: #E54646;} #HUABAN_WIDGETS .HUABAN-btn:active {background: #C52424;} #HUABAN_WIDGETS .HUABAN-wbtn {background: #EDEDED; color: #444;} #HUABAN_WIDGETS .HUABAN-wbtn:hover {background: #F2F2F2;} #HUABAN_WIDGETS .HUABAN-wbtn:active {background: #DDD;} #HUABAN_WIDGETS .HUABAN-f-button {position: absolute; display: none; z-index: 9999999999998; box-shadow: 0 0 0 2px rgba(255,255,255,.2); background: #aaa; background: rgba(0,0,0,.3); color: white; cursor: pointer; padding: 0 12px; height: 30px; line-height: 30px; border-radius: 2px; font-size: 14px} #HUABAN_WIDGETS .HUABAN-f-button:hover {background-color: #999; background-color: rgba(0,0,0,.5);} #HUABAN_WIDGETS .HUABAN-f-button:active {background-color: rgba(0,0,0,.6);} #HUABAN_WIDGETS .HUABAN-red-normal-icon-button {width: 36px; height: 24px; border: 0px; line-height: 24px; padding-left: 24px; padding-right: 0px; text-align: left; background: url(//huaban.com/img/widgets/widget_icons.png) 0 -200px no-repeat; box-shadow: none !important; font-size: 14px; background-color: transparent !important;} #HUABAN_WIDGETS .HUABAN-red-normal-icon-button:hover {background-position: -130px -200px;} #HUABAN_WIDGETS .HUABAN-red-normal-icon-button:active {background-position: -260px -200px;} #HUABAN_WIDGETS .HUABAN-red-large-icon-button {width: 80px; height: 24px; border: 0px; line-height: 24px; padding-left: 24px; padding-right: 0px; text-align: left; background: url(//huaban.com/img/widgets/widget_icons.png) 0 -150px no-repeat; box-shadow: none !important; font-size: 14px; background-color: transparent !important;} #HUABAN_WIDGETS .HUABAN-red-large-icon-button:hover {background-position: -130px -150px;} #HUABAN_WIDGETS .HUABAN-red-large-icon-button:active {background-position: -260px -150px;} #HUABAN_WIDGETS .HUABAN-red-small-icon-button {width: 30px; height: 21px; border: 0px; line-height: 21px; padding-left: 20px; padding-right: 0px; text-align: left; background: url(//huaban.com/img/widgets/widget_icons.png) 0 -250px no-repeat; box-shadow: none !important; font-size: 12px; background-color: transparent !important;} #HUABAN_WIDGETS .HUABAN-red-small-icon-button:hover {background-position: -130px -250px;} #HUABAN_WIDGETS .HUABAN-red-small-icon-button:active {background-position: -260px -250px;} #HUABAN_WIDGETS .HUABAN-white-normal-icon-button {width: 36px; height: 24px; border: 0px; line-height: 24px; padding-left: 24px; padding-right: 0px; text-align: left; background: url(//huaban.com/img/widgets/widget_icons.png) 0 -500px no-repeat; box-shadow: none !important; color: #444; font-size: 14px; background-color: transparent !important;} #HUABAN_WIDGETS .HUABAN-white-normal-icon-button:hover {background-position: -130px -500px;} #HUABAN_WIDGETS .HUABAN-white-normal-icon-button:active {background-position: -260px -500px;} #HUABAN_WIDGETS .HUABAN-white-large-icon-button {width: 80px; height: 24px; border: 0px; line-height: 24px; padding-left: 24px; padding-right: 0px; text-align: left; background: url(//huaban.com/img/widgets/widget_icons.png) 0 -450px no-repeat; box-shadow: none !important; color: #444; font-size: 14px; background-color: transparent !important;} #HUABAN_WIDGETS .HUABAN-white-large-icon-button:hover {background-position: -130px -450px;} #HUABAN_WIDGETS .HUABAN-white-large-icon-button:active {background-position: -260px -450px;} #HUABAN_WIDGETS .HUABAN-white-small-icon-button {width: 30px; height: 21px; border: 0px; line-height: 21px; padding-left: 20px; padding-right: 0px; text-align: left; background: url(//huaban.com/img/widgets/widget_icons.png) 0 -550px no-repeat; box-shadow: none !important; color: #444; font-size: 12px; background-color: transparent !important;} #HUABAN_WIDGETS .HUABAN-white-small-icon-button:hover {background-position: -130px -550px;} #HUABAN_WIDGETS .HUABAN-white-small-icon-button:active {background-position: -260px -550px;} #HUABAN_WIDGETS .HUABAN-cell {width: 236px; position: absolute; background: white; box-shadow: 0 1px 3px rgba(0,0,0,.3); transition: left .3s ease-in-out, top .3s linear;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-img-holder {overflow: hidden; position: relative;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-img-holder:hover img.HUABAN-cell-img {opacity: .8} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-video-icon {width: 72px; height: 62px; position: absolute; left: 50%; top: 50%; margin: -31px auto auto -36px; background: url(//huaban.com/img/widgets/media_video.png) 0 0 no-repeat; display: none;} #HUABAN_WIDGETS .HUABAN-cell.HUABAN-video .HUABAN-video-icon {display: block;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-over {display: none;} #HUABAN_WIDGETS .HUABAN-cell:hover .HUABAN-over {display: block;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-over .HUABAN-btn {width: 60px; height: 34px; padding: 0; position: absolute; left: 50%; top: 50%; margin: -18px 0 0 -31px; line-height: 34px; box-shadow: 0 0 0 2px rgba(255,255,255,.2); font-size: 16px;} #HUABAN_WIDGETS .HUABAN-cell.HUABAN-long .HUABAN-img-holder {height: 600px;} #HUABAN_WIDGETS .HUABAN-cell.HUABAN-long .HUABAN-img-holder:after {content: ""; display: block; position: absolute; width: 236px; height: 12px; left: 0; bottom: 0; background: url(//huaban.com/img/widgets/long_image_shadow_2.png) repeat-x 4px top;} #HUABAN_WIDGETS .HUABAN-cell img {width: 236px; display: block;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-size {margin: 8px 16px; font-size: 12px; color: #999} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-description {display: block; width: 202px; margin: 0 6px 6px; padding: 6px 10px; border: 0; resize: none; outline: 0; border: 1px solid transparent; line-height: 18px; font-size: 13px; overflow: hidden; word-wrap: break-word; background: url(//huaban.com/img/widgets/icon_edit.png) 500px center no-repeat;} #HUABAN_WIDGETS .HUABAN-cell:hover .HUABAN-description {background-color: #fff9e0; background-position: right top;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-description:focus {background-color: #F9F9F9; background-position: 500px center;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-select-btn {width: 34px; height:34px; background: url(//huaban.com/img/widgets/checkbox.png) 0 0 no-repeat; position: absolute; right: 5px; top: 5px; cursor: pointer;} #HUABAN_WIDGETS .HUABAN-cell .HUABAN-pinned-label {position: absolute; left: 0; top: 10px; height: 24px; line-height: 24px; padding: 0 10px; background: #CE0000; background: rgba(200, 0, 0, 0.9); color: white; font-size: 12px; display: none;} #HUABAN_WIDGETS .HUABAN-cell.HUABAN-pinned .HUABAN-pinned-label {display: block;} #HUABAN_WIDGETS .HUABAN-selected .HUABAN-select-btn {background-position: 0 -40px;} #HUABAN_WIDGETS .HUABAN-multi .HUABAN-cell .HUABAN-img-holder {cursor: pointer;} #HUABAN_WIDGETS .HUABAN-multi .HUABAN-cell .HUABAN-cell-pin-btn {display: none;} #HUABAN_WIDGETS .HUABAN-multi .HUABAN-cell .HUABAN-over {display: block;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-multi-buttons {position: absolute; top: 10px; left: 0; display: none;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-multi-buttons .HUABAN-btn {margin-right: 10px;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-multi-noti {display: none; height: 50px; line-height: 50px; text-align: center; font-size: 16px; color: #999; font-weight: bold;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-multi-noti span {font-weight: normal;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-multi-noti i {font-style: normal;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-notice {padding: 0 10px; height:30px; line-height: 30px; position: absolute; left: 50%; top: 10px; margin-left: -83px; background: #fff9e2; text-align: center;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-notice i {display: inline-block; width: 18px; height: 18px; background: url(//huaban.com/img/widgets/icon_notice.png) 0 0 no-repeat; vertical-align: top; margin: 6px 6px 0 0;} #HUABAN_WIDGETS .HUABAN-switcher {height: 50px; width: 100px; position: relative;} #HUABAN_WIDGETS .HUABAN-switcher .HUABAN-title {position: absolute; right: 75px; top: 13px; color: #999; white-space: nowrap; line-height: 24px; opacity: 0; visibility: hidden;} #HUABAN_WIDGETS .HUABAN-switcher:hover .HUABAN-title {visibility: visible; opacity: 1; -webkit-transition: opacity .2s linear; -webkit-transition-delay: .2s; transition: opacity .2s linear; transition-delay: .2s;} #HUABAN_WIDGETS .HUABAN-switcher .HUABAN-bar {width: 40px; height: 24px; background: #EB595F; border-radius: 12px; color: white; position: absolute; right: 0; top: 13px; cursor: pointer; font-size: 14px; -webkit-transition: all .2s linear; transition: all .2s linear;} #HUABAN_WIDGETS .HUABAN-switcher:hover .HUABAN-bar {width: 64px;} #HUABAN_WIDGETS .HUABAN-switcher.HUABAN-on .HUABAN-bar {background: #7DD100;} #HUABAN_WIDGETS .HUABAN-switcher .HUABAN-bar .HUABAN-round {width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; left: 2px; top: 2px; -webkit-transition: left .2s linear; box-shadow: 0px 0px 3px rgba(0,0,0,0.15); transition: left .2s linear; box-shadow: 0px 0px 3px rgba(0,0,0,0.15);} #HUABAN_WIDGETS .HUABAN-switcher.HUABAN-on .HUABAN-bar .HUABAN-round {left: 17px;} #HUABAN_WIDGETS .HUABAN-switcher.HUABAN-on:hover .HUABAN-bar .HUABAN-round {left: 41px;} #HUABAN_WIDGETS .HUABAN-switcher .HUABAN-bar .HUABAN-text-1 {height: 24px; line-height: 24px; position: absolute; right:17px; top: 0; opacity: 0; visibility: hidden; -webkit-transition: all .2s linear; transition: all .2s linear;} #HUABAN_WIDGETS .HUABAN-switcher:hover .HUABAN-bar .HUABAN-text-1 {right: 9px; opacity: 1; visibility: visible;} #HUABAN_WIDGETS .HUABAN-switcher.HUABAN-on:hover .HUABAN-bar .HUABAN-text-1 {right: 17px; opacity: 0; visibility: hidden;} #HUABAN_WIDGETS .HUABAN-switcher .HUABAN-bar .HUABAN-text-2 {height: 24px; line-height: 24px; position: absolute; left:17px; top: 0; opacity: 0; visibility: hidden; -webkit-transition: all .2s linear; transition: all .2s linear;} #HUABAN_WIDGETS .HUABAN-switcher:hover .HUABAN-bar .HUABAN-text-2 {left: 17px; opacity: 0; visibility: hidden;} #HUABAN_WIDGETS .HUABAN-switcher.HUABAN-on:hover .HUABAN-bar .HUABAN-text-2 {left: 9px; opacity: 1; visibility: visible;} #HUABAN_WIDGETS .HUABAN-header .HUABAN-switcher {position: absolute; right: 0; top: 0;} <!--[if IE 6]>#HUABAN_WIDGETS .HUABAN-red-normal-icon-button, .HUABAN-red-large-icon-button, .HUABAN-red-small-icon-button, .HUABAN-white-normal-icon-button, .HUABAN-white-large-icon-button, .HUABAN-white-small-icon-button { background-image: url({{imgBase}}/widget_icons_ie6.png) <![endif]--></style></div></body><div></div></html>
