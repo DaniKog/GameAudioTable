@@ -74,13 +74,11 @@ border-left: 0;
 border-bottom: 0;
 }
 </style>
-<div align="left">Last Update - 9.06.2015 <div align="right"> <a href="AudioEnginesMarkdown-Zh.html">Chinese Version</a> by  <a href="https://twitter.com/Moy_Fw" target="_blank"> @Moy_Fw</a></div>
+<div align="left">Last Update - 10.06.2015 <div align="right"> <a href="AudioEnginesMarkdown-Zh.html">Chinese Version</a> by  <a href="https://twitter.com/Moy_Fw" target="_blank"> @Moy_Fw</a></div>
 - Removed Unity 4
 <br>
-- First Pass Master Audio
-<br>
-- New Formating
-<h1>Audio Feature Implementation  Comparison Table <br> #GameAudioTable V2.3</h1>
+- Refined Master Audio
+<h1>Audio Feature Implementation  Comparison Table <br> #GameAudioTable V2.4</h1>
 <p align="center"><a href="https://github.com/DaniKog/AudioEnginesMarkdown" target="_blank">GitHub Repository with Source Code</a></p>
 <table align="center"><tr>
 <td class="Yes"> Feature Exists</td>
@@ -166,15 +164,15 @@ border-bottom: 0;
 	<td class="Yes">Sound Source -> Unity's 3D Settings </td>
 	<td class="Yes"><a href="https://docs.unrealengine.com/latest/INT/Engine/Audio/DistanceModelAttenuation/index.html" target="_blank">Blueprints -> Attenuation Node -> Size Adjustments</a></td>	
 	<td class="Yes">Positioning -> Attenuation -> Edit</td>	
-	<td class="Yes">3D Panner -> Off -> Add Built-in Parameter <br> -> Distance</td>
+	<td class="Yes">3D Panner -> Off -> Add Built-in Parameter<br>-> Distance</td>
 	
   </tr>
   <tr>
   	<td class="SubFeature" title="Save Custom created Rolloff/ Attenuation Curves for later use">Save Custom Made Rolloff /  Attenuation Curve</td>
 	<td class="WorkAround">Prefabs</td>
 	<td class="Yes">Prefabs & XML Support</td>
-	<td class="WorkAround">Researching...</td>
-	<td class="Yes">Audio Component -> Attenuation  Settting -> Create New Attenuation Class</td>
+	<td class="Yes">Create Custom Attenuation Prefab -> Add to Audio Master<br>-> Group Mixer -> Apply Audio Source Templates</td>
+	<td class="Yes">Audio Component -> Attenuation Setting -> Create New Attenuation Class</td>
 	<td class="Yes">Positioning -> 3D -> <br> Attenuation -> Edit -> Save Pre-set </td>	
 	<td class="WorkAround">Copy and Paste Curves</td>
 
@@ -224,7 +222,7 @@ border-bottom: 0;
   	<td class="SubFeature" title="Playing a into before entering a loop and playing an outro when exiting" >Music Intros and Outros</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Intro Loop Outro, Sequence<br>Timeline and Music Components</td>
-	<td class="WorkAround">Researching...</td>
+	<td class="WorkAround">Arrange in PlaylistController -> Uncheck Shuffle Mode<br> Add 3 Files Into,Loop,Outro</td>
 	<td class="WorkAround">Can Be Done in Blueprints</td>
 	<td class="Yes">Move Entry Cue and Exit Cue</td>
 	<td class="Yes">Arrange In Event's Logic Timelines</td>
@@ -236,7 +234,7 @@ border-bottom: 0;
 	<td class="Yes">Music Component Transition -> Transitions -> Sync On</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="WorkAround"><a href="https://forums.unrealengine.com/showthread.php?15791-Music-Timing-SystemCan" target="_blank">Can Be Done in Blueprints</a></td>
-	<td class="Yes">Transitions - > Source -> Exit Source At</td>
+	<td class="Yes">Transitions -> Source -> Exit Source At</td>
 	<td class="Yes">Logic Tracks -> Transition -> Quantizable Intervals</td>
 
   </tr>
@@ -254,7 +252,7 @@ border-bottom: 0;
   	<td class="SubFeature" title="Edit transitions between different music states ">Edit Transitions</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Music Component -> Transitions</td>
-	<td class="WorkAround">Researching...</td>
+	<td class="Yes">Master Audio -> Fades <br>& PlaylistController -> Song Changed Event</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Specific Transitions/ Fade In or Out/ Stingers</td>
 	<td class="Yes">Arrange In Event's Transition Timelines <br> Double Click on a Transition to Customize </td>
@@ -266,7 +264,7 @@ border-bottom: 0;
   	<td class="SubFeature" title="control one sound's signal based on the other">Side Chaining / Ducking</td>
 	<td class="Yes"><a href="https://www.youtube.com/watch?v=UJYN4_jUIQs&index=5&list=PLW6fMWQDKB27fVKi0APpACG6bujAvYMAI" target="_blank">Mixer -> Add Duck Volume Effect -> Send to Duck Vol Effect </td>
 	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/290568-sidechain" target="_blank">ADD Component -> Sidechain </td>
-	<td class="WorkAround">Researching... </td>
+	<td class="Yes">1. Assign To Bus -> Use Unity 5 Audio Mixer <br>2. Master Audio -> Music Ducking </td>
 	<td class="Yes"><a href="https://docs.unrealengine.com/latest/INT/Engine/Audio/Overview/index.html" target="_blank">Sound Class -> Passive Sound Mix </a></td>
 	<td class="Yes"><a href="https://www.youtube.com/watch?v=TSA-q4dzvd8" target="_blank">Add Effect -> Wwise Meter -> Assign Parameter to Volume</td>
 	<td class="Yes"><a href="https://www.youtube.com/watch?v=C_smYg1vphc" target="_blank">Add Effect -> Compressor -> Sidechain ON <br> Add Sidechain  </a> </td>
