@@ -74,10 +74,13 @@ border-left: 0;
 border-bottom: 0;
 }
 </style>
-<div align="left">Last Update - 07.06.2015 <div align="right"> <a href="AudioEnginesMarkdown-Zh.html">Chinese Version</a> by  <a href="https://twitter.com/Moy_Fw" target="_blank"> @Moy_Fw</a></div>
--Mixing SnapShots <br>
--Engine Visualization
-<h1>Audio Feature Implementation  Comparison Table <br> #GameAudioTable V2.2</h1>
+<div align="left">Last Update - 9.06.2015 <div align="right"> <a href="AudioEnginesMarkdown-Zh.html">Chinese Version</a> by  <a href="https://twitter.com/Moy_Fw" target="_blank"> @Moy_Fw</a></div>
+- Removed Unity 4
+<br>
+- First Pass Audio Master
+<br>
+- New Formating
+<h1>Audio Feature Implementation  Comparison Table <br> #GameAudioTable V2.3</h1>
 <p align="center"><a href="https://github.com/DaniKog/AudioEnginesMarkdown" target="_blank">GitHub Repository with Source Code</a></p>
 <table align="center"><tr>
 <td class="Yes"> Feature Exists</td>
@@ -88,199 +91,219 @@ border-bottom: 0;
   <tr>
 	<th colspan="1" width="4%" class = "norightborder"><p align="right"></th>
 	<th colspan="1" width="13%" class = "noleftborder"><p align="right" ><font size="4" align="right">Engine</font></p></th>
-	<th rowspan="2"><a href="https://unity3d.com/" target="_blank"><h2>Unity4</h2></th>
     <th rowspan="2" ><a href="https://unity3d.com/" target="_blank"><h2>Unity5</h2></th>	
+	<th rowspan="1" > <a href="http://www.tazman-audio.co.uk/"><h2>Fabric</h2></a></th>
+	<th rowspan="1" > <a href="https://www.assetstore.unity3d.com/en/#!/content/5607"><h2>Master Audio</h2></a></th>
     <th rowspan="2" ><a href="https://www.unrealengine.com/" target="_blank"><h2>Unreal 4</h2></th>		
 	<th rowspan="2" ><a href="https://www.audiokinetic.com/" target="_blank"><h2>Wwise</h2></th>
 	<th rowspan="2" > <a href="http://www.fmod.org"><h2>FMOD</h2></a></th>
-	<th rowspan="1" > <a href="http://www.tazman-audio.co.uk/"><h2>Fabric</h2></a></th>
+
 	</tr>
 	  <tr>
     <th colspan="2" ><p align="left"><font size="4">Feature</font></td>
-		<th colspan="1"><font size="4">Unity Plug-in</font></td>
+	<th colspan="2"><font size="4">Unity Plug-ins</font></td>
   </tr>
   <!--Documentation-->
   <tr>
    <th  colspan = "2" >Documentation</th> 
-   	<td class="Yes"><a href="http://docs.unity3d.com/460/Documentation/Manual/Audio.html" target="_blank">Click Here</a></td>
 	<td class="Yes"><a href="http://docs.unity3d.com/460/Documentation/Manual/Audio.html" target="_blank">Click Here</a></td>
+	<td class="Yes"><a href="http://fabric-manual.com/s/Docs/m/Fabric" target="_blank">Click Here</a></td>
+	<td class="Yes"><a href="https://dl.dropboxusercontent.com/u/40293802/DarkTonic/MA_ReadMe.pdf" target="_blank">Click Here</td>
 	<td class="Yes"><a href="https://docs.unrealengine.com/latest/INT/Engine/Audio/index.html" target="_blank">Click Here</a></td>
 	<td class="Yes"><a href="https://www.audiokinetic.com/download/documents/" target="_blank">Click Here</a></td>
 	<td class="Yes"><a href="http://www.fmod.org/documentation/" target="_blank">Click Here</a></td>
-	<td class="Yes"><a href="http://fabric-manual.com/s/Docs/m/Fabric" target="_blank">Click Here</a></td>
+
 	</tr>
 <!--SFX-->
   <tr>
     <th rowspan ="3" >SFX</th>
 	<td class="SubFeature" title="On each play, plays a different sound effect">Variation</td>
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_Native.cs" target="_blank">AudioClip[]</a></td>
-	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_Native.cs" target="_blank">AudioClip[]</a></td>
+	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/287975-randomcomponent" target="_blank">Random Component</a></td>
+	<td class="Yes"><a href="https://www.youtube.com/watch?v=Ue9waU8g0c0&index=1&list=PLW6fMWQDKB24osBmTuJd0IG8R5tOim6eV" target="_blank">Drag and Drop Multiple Audio Clips</td> 
 	<td class="Yes">SoundCue -> Random Node</td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_Wwise.cs" target="_blank">Random Container</a></td>	
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_FMOD.cs" target="_blank">Multi Sound</a></td>
-	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/287975-randomcomponent" target="_blank">Random Component</a></td>
+
   </tr>
   <tr>
     <td class="SubFeature" title="On each play, changes the pitch of the sound">Pitch Modulation</td>
-	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Native.cs" target="_blank">audio.pitch = Random.Range(Min,Max)]</a></td>		
+	
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Native.cs" target="_blank">audio.pitch = Random.Range(Min,Max)]</a></td>	
+	<td class="Yes">Audio Component -> Rand Pitch (+/-)</td>
+	<td class="Yes">Master Audio Group -> Use Random Pitch</td> 
 	<td class="Yes">SoundCue -> Modulator Node</td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Wwise.cs" target="_blank">Randomizer</a></td>		
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_FMOD.cs" target="_blank">Modulation -> Random</a></td>
-	<td class="Yes">Audio Component -> Rand Pitch (+/-)</td>
+	
   </tr>
   <tr>
 	<td class="SubFeature" title="Prioritizing and assigning probability for each sound effect">Variation Priority / Probability</td>
-	<td class="WorkAround">Code Yourself</td>		
 	<td class="WorkAround">Code Yourself</td>
+	<td class="Yes">Event Trigger -> Probability</td>
+	<td class="WorkAround">Researching...</td>	
 	<td class="Yes">SoundCue -> Modulator Node -> Weights</td>	
 	<td class="Yes">Weight</td>		
 	<td class="Yes">Play Percentage</td>
-	<td class="Yes">Event Trigger -> Probability</td>
+	
 	</tr>
 <!--3D-->
   <tr>
     <th rowspan ="5">3D</th>
 	<td class="SubFeature" title="3D aware sounds, changing volume and panning depends on player's location">3D Sounds</td>
-	<td class="Yes">Audio Asset -> 3D/2D</td>
-	<td class="Yes">SoundSource -> Spatial Blend</td>
+	<td class="Yes">Sound Source -> Unity's Audio Source 3D Settings</td> 
+	<td class="Yes">Audio Component -> <br>Unity's Audio Source 3D Settings</td>
+	<td class="Yes">Sound Source -> <br>Unity's Audio Source 3D Settings</td>
 	<td class="Yes">3D -> Set Attenuation</td>	
 	<td class="Yes">Positioning -> 3D</td>	
 	<td class="Yes">Master Track -> 3D Panner</td>
-	<td class="Yes">Audio Component -> <br>Unity's Audio Source 3D Settings</td>
+
   </tr>
   	  <tr>
   	<td class="SubFeature" title="Drawing your own Rolloff/ Attenuation Curves on a 3D sound">Custom Rolloff / Attenuation Curve </td>
-	<td class="Yes">Audio Source -> 3D Settings</td>
-	<td class="Yes">Audio Source -> 3D Settings</td>
+	<td class="Yes">Sound Source -> 3D Settings</td>
+	<td class="Yes">Runtime Parameter ->  Parameter <br> - > Distance, Property Volume. <br>& Audio Component -> Override Unity's 3D -> Max Distance = Min Parameter Value</td>
+	<td class="Yes">Sound Source -> Unity's 3D Settings </td>
 	<td class="Yes"><a href="https://docs.unrealengine.com/latest/INT/Engine/Audio/DistanceModelAttenuation/index.html" target="_blank">Blueprints -> Attenuation Node -> Size Adjustments</a></td>	
 	<td class="Yes">Positioning -> Attenuation -> Edit</td>	
 	<td class="Yes">3D Panner -> Off -> Add Built-in Parameter <br> -> Distance</td>
-	<td class="Yes">Runtime Parameter ->  Parameter <br> - > Distance, Property Volume. <br>& Audio Component -> Override Unity's 3D -> Max Distance = Min Parameter Value</td>
+	
   </tr>
   <tr>
   	<td class="SubFeature" title="Save Custom created Rolloff/ Attenuation Curves for later use">Save Custom Made Rolloff /  Attenuation Curve</td>
 	<td class="WorkAround">Prefabs</td>
-	<td class="WorkAround">Prefabs</td>
+	<td class="Yes">Prefabs & XML Support</td>
+	<td class="WorkAround">Researching...</td>
 	<td class="Yes">Audio Component -> Attenuation  Settting -> Create New Attenuation Class</td>
 	<td class="Yes">Positioning -> 3D -> <br> Attenuation -> Edit -> Save Pre-set </td>	
 	<td class="WorkAround">Copy and Paste Curves</td>
-	<td class="Yes">Prefabs & XML Support</td>
+
   </tr>
       <tr>
   	<td class="SubFeature" title="Drawing a sphere in the game engine according to the Rolloff/ Attenuation of a sound">3D Sound in Game Engine Visualization</td>
 	<td class="Yes">Audio Source -> 3D settings -> Max Distance <br> (casts a sphere in editor on change)</td>
-	<td class="Yes">Audio Source -> 3D settings -> Max Distance <br> (casts a sphere in editor on change)</td>
+	<td class="Yes">Unity's Audio Visualization </td>
+	<td class="Yes">Unity's Audio Visualization</td>
 	<td class="Yes">SoundCue -> Debug |<br> In Game -> <br> (command stat sounds -Debug)</td>
 	<td class="Yes">1. Using Unreal's Audio Visualization <br>2. Wwise's API Show Attenuation Sphere</td>	
 	<td class="Yes">1. Using Unreal's Audio Visualization <br>2. Unity Code Yourself (Draw sphere) <br>3. In Audio Engine Visualization -> Profiler -> 3D View </td>
-	<td class="Yes">Unity's Audio Visualization </td>
+	
   </tr>
       <tr>
   	<td class="SubFeature" title="Built in Parameters that allow you to control aspects of a sound based on the player's location">Distance Driven Parameters<br>(Besides Panning and Volume)</td>
-	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Native.cs" target="_blank">Spread <br>(Code Yourself - Pitch and Doppler)</a></td>
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Native.cs" target="_blank">Spread, Reverb <br>(Code Yourself - Any)</a></td>
+	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/287978-runtimeparameter" target="_blank">Window -> Fabric -> Run Time Parameters <br>-> Parameter -> Distance</td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Native.cs" target="_blank">Spread, Reverb <br>(Code Yourself - Any)</td>
 	<td class="Yes">Continuous Modulator Node <br> (pitch only)</td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Wwise.cs" target="_blank">New Game Parameter<br>-> Bind to Build-In Parameter -> Distance</a></td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_FMOD.cs" target="_blank">Add Parameter <br> Add Built-in Parameter -> Distance</a></td>
-	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/287978-runtimeparameter" target="_blank">Window -> Fabric -> Run Time Parameters <br>-> Parameter -> Distance</td>
+	
   </tr>
   <!--Music-->
       <tr>
 	<th rowspan ="6">Music</th>
   	<td class="SubFeature" title="Each layer represents an instrument and each instrument is dynamically mixed based on player's actions / location">Dynamic Music <br> Individual Instrument Mix</td>
 	<td class="WorkAround">Code Yourself<br>(Hard to keep in Sync)</td>
-	<td class="WorkAround">Code Yourself<br>(Hard to keep in Sync)</td>
+	<td class="Yes">Music Component <br>-> Multiple Components Sync to Master Tempo</td>
+	<td class="Yes">Multiple Playlist Scripts -> Sync Clips </td>
 	<td class="Yes">Can Be Done In Blueprints or via SoundMix changes</td>
 	<td class="Yes">Music Segment <br>-> Multiple Music Tracks</td>
 	<td class="Yes">New Parameter <br>-> Multiple Logic Tracks</td>
-	<td class="Yes">Music Component <br>-> Multiple Components Sync to Master Tempo</td>
+
   </tr>
       <tr>
   	<td class="SubFeature" title="The music changes based on the player's actions / location">Dynamic Music <br> Intensity Level Based </td>
-	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native4.cs" target="_blank">Multiple Audio Sources Different Volumes <br> All Mute and One is Full Volume</a></td>
-	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native5.cs" target="_blank">Interpolate Between<br>Mixer Screen-shots</a></td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native4.cs" target="_blank">1.Multiple Audio Sources Different Volumes <br> All Mute and One is Full Volume<br></a><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native5.cs" target="_blank">2.Interpolate Between<br>Mixer Screen-shots</a></td>
+	<td class="Yes"><a href="https://www.youtube.com/watch?v=joV2LpShX14" target="_blank">Timeline Components <br>Controlled by Parameters/EventActions</a></td>
+	<td class="WorkAround"><a href="https://www.youtube.com/watch?v=vDs-rw-w1ns&index=6&list=PLW6fMWQDKB24osBmTuJd0IG8R5tOim6eV" target="_blank">Multiple Playlist Scripts -> Sync Clips <br> Code Parameter Yourself</a></td>
 	<td class="Yes">Alter Volume Parameter or SoundMix change</td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Wwise.cs" target="_blank">Music<br>Switch Container</a></td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_FMOD.cs" target="_blank">Loop Regions<br>Controlled by Parameters</a></td>
-	<td class="Yes"><a href="https://www.youtube.com/watch?v=joV2LpShX14" target="_blank">Timeline Components <br>Controlled by Parameters/EventActions</td>
   </tr>
       <tr>
   	<td class="SubFeature" title="Playing a into before entering a loop and playing an outro when exiting" >Music Intros and Outros</td>
 	<td class="No">Not That I Know Of</td>
-	<td class="No">Not That I Know Of</td>
+	<td class="Yes">Intro Loop Outro, Sequence<br>Timeline and Music Components</td>
+	<td class="WorkAround">Researching...</td>
 	<td class="WorkAround">Can Be Done in Blueprints</td>
 	<td class="Yes">Move Entry Cue and Exit Cue</td>
 	<td class="Yes">Arrange In Event's Logic Timelines</td>
-	<td class="Yes">Intro Loop Outro, Sequence<br>Timeline and Music Components</td>
+
   </tr>
       <tr>
   	<td class="SubFeature" title="Trigger transitions on beat with the music">On Beat Transitions</td>
 	<td class="WorkAround"><a href="http://docs.unity3d.com/ScriptReference/AudioSource.GetSpectrumData.html" target="_blank">GetSpectrumData </a> <br> Code Yourself</td>
-	<td class="WorkAround"><a href="http://docs.unity3d.com/ScriptReference/AudioSource.GetSpectrumData.html" target="_blank">GetSpectrumData </a> <br> Code Yourself</td>
+	<td class="Yes">Music Component Transition -> Transitions -> Sync On</td>
+	<td class="No">Not That I Know Of</td>
 	<td class="WorkAround"><a href="https://forums.unrealengine.com/showthread.php?15791-Music-Timing-SystemCan" target="_blank">Can Be Done in Blueprints</a></td>
 	<td class="Yes">Transitions - > Source -> Exit Source At</td>
 	<td class="Yes">Logic Tracks -> Transition -> Quantizable Intervals</td>
-	<td class="Yes">Music Component Transition -> Transitions -> Sync On</td>
+
   </tr>
       <tr>
   	<td class="SubFeature" title="Change to play upon entering a loop">Entering a Loop Chance to Play</td>
 	<td class="WorkAround">Code Yourself</td>
-	<td class="WorkAround">Code Yourself</td>
+	<td class="Yes">Event Trigger -> Probability</td>
+	<td class="No">Not That I Know Of</td>
 	<td class="WorkAround">Can Be Done In Blueprints - Random Node</td>
 	<td class="Yes">Music Sequence -> Weight</td>
 	<td class="Yes">Play Percentage</td>
-	<td class="Yes">Event Trigger -> Probability</td>
+
   </tr>
      <tr>
   	<td class="SubFeature" title="Edit transitions between different music states ">Edit Transitions</td>
 	<td class="No">Not That I Know Of</td>
-	<td class="No">Not That I Know Of</td>
+	<td class="Yes">Music Component -> Transitions</td>
+	<td class="WorkAround">Researching...</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Specific Transitions/ Fade In or Out/ Stingers</td>
 	<td class="Yes">Arrange In Event's Transition Timelines <br> Double Click on a Transition to Customize </td>
-	<td class="Yes">Music Component -> Transitions</td>
+
   </tr>
   <!--Mixing-->
 	 <tr>
 	 <th rowspan ="3">Mixing</th>
   	<td class="SubFeature" title="control one sound's signal based on the other">Side Chaining / Ducking</td>
-	<td class="No">Not That I Know Of</td>
 	<td class="Yes"><a href="https://www.youtube.com/watch?v=UJYN4_jUIQs&index=5&list=PLW6fMWQDKB27fVKi0APpACG6bujAvYMAI" target="_blank">Mixer -> Add Duck Volume Effect -> Send to Duck Vol Effect </td>
+	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/290568-sidechain" target="_blank">ADD Component -> Sidechain </td>
+	<td class="WorkAround">Researching... </td>
 	<td class="Yes"><a href="https://docs.unrealengine.com/latest/INT/Engine/Audio/Overview/index.html" target="_blank">Sound Class -> Passive Sound Mix </a></td>
 	<td class="Yes"><a href="https://www.youtube.com/watch?v=TSA-q4dzvd8" target="_blank">Add Effect -> Wwise Meter -> Assign Parameter to Volume</td>
 	<td class="Yes"><a href="https://www.youtube.com/watch?v=C_smYg1vphc" target="_blank">Add Effect -> Compressor -> Sidechain ON <br> Add Sidechain  </a> </td>
-	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/290568-sidechain" target="_blank">ADD Component -> Sidechain </td>
+	
 
   </tr>
 	<tr>
 	<td class="SubFeature" title="Save the current values and state of the mixing deck (and load it)">Mixing Snapshots</td>
-	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Window -> Mixer -> Snapshots</td>
+	<td class="Yes">Unity5's Mixing Snapshots</td>
+	<td class="Yes">Unity5's Mixing Snapshots</td>
 	<td class="Yes">Save SoundClasses</td>
 	<td class="Yes">Layout -> Mixer -> Save and Load Mixing Sessions </td>
 	<td class="Yes">Window -> Mixer -> Snapshots tabs</td>
-	<td class="Yes">Unity5's Mixing Snapshots</td>
+
   </tr>
     <tr>
 	<td class="SubFeature" title="Mixing while the game is running">Real Time Mixing</td>
-	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Window -> Mixer -> Edit in play mode</td>
-	<td class="No">Not That I Know Of</td>
+	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/c/101744" target="_blank">Play mode Persistence in Editor, OSC Server/Listener Components </a></td>
+	<td class="Yes">Master Audio -> Show Advanced -> Save Runtime Changes</td>
+	<td class="WorkAround">Researching...</td>
 	<td class="Yes">Remote... -> Connect</td>
 	<td class="Yes">File -> Connect to Game </td>
-	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/c/101744" target="_blank">Play mode Persistence in Editor, OSC Server/Listener Components </a></td>
+	
   </tr>
   <!--System-->
   	 <tr>
 	 <th rowspan ="6">System</th> 
 	<td class="SubFeature" title="Profiler that allows you see information about the audio system and the audio events">Audio Debugging</td>
 	<td class="WorkAround">Debug.Log();</td>
+	<td class="Yes"> Window -> Fabric -> (EventLog / EventMonitor)<br> Or Debug.Log();</td>
 	<td class="WorkAround">Debug.Log();</td>
 	<td class="Yes"><a href="https://answers.unrealengine.com/questions/121899/console-commands-for-audio-broken.html" target="_blank">Blueprint Debugger / stat sounds -debug</a></td>
 	<td class="Yes">F6 -> Profiler</td>
 	<td class="Yes"> Window -> Profiler</td>
-	<td class="Yes"> Window -> Fabric -> (EventLog / EventMonitor)<br> Or Debug.Log();</td>
+	
   </tr>
      <tr>
   	<td class="SubFeature" title="The Ability to record an profiler session change some events replay the recording and compare the two">Editable Profiler Replays</td>
@@ -288,49 +311,54 @@ border-bottom: 0;
 	<td class="No">Not That I Know Of</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="No">Not That I Know Of</td>
-	<td class="Yes"><a href="https://www.youtube.com/watch?v=D8zthXuTKPI" target="_blank">Instant Replay <br> Profiler -> Toggle API button</td>
 	<td class="No">Not That I Know Of</td>
+	<td class="Yes"><a href="https://www.youtube.com/watch?v=4G0IHefO4v8" target="_blank">Instant Replay <br> Profiler -> Toggle API button</td>
+	
   </tr>
    <tr>
   	<td class="SubFeature" title="The way the game engine is effecting the sounds in the audio engine">Parameters</td>
-	<td class="Yes">audio.</td>
-	<td class="Yes">audio.</td>
+	<td class="WorkAround">audio.</td>
+	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/287978-runtimeparameter" target="_blank">Parameters</a></td>
+	<td class="WorkAround">MasterAudio.</td>
 	<td class="Yes">Blueprint Nodes</td>
 	<td class="Yes">RTPC (Real Time Parameter Controller)</td>
 	<td class="Yes">Parameters</td>
-	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/287978-runtimeparameter" target="_blank">Parameters</a></td>
+	
   </tr>
 	<tr>
   	<td class="SubFeature" title="The logical mind set and approach of each engine">Design Approach</td>
 	<td class="Yes">C#/JavaScript</td>
-	<td class="Yes">C#/JavaScript</td>
+	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/288095-eventtrigger" target="_blank">Event Based System( Logic Done in Unity's Hierarchy)</a></td>
+	<td class="Yes">Unity Event-Based<br> Or C#/JavaScript</td>
 	<td class="Yes">C++ / Blueprints</td>
 	<td class="Yes">Event Based System ( Most Logic is Written in Code)</td>
 	<td class="Yes">Visual Logic Tracks ( Most Logic is Done Visually)</td>
-	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/288095-eventtrigger" target="_blank">Event Based System( Logic Done in Unity's Hierarchy)</a></td>
+	
   </tr>
   	<tr>
   	<td class="SubFeature" title="Can create an executable that will run in a web browser">Web Build Support</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
+	<td class="Yes">Yes</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="No">No (Using System.IO)</td>
 	<td class="No">No (Using System.IO)</td>
-	<td class="Yes">Yes</td>
+
   </tr>
   	<tr>
   	<td class="SubFeature" title=" Can use mp3 in the engine">MP3 Support</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
+	<td class="Yes">Yes</td>
 	<td class="Workaround">iOS only</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Yes</td>
-	<td class="Yes">Yes</td>
+
   </tr>
 </table>
 <br> 
 
-<h4 align="center">This table is a based on personal experiences. <br>Feedback, contributions and critiques are most welcome, send to dani.kogandk at gmail.com, or <a href="https://twitter.com/Dani_Kogan" target="_blank">@Dani_Kogan</a> </h4>
+<h4 align="center">This table is a based on personal experiences and community acquired data. <br>Feedback, contributions and critiques are most welcome, send to dani.kogandk at gmail.com, or <a href="https://twitter.com/Dani_Kogan" target="_blank">@Dani_Kogan</a> </h4>
 <h1>Thanks</h1>
 <p align="center"> Huge thanks to contributors which added information, helped fix problems and pointed to inconsistencies in the table.
 <br>
