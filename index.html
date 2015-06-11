@@ -74,11 +74,13 @@ border-left: 0;
 border-bottom: 0;
 }
 </style>
-<div align="left">Last Update - 10.06.2015 <div align="right"> <a href="AudioEnginesMarkdown-Zh.html">Chinese Version</a> by  <a href="https://twitter.com/Moy_Fw" target="_blank"> @Moy_Fw</a></div>
-- Removed Unity 4
+<div align="left">Last Update - 11.06.2015 <div align="right"> <a href="AudioEnginesMarkdown-Zh.html">Chinese Version</a> by  <a href="https://twitter.com/Moy_Fw" target="_blank"> @Moy_Fw</a></div>
+- Removed Unity 4 Column
 <br>
-- Refined Master Audio
-<h1>Audio Feature Implementation  Comparison Table <br> #GameAudioTable V2.4</h1>
+- Added Master Audio Column
+<br>
+- New Formatting
+<h1>Audio Feature Implementation  Comparison Table <br> #GameAudioTable V2.5</h1>
 <p align="center"><a href="https://github.com/DaniKog/AudioEnginesMarkdown" target="_blank">GitHub Repository with Source Code</a></p>
 <table align="center"><tr>
 <td class="Yes"> Feature Exists</td>
@@ -139,7 +141,7 @@ border-bottom: 0;
 	<td class="SubFeature" title="Prioritizing and assigning probability for each sound effect">Variation Priority / Probability</td>
 	<td class="WorkAround">Code Yourself</td>
 	<td class="Yes">Event Trigger -> Probability</td>
-	<td class="WorkAround">Researching...</td>	
+	<td class="Yes">Master Audio Group -> Voices (Weight)</td>	
 	<td class="Yes">SoundCue -> Modulator Node -> Weights</td>	
 	<td class="Yes">Weight</td>		
 	<td class="Yes">Play Percentage</td>
@@ -160,7 +162,7 @@ border-bottom: 0;
   	  <tr>
   	<td class="SubFeature" title="Drawing your own Rolloff/ Attenuation Curves on a 3D sound">Custom Rolloff / Attenuation Curve </td>
 	<td class="Yes">Sound Source -> 3D Settings</td>
-	<td class="Yes">Runtime Parameter ->  Parameter <br> - > Distance, Property Volume. <br>& Audio Component -> Override Unity's 3D -> Max Distance = Min Parameter Value</td>
+	<td class="Yes">Runtime Parameter ->  Parameter <br> -> Distance, Property Volume. <br>& Audio Component -> Override Unity's 3D -> Max Distance = Min Parameter Value</td>
 	<td class="Yes">Sound Source -> Unity's 3D Settings </td>
 	<td class="Yes"><a href="https://docs.unrealengine.com/latest/INT/Engine/Audio/DistanceModelAttenuation/index.html" target="_blank">Blueprints -> Attenuation Node -> Size Adjustments</a></td>	
 	<td class="Yes">Positioning -> Attenuation -> Edit</td>	
@@ -204,7 +206,7 @@ border-bottom: 0;
 	<td class="WorkAround">Code Yourself<br>(Hard to keep in Sync)</td>
 	<td class="Yes">Music Component <br>-> Multiple Components Sync to Master Tempo</td>
 	<td class="Yes">Multiple Playlist Scripts -> Sync Clips </td>
-	<td class="Yes">Can Be Done In Blueprints or via SoundMix changes</td>
+	<td class="Yes">Can Be Done In Blueprints or via SoundMix Changes</td>
 	<td class="Yes">Music Segment <br>-> Multiple Music Tracks</td>
 	<td class="Yes">New Parameter <br>-> Multiple Logic Tracks</td>
 
@@ -214,7 +216,7 @@ border-bottom: 0;
 	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native4.cs" target="_blank">1.Multiple Audio Sources Different Volumes <br> All Mute and One is Full Volume<br></a><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native5.cs" target="_blank">2.Interpolate Between<br>Mixer Screen-shots</a></td>
 	<td class="Yes"><a href="https://www.youtube.com/watch?v=joV2LpShX14" target="_blank">Timeline Components <br>Controlled by Parameters/EventActions</a></td>
 	<td class="WorkAround"><a href="https://www.youtube.com/watch?v=vDs-rw-w1ns&index=6&list=PLW6fMWQDKB24osBmTuJd0IG8R5tOim6eV" target="_blank">Multiple Playlist Scripts -> Sync Clips <br> Code Parameter Yourself</a></td>
-	<td class="Yes">Alter Volume Parameter or SoundMix change</td>
+	<td class="Yes">Alter Volume Parameter or SoundMix Change</td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Wwise.cs" target="_blank">Music<br>Switch Container</a></td>
 	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_FMOD.cs" target="_blank">Loop Regions<br>Controlled by Parameters</a></td>
   </tr>
@@ -297,7 +299,7 @@ border-bottom: 0;
 	<td class="SubFeature" title="Profiler that allows you see information about the audio system and the audio events">Audio Debugging</td>
 	<td class="WorkAround">Debug.Log();</td>
 	<td class="Yes"> Window -> Fabric -> (EventLog / EventMonitor)<br> Or Debug.Log();</td>
-	<td class="WorkAround">Debug.Log();</td>
+	<td class="Yes">Master Audio -> Advanced Settings -> Log Sounds / Log Custom Events</td>
 	<td class="Yes"><a href="https://answers.unrealengine.com/questions/121899/console-commands-for-audio-broken.html" target="_blank">Blueprint Debugger / stat sounds -debug</a></td>
 	<td class="Yes">F6 -> Profiler</td>
 	<td class="Yes"> Window -> Profiler</td>
@@ -360,6 +362,8 @@ border-bottom: 0;
 <h1>Thanks</h1>
 <p align="center"> Huge thanks to contributors which added information, helped fix problems and pointed to inconsistencies in the table.
 <br>
+<br>
+<a href="https://twitter.com/darktonicgames" target="_blank"> @darktonicgames </a> 
 <br>
 <a href="https://twitter.com/bpaterson2000" target="_blank"> @bpaterson2000 </a> 
 <br>
