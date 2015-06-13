@@ -74,13 +74,12 @@ border-left: 0;
 border-bottom: 0;
 }
 </style>
-<div align="left">Last Update - 11.06.2015 <div align="right"> <a href="AudioEnginesMarkdown-Zh.html">Chinese Version</a> by  <a href="https://twitter.com/Moy_Fw" target="_blank"> @Moy_Fw</a></div>
-- Removed Unity 4 Column
+<div align="left">Last Update - 13.06.2015 <div align="right"> <a href="AudioEnginesMarkdown-Zh.html">Chinese Version</a> by  <a href="https://twitter.com/Moy_Fw" target="_blank"> @Moy_Fw</a></div>
+- Added Prices
 <br>
-- Added Master Audio Column
-<br>
-- New Formatting
-<h1>Audio Feature Implementation  Comparison Table <br> #GameAudioTable V2.5</h1>
+- Added Ogg Support
+
+<h1>Audio Feature Implementation  Comparison Table <br> #GameAudioTable V2.6</h1>
 <p align="center"><a href="https://github.com/DaniKog/AudioEnginesMarkdown" target="_blank">GitHub Repository with Source Code</a></p>
 <table align="center"><tr>
 <td class="Yes"> Feature Exists</td>
@@ -112,6 +111,16 @@ border-bottom: 0;
 	<td class="Yes"><a href="https://docs.unrealengine.com/latest/INT/Engine/Audio/index.html" target="_blank">Click Here</a></td>
 	<td class="Yes"><a href="https://www.audiokinetic.com/download/documents/" target="_blank">Click Here</a></td>
 	<td class="Yes"><a href="http://www.fmod.org/documentation/" target="_blank">Click Here</a></td>
+
+	</tr>
+	  <tr>
+   <th  colspan = "2" >Price (Lowest Tier)</th> 
+	<td class="Yes"><a href="https://unity3d.com/get-unity" target="_blank">Under 100K Revenue<br>Free</a></td>
+	<td class="Yes"><a href="http://www.tazman-audio.co.uk/#!licensing/c1df1" target="_blank">Under 150K Budget<br>Free</a></td>
+	<td class="Yes"><a href="https://www.assetstore.unity3d.com/en/#!/content/5607" target="_blank">45$</td>
+	<td class="Yes"><a href="https://www.unrealengine.com/custom-licensing" target="_blank">5% of Revenue<br>Or Custom Agreement</a></td>
+	<td class="Yes"><a href="https://www.audiokinetic.com/licensing/pricing/" target="_blank">Less Then 200 Assets<br> Free</a></td>
+	<td class="Yes"><a href="http://www.fmod.org/sales/" target="_blank">Under 100K Budget<br>Free</a></td>
 
 	</tr>
 <!--SFX-->
@@ -295,7 +304,7 @@ border-bottom: 0;
   </tr>
   <!--System-->
   	 <tr>
-	 <th rowspan ="6">System</th> 
+	 <th rowspan ="7">System</th> 
 	<td class="SubFeature" title="Profiler that allows you see information about the audio system and the audio events">Audio Debugging</td>
 	<td class="WorkAround">Debug.Log();</td>
 	<td class="Yes"> Window -> Fabric -> (EventLog / EventMonitor)<br> Or Debug.Log();</td>
@@ -329,7 +338,7 @@ border-bottom: 0;
   	<td class="SubFeature" title="The logical mind set and approach of each engine">Design Approach</td>
 	<td class="Yes">C#/JavaScript</td>
 	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/288095-eventtrigger" target="_blank">Event Based System( Logic Done in Unity's Hierarchy)</a></td>
-	<td class="Yes">Unity Event-Based (EventSounds)<br> Or C#/JavaScript</td>
+	<td class="Yes">Unity Event-Based<br> Or C#/JavaScript</td>
 	<td class="Yes">C++ / Blueprints</td>
 	<td class="Yes">Event Based System ( Most Logic is Written in Code)</td>
 	<td class="Yes">Visual Logic Tracks ( Most Logic is Done Visually)</td>
@@ -347,6 +356,17 @@ border-bottom: 0;
   </tr>
   	<tr>
   	<td class="SubFeature" title=" Can use mp3 in the engine">MP3 Support</td>
+	<td class="Yes">Yes</td>
+	<td class="Yes">Yes</td>
+	<td class="Yes">Yes</td>
+	<td class="Workaround">iOS only</td>
+	<td class="No">Not That I Know Of</td>
+	<td class="Yes">Yes</td>
+
+  </tr>
+    </tr>
+  	<tr>
+  	<td class="SubFeature" title=" Can use mp3 in the engine">Ogg Support</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
