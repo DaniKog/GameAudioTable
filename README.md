@@ -15,9 +15,15 @@ FMOD + Unity: https://www.youtube.com/watch?v=p14Hx_jLGEA
 Huge thanks to contributors which added information, helped fix problems and pointed to inconsistencies in the table.
 <br>
 <br>
+<a href="https://twitter.com/darktonicgames" target="_blank"> @darktonicgames </a> 
+<br>
+<a href="https://twitter.com/bpaterson2000" target="_blank"> @bpaterson2000 </a> 
+<br>
 <a href="https://twitter.com/Tazman_Audio" target="_blank"> @Tazman_Audio </a> 
 <br>
 <a href="https://twitter.com/ShriekStudios" target="_blank">@ShriekStudios </a> 
+<br>
+<a href="https://twitter.com/Moy_Fw" target="_blank"> @Moy_Fw</a>
 <br>
 <a href="https://twitter.com/GameAudioInst" target="_blank">@GameAudioInst </a>	
 <br>
@@ -34,4 +40,3 @@ Huge thanks to contributors which added information, helped fix problems and poi
 <a href="https://twitter.com/SimonDSchmidt" target="_blank">@SimonDSchmidt</a>
 <br>
 <a href="https://twitter.com/depanther" target="_blank">@DePanther</a>
-
