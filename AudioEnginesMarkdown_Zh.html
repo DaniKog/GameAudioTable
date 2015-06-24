@@ -1,0 +1,493 @@
+
+<!-- saved from url=(0046)http://danikog.github.io/AudioEnginesMarkdown/ -->
+<html class="hb-loaded" version="g42dymwpi--nx">
+
+<head>
+
+<link rel="icon" href="./favicon.ico" mce_href="./favicon.ico" type="image/x-icon">  
+
+<title>游戏音频引擎对照表</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body>
+
+<style>
+
+h2 {
+font-family: Arial,Helvetica,sans-serif;
+color: #FFF;
+font-weight: bold;
+text-shadow: .05em .05em .05em rgba(0,0,0,0.5);
+}
+a {text-decoration: none;}
+
+a:hover {color: #FF6633;}
+
+table {
+table-layout: fixed;
+    width:90%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: center;
+}
+table#t01 th	{
+	background: rgb(92,92,92);
+    color: white;
+}
+table#t01 th:nth-child(0)) { text-align: left; }
+h1{ text-align: center; }
+td.SubFeature
+{
+text-align: center;
+color: white;
+font-size: 15px;
+font-weight: lighter;
+background-color: #808080;
+}
+td.Feature
+{
+text-align: center;
+color: white;
+font-size: 15px;
+font-weight: lighter;
+background-color: #808080;
+}
+
+td.Yes
+{
+text-align: center;
+background-color: #80CC80;
+//Green
+}
+
+td.WorkAround
+{
+text-align: center;
+background-color: #FFDB4D;
+//Yellow
+}
+td.No
+{
+text-align: center;
+background-color: #FF8080;
+//Red
+}
+tr:hover {
+    opacity: 0.9;
+}
+th.norightborder 
+{ 
+border-right: 0;
+border-bottom: 0;
+}
+th.noleftborder
+{ 
+border-left: 0;
+border-bottom: 0;
+}
+</style>
+<div align="left">上次更新 - 13.06.2015 
+<div align="right"><a href="index.html" id="originVer">英文原版</a> 
+作者：<a href="https://twitter.com/Dani_Kogan">Dani Kogan</a></div>
+- 增加了售价信息
+<br>
+- 增加了对 Ogg 格式的支持信息
+
+
+<h1>各引擎音频特性实现对照表 <br> #GameAudioTable V2.6</h1>
+<p align="center"><a href="https://github.com/DaniKog/AudioEnginesMarkdown" target="_blank">GitHub 仓库（附源代码）</a></p>
+<table align="center"><tbody><tr>
+<td class="Yes"> 绿色：具备特性</td>
+</tr><tr><td class="WorkAround"> 黄色：存在变通的办法</td>
+</tr><tr><td class="No"> 红色：（据我所知）不存在</td></tr></tbody></table>
+<br>
+<br>
+
+<div align="right">
+<i>注：将鼠标悬浮在<b>第二列</b>的特性名上可看到相关介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></div>
+
+<table id="t01" align="Center">
+  <tr>
+	<th colspan="1" width="4%" class = "norightborder"><p align="right"></th>
+	<th colspan="1" width="13%" class = "noleftborder"><p align="right" ><font size="4">引擎</font></p></th>
+    <th rowspan="2" ><a href="https://unity3d.com/" target="_blank">
+    <h2>Unity 5</h2></th>	
+	<th rowspan="1" > <a href="http://www.tazman-audio.co.uk/"><h2>Fabric</h2></a></th>
+	<th rowspan="1" > <a href="https://www.assetstore.unity3d.com/en/#!/content/5607"><h2>Master Audio</h2></a></th>
+    <th rowspan="2" ><a href="https://www.unrealengine.com/" target="_blank"><h2>Unreal 4</h2></th>		
+	<th rowspan="2" ><a href="https://www.audiokinetic.com/" target="_blank"><h2>Wwise</h2></th>
+	<th rowspan="2" > <a href="http://www.fmod.org"><h2>FMOD</h2></a></th>
+
+	</tr>
+	  <tr>
+    <th colspan="2" ><p align="left"><font size="4">特性</font><th colspan="2"><font size="4">Unity 插件<br>
+	</font>
+	  </td>
+  </tr>
+  
+  
+  <!--Documentation-->
+  <tr>
+   <th  colspan = "2" title="官方的说明文档">文档</th> 
+	<td class="Yes"><a href="http://docs.unity3d.com/460/Documentation/Manual/Audio.html" target="_blank">点击此处</a></td>
+	<td class="Yes"><a href="http://fabric-manual.com/s/Docs/m/Fabric" target="_blank">点击此处</a></td>
+	<td class="Yes"><a href="https://dl.dropboxusercontent.com/u/40293802/DarkTonic/MA_ReadMe.pdf" target="_blank">点击此处</td>
+	<td class="Yes"><a href="https://docs.unrealengine.com/latest/INT/Engine/Audio/index.html" target="_blank">点击此处</a></td>
+	<td class="Yes"><a href="https://www.audiokinetic.com/download/documents/" target="_blank">点击此处</a></td>
+	<td class="Yes"><a href="http://www.fmod.org/documentation/" target="_blank">点击此处</a></td>
+
+	</tr>
+	  <tr>
+   <th  colspan = "2" title="像Unity等软件，如果满足括号里的条件，则可以免费使用">售价<br>(能获取到的最低售价)</th> 
+	<td class="Yes"><a href="https://unity3d.com/get-unity" target="_blank">免费<br>（营业收入低于10万美刀）</a></td>
+	<td class="Yes"><a href="http://www.tazman-audio.co.uk/#!licensing/c1df1" target="_blank">免费<br>（预算低于15万美刀）</a></td>
+	<td class="Yes"><a href="https://www.assetstore.unity3d.com/en/#!/content/5607" target="_blank" title="约合人民币￥280元">45美刀</td>
+	<td class="Yes"><a href="https://www.unrealengine.com/custom-licensing" target="_blank">营业收入的百分之五<br>或 定制许可</a></td>
+	<td class="Yes"><a href="https://www.audiokinetic.com/licensing/pricing/" target="_blank">免费<br>（少于200个素材）</a></td>
+	<td class="Yes"><a href="http://www.fmod.org/sales/" target="_blank">免费<br>（预算低于10万美刀）</a></td>
+
+	</tr>
+    
+    
+<!--SFX-->
+  <tr>
+    <th rowspan ="3" title="别戳我，戳我右边列的那些属性们。只有它们才会显示介绍 ：）">音效</th>
+		<td class="SubFeature" title="每次播放时，播放不同的音效">声音变化</td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_Native.cs" target="_blank">AudioClip[]</a></td>
+	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/287975-randomcomponent" target="_blank">Random Component</a></td>
+	<td class="Yes"><a href="https://www.youtube.com/watch?v=Ue9waU8g0c0&index=1&list=PLW6fMWQDKB24osBmTuJd0IG8R5tOim6eV" target="_blank">Drag and Drop Multiple Audio Clips</td> 
+	<td class="Yes">SoundCue -> Random Node</td>
+	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_Wwise.cs" target="_blank">Random Container</a></td>	
+	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXVariation_FMOD.cs" target="_blank">添加多个声音文件</a></td>
+
+  </tr>
+  <tr>
+    <td class="SubFeature" title="每次播放时，改变声音的音调">调节音调</td>
+	
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Native.cs" target="_blank">audio.pitch = Random.Range(Min,Max)]</a></td>	
+	<td class="Yes">Audio Component -> Rand Pitch (+/-)</td>
+	<td class="Yes">Master Audio Group -> Use Random Pitch</td> 
+	<td class="Yes">SoundCue -> Modulator Node</td>
+	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_Wwise.cs" target="_blank">Randomizer</a></td>		
+	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/SFX/SFXPitchModulation_FMOD.cs" target="_blank">Modulation -> Random</a></td>
+	
+  </tr>
+  <tr>
+	<td class="SubFeature" title="为每个音效确定优先级，并分配不同的播放概率">变量的优先级/概率</td>
+    <td class="WorkAround">自己敲代码实现</td>
+	<td class="Yes">Event Trigger -> Probability</td>
+	<td class="Yes">Master Audio Group -> Voices (Weight)</td>	
+	<td class="Yes">SoundCue -> Modulator Node -> Weights</td>	
+	<td class="Yes" title="比重">Weight</td>		
+	<td class="Yes" title="播放概率，可在声音定义或简单事件中调节">Play Percentage</td>
+	
+	</tr>
+<!--3D-->
+  <tr>
+    <th rowspan ="5" title="别戳我，戳我右边列的那些属性们。只有它们才会显示介绍 ：）">3D</th>
+	<td class="SubFeature" title="三维的声音，根据玩家的位置改变声像和音量">三维声音</td>
+	<td class="Yes" title="声源 -> Unity 里头的声音三维设置">Sound Source -> Unity's Audio Source 3D Settings</td> 
+	<td class="Yes" title="声音组件 -> Unity 里头的声音三维设置">Audio Component -> <br>Unity's Audio Source 3D Settings</td>
+	<td class="Yes" title="声源 -> Unity 里头的声音三维设置">Sound Source -> <br>Unity's Audio Source 3D Settings</td>
+	<td class="Yes">3D -> Set Attenuation</td>	
+	<td class="Yes">Positioning -> 3D</td>	
+	<td class="Yes" title="总轨道 -> 三维声像">Master Track -> 3D Panner</td>
+
+  </tr>
+  	  <tr>
+  	<td class="SubFeature" title="为三维声音绘制你自个儿的滑离/衰减曲线（滑离即衰减曲线，详情见注释1）">自定义滑离/衰减曲线 
+    <sup id="fnref1">
+<a href="#fn1" rel="footnote">1</a>
+</sup> 
+	</td>
+	<td class="Yes">Sound Source -> 3D Settings</td>
+	<td class="Yes">Runtime Parameter ->  Parameter <br> -> Distance, Property Volume. <br>& Audio Component -> Override Unity's 3D -> Max Distance = Min Parameter Value</td>
+	<td class="Yes">Sound Source -> Unity's 3D Settings </td>
+	<td class="Yes"><a href="https://docs.unrealengine.com/latest/INT/Engine/Audio/DistanceModelAttenuation/index.html" target="_blank">Blueprints -> Attenuation Node -> Size Adjustments</a></td>	
+	<td class="Yes">Positioning -> Attenuation -> Edit</td>	
+	<td class="Yes">3D Panner -> Off -> Add Built-in Parameter<br>-> Distance</td>
+	
+  </tr>
+  <tr>
+  	<td class="SubFeature" title="将创建的自定义滑离/衰减曲线保存下来，以便后续的使用">保存自定义滑离/衰减曲线</td>
+	<td class="WorkAround">Prefabs</td>
+	<td class="Yes">Prefabs & XML Support</td>
+	<td class="Yes">Create Custom Attenuation Prefab -> Add to Audio Master<br>-> Group Mixer -> Apply Audio Source Templates</td>
+	<td class="Yes">Audio Component -> Attenuation Setting -> Create New Attenuation Class</td>
+	<td class="Yes">Positioning -> 3D -> <br> Attenuation -> Edit -> Save Pre-set </td>	
+	<td class="WorkAround">复制并粘贴曲线</td>
+
+  </tr>
+      <tr>  	
+      <td class="SubFeature" title="在游戏引擎中，根据滑离/衰减曲线绘制出一个可视化球体">三维声音在游戏引擎中的可视化</td>
+  	
+    <td class="Yes">Audio Source -> 3D settings -> Max Distance <br> (casts a sphere in editor on change)</td>
+	<td class="Yes">Unity's Audio Visualization </td>
+	<td class="Yes">Unity's Audio Visualization</td>
+	<td class="Yes">SoundCue -> Debug |<br> In Game -> <br> (command stat sounds -Debug)</td>
+	<td class="Yes">1. Using Unreal's Audio Visualization <br>2. Wwise's API Show Attenuation Sphere</td>	
+	<td class="Yes">1. Using Unreal's Audio Visualization <br>2. Unity Code Yourself (Draw sphere) <br>3. In Audio Engine Visualization -> Profiler -> 3D View </td>
+	
+  </tr>
+  
+  	<td class="SubFeature" title="能根据玩家的位置来控制（除声场与音量之外的）各个方面的内建参数">由距离驱动的参数</td>
+    
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Native.cs" target="_blank">扩散、混响 <br>（自己敲代码的话—任意参数）</a></td>
+	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/287978-runtimeparameter" target="_blank">Window -> Fabric -> Run Time Parameters <br>-> Parameter -> Distance</td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Native.cs" target="_blank">扩散、混响 <br>（自己敲代码的话—任意参数）</td>
+	<td class="Yes">Continuous Modulator Node <br> (pitch only)</td>
+	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_Wwise.cs" target="_blank">New Game Parameter<br>-> Bind to Build-In Parameter -> Distance</a></td>
+	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/3D/D_DistanceDrivenParameters_FMOD.cs" target="_blank">Add Parameter <br> Add Built-in Parameter -> Distance</a></td>
+	
+  </tr>
+  <!--Music-->
+      <tr>
+	<th rowspan ="6" title="别戳我，戳我右边列的那些属性们。只有它们才会显示介绍 ：）">音乐</th>
+  	<td class="SubFeature" title="每个层代表一种乐器，每个乐器都能根据玩家的动作或位置进行动态混音">动态音乐 <br> （独立的乐器混音）</td>
+	<td class="WorkAround">自己敲代码实现<br>（很难保持同步）</td>
+	<td class="Yes">Music Component <br>-> Multiple Components Sync to Master Tempo</td>
+	<td class="Yes">Multiple Playlist Scripts -> Sync Clips </td>
+	<td class="Yes">能在 Blueprints 中完成，<br>或通过 SoundMix Changes 实现</td>
+	<td class="Yes">Music Segment <br>-> Multiple Music Tracks</td>
+	<td class="Yes">New Parameter <br>-> Multiple Logic Tracks</td>
+
+  </tr>
+      <tr>
+  	<td class="SubFeature" title="音乐会根据玩家的动作或位置发生改变">动态音乐 <br> （基于强度等级） </td>
+	<td class="WorkAround"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native4.cs" target="_blank">1.多个音量不同的声音 <br> 只保留其中一个的完全音量，其他全部静音<br></a><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Native5.cs" target="_blank">2.Interpolate Between<br>Mixer Screen-shots</a></td>
+	<td class="Yes"><a href="https://www.youtube.com/watch?v=joV2LpShX14" target="_blank">Timeline Components <br>Controlled by Parameters/EventActions</a></td>
+	<td class="WorkAround"><a href="https://www.youtube.com/watch?v=vDs-rw-w1ns&index=6&list=PLW6fMWQDKB24osBmTuJd0IG8R5tOim6eV" target="_blank">Multiple Playlist Scripts -> Sync Clips <br> Code Parameter Yourself</a></td>
+	<td class="Yes">调节音量参数或是 SoundMix Change</td>
+	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_Wwise.cs" target="_blank">Music<br>Switch Container</a></td>
+	<td class="Yes"><a href="https://github.com/DaniKog/AudioEnginesMarkdown/blob/master/Assets/Scripts/AudioScripts/Music/Music_DynamicIntensity_FMOD.cs" target="_blank">参数控制的循环区域</a></td>
+  </tr>
+      <tr>
+  	<td class="SubFeature" title="（如果存在前/尾奏）在进入循环前，播放前奏 / 在退出循环后，播放尾奏">音乐前奏与尾奏</td>
+	<td class="No">（据我所知）不存在</td>
+	<td class="Yes">Intro Loop Outro, Sequence<br>Timeline and Music Components</td>
+	<td class="WorkAround">在 PlaylistController 中编排 <br>-> 不要勾选 Shuffle 模式<br> 增加三个文件：前奏、循环、尾奏</td>
+	<td class="WorkAround">可以在 Blueprints 中实现</td>
+	<td class="Yes">进入音乐索引（cue）<br>退出音乐索引</td>
+	<td class="Yes">在事件的逻辑时间线上编排</td>
+
+  </tr>
+      <tr>
+  	<td class="SubFeature" title="触发并使音乐的节奏产生转变">节奏转变</td>
+	<td class="WorkAround">利用 <a href="http://docs.unity3d.com/ScriptReference/AudioSource.GetSpectrumData.html" target="_blank">GetSpectrumData </a>函数 <br> 自己编程实现</td>
+	<td class="Yes">Music Component Transition -> Transitions -> Sync On</td>
+	<td class="No">（据我所知）不存在</td>
+	<td class="WorkAround"><a href="https://forums.unrealengine.com/showthread.php?15791-Music-Timing-SystemCan" target="_blank">Can Be Done in Blueprints</a></td>
+	<td class="Yes">Transitions -> Source -> Exit Source At</td>
+	<td class="Yes">Logic Tracks -> Transition -> Quantizable Intervals</td>
+
+  </tr>
+      <tr>
+  	<td class="SubFeature" title="在进入一个循环时，可能发生些改变" >进入有概率发生的循环</td>	<td class="WorkAround">自己敲代码实现</td>
+	<td class="Yes">Event Trigger -> Probability</td>
+	<td class="No">（据我所知）不存在</td>
+	<td class="WorkAround">可以在 Blueprints 中实现 - Random Node</td>
+	<td class="Yes">Music Sequence -> Weight</td>		
+	<td class="Yes" title="播放概率，可在声音定义或简单事件中调节">Play Percentage</td>
+
+  </tr>
+     <tr>
+  	<td class="SubFeature" title="在不同的音乐状态之间转换">编辑过渡</td>
+	<td class="No">（据我所知）不存在</td>
+	<td class="Yes">Music Component -> Transitions</td>
+	<td class="Yes">Master Audio -> Fades <br>& PlaylistController -> Song Changed Event</td>
+	<td class="No">（据我所知）不存在</td>
+	<td class="Yes">特定过渡 / 淡入淡出 / 转场</td>
+	<td class="Yes">在事件的 Transition 时间轴进行编排<br>（双击以进行自定义） </td>
+
+  </tr>
+  
+  <!--Mixing-->
+	 <tr>
+	 <th rowspan ="3" title="别戳我，戳我右边列的那些属性们。只有它们才会显示介绍 ：）">混音</th>
+  	<td class="SubFeature" title="基于其他声音控制某个声音的信号量">旁链/闪避</td>
+	<td class="Yes"><a href="https://www.youtube.com/watch?v=UJYN4_jUIQs&index=5&list=PLW6fMWQDKB27fVKi0APpACG6bujAvYMAI" target="_blank">Mixer -> Add Duck Volume Effect -> Send to Duck Vol Effect </td>
+	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/290568-sidechain" target="_blank">ADD Component -> Sidechain </td>
+	<td class="Yes">1. 分配给总线（Bus） -> <br>使用 Unity 5 的混音器（Audio Mixer） <br>2. Master Audio -> Music Ducking </td>
+	<td class="Yes"><a href="https://docs.unrealengine.com/latest/INT/Engine/Audio/Overview/index.html" target="_blank">Sound Class -> Passive Sound Mix </a></td>
+	<td class="Yes"><a href="https://www.youtube.com/watch?v=TSA-q4dzvd8" target="_blank">新增效果 -> Wwise Meter -> Assign Parameter to Volume</td>
+	<td class="Yes"><a href="https://www.youtube.com/watch?v=C_smYg1vphc" target="_blank">新增效果 -> FMOD Compressor -> 打开 Sidechain 开关 <br> 右键->插入旁链  </a> </td>
+	
+
+  </tr>
+	<tr>
+	<td class="SubFeature" title="保存当前混音面板的所有数值和状态（并且能够再次加载）">混音快照</td>
+    
+	<td class="Yes">Window -> Mixer -> Snapshots</td>
+    
+	<td class="Yes">Unity5 的混音快照功能<br>（见左边那格）</td>
+	<td class="Yes">Unity5 的混音快照功能<br>（见左左边那格）</td>
+    
+	<td class="Yes">Save SoundClasses</td>
+	<td class="Yes">Layout -> Mixer -> Save and Load Mixing Sessions </td>
+	<td class="Yes">Window -> Mixer -> Snapshots tabs</td>
+
+  </tr>
+    <tr>
+	<td class="SubFeature" title="在游戏运行时混音">实时混音</td>
+	<td class="Yes">Window -> Mixer -> Edit in play mode</td>
+	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/c/101744" target="_blank">Play mode Persistence in Editor, OSC Server/Listener Components </a></td>
+	<td class="Yes">Master Audio -> Show Advanced -> Save Runtime Changes</td>
+	<td class="WorkAround">正在研究……</td>
+	<td class="Yes">Remote... -> Connect</td>
+	<td class="Yes">File -> Connect to Game </td>
+	
+  </tr>
+  <!--System-->
+  	 <tr>
+	 <th rowspan ="7" title="别戳我，戳我右边列的那些属性们。只有它们才会显示介绍 ：）">系统</th> 
+	<td class="SubFeature" title="允许你看到关于声音系统和声音事件相关信息的分析器">音频调试信息</td>
+	<td class="WorkAround">Debug.Log();</td>
+	<td class="Yes"> Window -> Fabric -> (EventLog / EventMonitor)<br> Or Debug.Log();</td>
+	<td class="Yes">Master Audio -> Advanced Settings -> Log Sounds / Log Custom Events</td>
+	<td class="Yes"><a href="https://answers.unrealengine.com/questions/121899/console-commands-for-audio-broken.html" target="_blank">Blueprint Debugger / stat sounds -debug</a></td>
+	<td class="Yes">F6 -> Profiler</td>
+	<td class="Yes"> Window -> Profiler</td>
+	
+  </tr>
+     <tr>
+  	<td class="SubFeature" title="是否能记录一段分析器活动，改变一些事件后再次记录，然后回放并对比两者">可编辑的分析器回放
+    <sup id="fnref2">
+		<a href="#fn2" rel="footnote">2</a>
+	</sup>
+    
+    </td>
+	<td class="No">（据我所知）不存在</td>
+	<td class="No">（据我所知）不存在</td>
+	<td class="No">（据我所知）不存在</td>
+	<td class="No">（据我所知）不存在</td>
+	<td class="No">（据我所知）不存在</td>
+	<td class="Yes"><a href="https://www.youtube.com/watch?v=4G0IHefO4v8" target="_blank">Instant Replay <br> Profiler -> Toggle API button</td>
+	
+  </tr>
+   <tr>
+  	<td class="SubFeature" title="游戏引擎在音频引擎中影响效果的方式">参数</td>
+	<td class="WorkAround">audio.</td>
+	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/287978-runtimeparameter" target="_blank">Parameters</a></td>
+	<td class="WorkAround">MasterAudio.</td>
+	<td class="Yes">Blueprint Nodes</td>
+	<td class="Yes">RTPC (Real Time Parameter Controller)</td>
+	<td class="Yes">Parameters</td>
+	
+  </tr>
+	<tr>
+  	<td class="SubFeature" title="每个引擎各自的逻辑方式和实现方法">设计方法</td>
+	<td class="Yes">C#/JavaScript</td>
+	<td class="Yes"><a href="http://fabric-manual.com/m/Fabric/l/288095-eventtrigger" target="_blank">Event Based System<br>（逻辑由 Unity 的 Hierachy 实现）</a></td>
+	<td class="Yes">Unity Event-Based<br> 或 C#/JavaScript</td>
+	<td class="Yes">C++ / Blueprints</td>
+	<td class="Yes">Event Based System ( Most Logic is Written in Code)</td>
+	<td class="Yes">可见的逻辑轨道<br>（大部分逻辑都以可视化操作实现）</td>
+	
+  </tr>
+  	<tr>
+  	<td class="SubFeature" title="是否能创建可运行于网页浏览器的可执行文件">是否支持网页构建</td>	<td class="Yes">支持的</td>	<td class="Yes">支持的</td>
+	<td class="Yes">支持的</td>
+	<td class="No">（据我所知）不支持</td>
+	<td class="No">并不支持<br>（使用 System.IO）</td>
+	<td class="No">并不支持<br>（使用 System.IO）</td>
+
+  </tr>
+  	<tr>
+  	<td class="SubFeature" title=" 能否在引擎中使用 mp3 文件">是否支持 Mp3 格式</td>	<td class="Yes">支持的</td>	<td class="Yes">支持的</td>	<td class="Yes">支持的</td>
+	<td class="Workaround">只支持 iOS</td>
+	<td class="No">（据我所知）不支持</td>	<td class="Yes">支持的</td>
+
+  </tr>
+    </tr>
+  	<tr>
+  	<td class="SubFeature" title="能否在引擎中使用 ogg 文件">是否支持 Ogg 格式</td>	<td class="Yes">支持的</td>	<td class="Yes">支持的</td>	<td class="Yes">支持的</td>
+	<td class="Workaround">只支持 iOS </td>
+	<td class="No">（据我所知）不支持</td>	<td class="Yes">支持的</td>
+
+  </tr>
+</table>
+<br> 
+
+<h4 align="center">这个对照表基于个人经验和社区学习的数据整理而成。<br>若你有相关的反馈、贡献和评论，非常欢迎！<br>您可以发送邮件至 Dani.Kongandk@gmail.com 的谷歌邮箱</a>，或在 Twitter 上联系我：<a href="https://twitter.com/Dani_Kogan" target="_blank">@Dani_Kogan</a> </h4>
+<h1>特别感谢：</h1>
+<p align="center"> 向下列贡献者报以十分的感谢，他（她）们为此表增加信息、帮助修复问题并且指出了表中的矛盾之处。
+<br>
+<br>
+<a href="https://twitter.com/darktonicgames" target="_blank"> @darktonicgames </a> 
+<br>
+<a href="https://twitter.com/bpaterson2000" target="_blank"> @bpaterson2000 </a> 
+<br>
+<a href="https://twitter.com/Tazman_Audio" target="_blank"> @Tazman_Audio </a> 
+<br>
+<a href="https://twitter.com/ShriekStudios" target="_blank">@ShriekStudios </a> 
+<br>
+<a href="https://twitter.com/Moy_Fw" target="_blank"> @Moy_Fw</a>
+<br>
+<a href="https://twitter.com/GameAudioInst" target="_blank">@GameAudioInst </a>	
+<br>
+<a href="https://twitter.com/AnastasiaDevana" target="_blank">@AnastasiaDevana </a>	
+<br>
+<a href="https://twitter.com/MattRyanSound" target="_blank">@MattRyanSound</a>
+<br>
+<a href="https://twitter.com/AKMikeD" target="_blank">@AKMikeD</a>
+<br>
+<a href="https://twitter.com/redbluemonkey" target="_blank">@redbluemonkey</a>
+<br>
+<a href="https://twitter.com/JayMFernandes" target="_blank">@JayMFernandes</a>
+<br>
+<a href="https://twitter.com/SimonDSchmidt" target="_blank">@SimonDSchmidt</a>
+<br>
+<a href="https://twitter.com/depanther" target="_blank">@DePanther</a>
+</p>
+<h4 align="center">（中文版由Moy翻译，欢迎联系新浪微博<a href="http://weibo.com/frostxfox">@Moy_F</a> 交流探讨）</h4>
+
+
+<br> 
+<hr>
+<br> 
+<div>
+<li id="fn1">
+<p>注释一：滑离&nbsp;<a href="#fnref1" rev="footnote">&#8617;</a></p>
+<p>英文原词Rolloff，并没有找到特别合适的中文单词，“滑离”这种译法参考自<a href="http://book.douban.com/subject/20503570/">《FMOD 游戏音频快速上手》</a>。<br>在此处的用法，可以理解为<u>音量随距离产生相应变化的衰减曲线</u>这么个意思吧。</p>
+
+
+
+<br>
+<li id="fn2">
+<p>注释二：瞬时分析器回放&nbsp;<a href="#fnref2" rev="footnote">&#8617;</a></p>
+<p>这是 FMOD Studio 1.06 支持的新特性，点击表格中的链接可以看到演示，想要详细的介绍可以戳：<a href="youtu.be/D8zthXuTKPI ">Introduction to the Profiler - Instant Replay</a>（需翻墙）<br>简单地说，它支持实时连接游戏，并将游戏过程的声音状态（及参数）全部录下来，随后对录制的数据进行更改和调试。</p>
+</li>
+
+
+</div>
+
+
+<br><br>
+
+<hr>
+
+<div>
+译者说明：<br><br>表格内的英文大部分维持不动，一方面因为相关的软件通常都是英文版，使用英文进行检索会更方便快捷；另一方面一些单词在软件中的意思也是特有的（例如 Unity 中的 Prefab），翻译之后反而词不达意。
+
+<br><br>做这个活儿其实有点吃力不讨好，行业内的前辈基本都知道意思，而纯新手的话这里一两句话也说不清楚。
+<br>所以主要目的，是让它可以作为一个学习的<b>入门指南</b>。<br>
+我刚开始做翻译的时候，表格里的一些功能就很难理解，比如 Rolloff，在音频软件外的用法完全不同，相关资料也比较少，前两天接触了 FMOD 才明白意思。这里也希望这份译本对你有所帮助，至少有能学习入手的途径。<br>如果有翻译不到位之处，还请谅解。原文版本在<a href="#originVer">页面右上角</a>，供对照参考。
+
+<p align="right">
+2015年6月23日<br>
+Moy</p>
+
+<p align="center">&nbsp;</p>
+</div>
+
+</body>
+
+
+</html>
