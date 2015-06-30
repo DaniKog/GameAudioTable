@@ -1,0 +1,74 @@
+h2 {
+font-family: Arial,Helvetica,sans-serif;
+color: #FFF;
+font-weight: bold;
+text-shadow: .05em .05em .05em rgba(0,0,0,0.5);
+
+}
+a {text-decoration: none;}
+a:hover {color: #FF6633;}
+h2:hover{color: #FF6633;}
+table {
+table-layout: fixed;
+    width:90%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: center;
+}
+table.audio th	{
+	background: rgb(92,92,92);
+    color: white;
+}
+table.audio th:nth-child(0)) { text-align: left; }
+h1{ text-align: center; }
+td.SubFeature
+{
+text-align: center;
+color: white;
+font-size: 15px;
+font-weight: lighter;
+background-color: #808080;
+}
+td.Feature
+{
+text-align: center;
+color: white;
+font-size: 15px;
+font-weight: lighter;
+background-color: #808080;
+}
+td.Yes
+{
+text-align: center;
+background-color: #80CC80;
+//Green
+}
+td.WorkAround
+{
+text-align: center;
+background-color: #FFDB4D;
+//Yellow
+}
+td.No
+{
+text-align: center;
+background-color: #FF8080;
+//Red
+}
+tr:hover {
+    opacity: 0.9;
+}
+th.norightborder 
+{ 
+border-right: 0;
+border-bottom: 0;
+}
+th.noleftborder
+{ 
+border-left: 0;
+border-bottom: 0;
+}

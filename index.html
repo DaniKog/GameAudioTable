@@ -1,108 +1,53 @@
+<br>
+<!DOCTYPE html>
 <html>
 <head>
-
+<link rel="stylesheet" type="text/css" href="audiostyle.css">
 <link rel="icon" href="./favicon.ico" mce_href="./favicon.ico" type="image/x-icon">  
-
-<title># 	 	GameAudioTable - Audio Middleware Feature Implementation Table</title>
+<script src="jquery-1.11.3.js"></script>
+<script src="jquery.floatThead.js"></script>
+<script src="jquery.floatThead._.js"></script>
+<script src="ScrollingScript.js"></script>
+<title>#GameAudioTable - Audio Middleware Feature Implementation Table</title>
 
 <meta name="description" content="Audio middleware related info, open source implementation code for Wwise FMOD Fabric MasterAudio and Unity"/>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-</head>
-<body>
-<style>
-h2 {
-font-family: Arial,Helvetica,sans-serif;
-color: #FFF;
-font-weight: bold;
-text-shadow: .05em .05em .05em rgba(0,0,0,0.5);
-}
-a {text-decoration: none;}
-a:hover {color: #FF6633;}
-table {
-table-layout: fixed;
-    width:90%;
-}
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-th, td {
-    text-align: center;
-}
-table#t01 th	{
-	background: rgb(92,92,92);
-    color: white;
-}
-table#t01 th:nth-child(0)) { text-align: left; }
-h1{ text-align: center; }
-td.SubFeature
-{
-text-align: center;
-color: white;
-font-size: 15px;
-font-weight: lighter;
-background-color: #808080;
-}
-td.Feature
-{
-text-align: center;
-color: white;
-font-size: 15px;
-font-weight: lighter;
-background-color: #808080;
-}
-td.Yes
-{
-text-align: center;
-background-color: #80CC80;
-//Green
-}
-td.WorkAround
-{
-text-align: center;
-background-color: #FFDB4D;
-//Yellow
-}
-td.No
-{
-text-align: center;
-background-color: #FF8080;
-//Red
-}
-tr:hover {
-    opacity: 0.9;
-}
-th.norightborder 
-{ 
-border-right: 0;
-border-bottom: 0;
-}
-th.noleftborder
-{ 
-border-left: 0;
-border-bottom: 0;
-}
-</style>
-<div align="left">Last Update - 24.06.2015 <div align="right"> <a href="GameAudioTable_Zh.html">(Chinese Version)中文版本 </a> 由<a href="https://twitter.com/Moy_Fw" target="_blank"> @Moy_Fw</a> 翻译</div>
+<div align="left">Last Update - 30.06.2015 <div align="right"> <a href="GameAudioTable_Zh.html">(Chinese Version)中文版本 </a> 由<a href="https://twitter.com/Moy_Fw" target="_blank"> @Moy_Fw</a> 翻译</div>
 - Formatting
 <br>
-- Updated Chinese Version 
+- Table Header Follows on scroll 
 
 <h1>#GameAudioTable V2.6 <br> Audio Middleware Implementation Table </h1>
 <p align="center"><a href="https://github.com/DaniKog/AudioEnginesMarkdown" target="_blank">GitHub Repository with Source Code</a></p>
 <table align="center"><tr>
 <td class="Yes"> Feature Exists</td>
 <tr><td class="WorkAround"> A Workaround</td>
-<tr><td class="No"> Doesn't Exist As Far As I Know</td></tr></table>
+<tr><td class="No"> Doesn't Exist As Far As I Know</td></tr>
+</table>
+</head>
+<body>
 <br>
 
-<table id="t01" align="Center">
+<table Class="table audio" align="Center">
 <div align="left">
-<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Mouse Over a feature for a description</i></div>
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Mouse Over a feature for a description</i>
+</div>
+ <colgroup>
+
+    <col style="width: 4%;"></col>
+	<col style="width: 13%;"></col>
+	<col style="width: 13.8%;"></col>
+	<col style="width: 13.8%;"></col>
+	<col style="width: 13.8%;"></col>
+	<col style="width: 13.8%;"></col>
+	<col style="width: 13.8%;"></col>
+	<col style="width: 13.8%;"></col>
+</colgroup>
+ <thead>
   <tr>
-	<th colspan="1" width="4%" class = "norightborder"><p align="right"></th>
-	<th colspan="1" width="13%" class = "noleftborder"><p align="right" ><font size="4" align="right">Engine</font></p></th>
+	<th colspan="1" width="4%" class = "norightborder"><div align="right"></div></th>
+	<th colspan="1" width="13%" class = "noleftborder"><div align="right"><font size="4" align="right">Engine</font></div></th>
     <th rowspan="2" ><a href="https://unity3d.com/" target="_blank"><h2>Unity5</h2></th>	
 	<th rowspan="1" > <a href="http://www.tazman-audio.co.uk/"><h2>Fabric</h2></a></th>
 	<th rowspan="1" > <a href="https://www.assetstore.unity3d.com/en/#!/content/5607"><h2>Master Audio</h2></a></th>
@@ -115,6 +60,7 @@ border-bottom: 0;
     <th colspan="2" ><p align="left"><font size="4">Feature</font></td>
 	<th colspan="2"><font size="4">Unity Plug-ins</font></td>
   </tr>
+   </thead>
   <!--Documentation-->
   <tr>
    <th  colspan = "2" >Documentation</th> 
@@ -372,7 +318,7 @@ border-bottom: 0;
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
-	<td class="Workaround">iOS only</td>
+	<td class="WorkAround">iOS only</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Yes</td>
 
@@ -383,12 +329,13 @@ border-bottom: 0;
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
-	<td class="Workaround">iOS only</td>
+	<td class="WorkAround">iOS only</td>
 	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Yes</td>
 
   </tr>
 </table>
+
 <br> 
 
 <h4 align="center">This table is a based on personal experiences and community acquired data. <br>Feedback, contributions and critiques are most welcome, send to Dani.Kogandk@gmail.com, or <a href="https://twitter.com/Dani_Kogan" target="_blank">@Dani_Kogan</a> </h4>

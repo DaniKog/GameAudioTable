@@ -1,124 +1,57 @@
-
-<!-- saved from url=(0046)http://danikog.github.io/AudioEnginesMarkdown/ -->
+<!-- saved from url=(0046)http://danikog.github.io/GameAudioTable -->
+<br>
+<!DOCTYPE html>
 <html class="hb-loaded" version="g42dymwpi--nx">
-
 <head>
-
+<link rel="stylesheet" type="text/css" href="audiostyle.css">
 <link rel="icon" href="./favicon.ico" mce_href="./favicon.ico" type="image/x-icon">  
-
+<script src="jquery-1.11.3.js"></script>
+<script src="jquery.floatThead.js"></script>
+<script src="jquery.floatThead._.js"></script>
+<script src="ScrollingScript.js"></script>
 <title>游戏音频引擎对照表</title>
 
+<meta name="description" content="音频中间件相关信息 FMOD Wwise Unity Unreal 4 Fabric Master Audio"/> <!--Please let me know if I did this Right. feel free to change this to reflect the contact better-->
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-</head>
-
-<body>
-
-<style>
-
-h2 {
-font-family: Arial,Helvetica,sans-serif;
-color: #FFF;
-font-weight: bold;
-text-shadow: .05em .05em .05em rgba(0,0,0,0.5);
-}
-a {text-decoration: none;}
-
-a:hover {color: #FF6633;}
-
-table {
-table-layout: fixed;
-    width:90%;
-}
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-th, td {
-    text-align: center;
-}
-table#t01 th	{
-	background: rgb(92,92,92);
-    color: white;
-}
-table#t01 th:nth-child(0)) { text-align: left; }
-h1{ text-align: center; }
-td.SubFeature
-{
-text-align: center;
-color: white;
-font-size: 15px;
-font-weight: lighter;
-background-color: #808080;
-}
-td.Feature
-{
-text-align: center;
-color: white;
-font-size: 15px;
-font-weight: lighter;
-background-color: #808080;
-}
-
-td.Yes
-{
-text-align: center;
-background-color: #80CC80;
-//Green
-}
-
-td.WorkAround
-{
-text-align: center;
-background-color: #FFDB4D;
-//Yellow
-}
-td.No
-{
-text-align: center;
-background-color: #FF8080;
-//Red
-}
-tr:hover {
-    opacity: 0.9;
-}
-th.norightborder 
-{ 
-border-right: 0;
-border-bottom: 0;
-}
-th.noleftborder
-{ 
-border-left: 0;
-border-bottom: 0;
-}
-</style>
-<div align="left">上次更新 - 13.06.2015 
+<div align="left">上次更新 - 30.06.2015 
 <div align="right"><a href="index.html" id="originVer">(English Version)英文原版</a> 
 作者：<a href="https://twitter.com/Dani_Kogan">@Dani_Kogan</a></div>
-- 增加了售价信息
-<br>
-- 增加了对 Ogg 格式的支持信息
+- 格式化
+<br> <!--Please change this to be more accurate. This text is place holder-->
+- 布局
 
-
-<h1>各引擎音频特性实现对照表 <br> #GameAudioTable V2.6</h1>
-<p align="center"><a href="https://github.com/DaniKog/AudioEnginesMarkdown" target="_blank">GitHub 仓库（附源代码）</a></p>
+<h1>#GameAudioTable V2.6 <br> 各引擎音频特性实现对照表 </h1>
+<p align="center"><a href="https://github.com/DaniKog/AudioEnginesMarkdown" target="_blank">GitHub 仓库（附源代码</a></p>
 <table align="center"><tbody><tr>
 <td class="Yes"> 绿色：具备特性</td>
 </tr><tr><td class="WorkAround"> 黄色：存在变通的办法</td>
 </tr><tr><td class="No"> 红色：（据我所知）不存在</td></tr></tbody></table>
 <br>
 <br>
+</head>
+<body>
 
-<div align="right">
-<i>注：将鼠标悬浮在<b>第二列</b>的特性名上可看到相关介绍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></div>
+<table Class="table audio" align="Center">
+<div align="left">
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：将鼠标悬浮在<b>第二列</b>的特性名上可看到相关介绍</i>
+</div>
+ <colgroup>
 
-<table id="t01" align="Center">
+    <col style="width: 4%;"></col>
+	<col style="width: 13%;"></col>
+	<col style="width: 13.8%;"></col>
+	<col style="width: 13.8%;"></col>
+	<col style="width: 13.8%;"></col>
+	<col style="width: 13.8%;"></col>
+	<col style="width: 13.8%;"></col>
+	<col style="width: 13.8%;"></col>
+</colgroup>
+ <thead>
   <tr>
-	<th colspan="1" width="4%" class = "norightborder"><p align="right"></th>
-	<th colspan="1" width="13%" class = "noleftborder"><p align="right" ><font size="4">引擎</font></p></th>
-    <th rowspan="2" ><a href="https://unity3d.com/" target="_blank">
-    <h2>Unity 5</h2></th>	
+	<th colspan="1" width="4%" class = "norightborder"><div align="right"></div></th>
+	<th colspan="1" width="13%" class = "noleftborder"><div align="right"><font size="4" align="right">引擎</font></div></th>
+    <th rowspan="2" ><a href="https://unity3d.com/" target="_blank"><h2>Unity5</h2></th>	
 	<th rowspan="1" > <a href="http://www.tazman-audio.co.uk/"><h2>Fabric</h2></a></th>
 	<th rowspan="1" > <a href="https://www.assetstore.unity3d.com/en/#!/content/5607"><h2>Master Audio</h2></a></th>
     <th rowspan="2" ><a href="https://www.unrealengine.com/" target="_blank"><h2>Unreal 4</h2></th>		
@@ -127,14 +60,12 @@ border-bottom: 0;
 
 	</tr>
 	  <tr>
-    <th colspan="2" ><p align="left"><font size="4">特性</font><th colspan="2"><font size="4">Unity 插件<br>
-	</font>
-	  </td>
+    <th colspan="2" ><p align="left"><font size="4">特性</font></td>
+	<th colspan="2"><font size="4">Unity 插件</font></td>
   </tr>
-  
-  
+   </thead>
   <!--Documentation-->
-  <tr>
+ <tr>
    <th  colspan = "2" title="官方的说明文档">文档</th> 
 	<td class="Yes"><a href="http://docs.unity3d.com/460/Documentation/Manual/Audio.html" target="_blank">点击此处</a></td>
 	<td class="Yes"><a href="http://fabric-manual.com/s/Docs/m/Fabric" target="_blank">点击此处</a></td>
@@ -491,3 +422,4 @@ Moy</p>
 
 
 </html>
+
