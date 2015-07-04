@@ -14,12 +14,12 @@
 <meta name="description" content="Audio middleware related info, open source implementation code for Wwise FMOD Fabric MasterAudio and Unity"/>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<div align="left">Last Update - 30.06.2015 <div align="right"> <a href="Zh.html">(Chinese Version)中文版本 </a> 由<a href="https://twitter.com/Moy_Fw" target="_blank"> @Moy_Fw</a> 翻译</div>
-- Formatting
+<div align="left">Last Update - 04.07.2015 <div align="right"> <a href="Zh.html">(Chinese Version)中文版本 </a> 由<a href="https://twitter.com/Moy_Fw" target="_blank"> @Moy_Fw</a> 翻译</div>
+- Audio Format Compression (First Pass)
 <br>
-- Table Header Follows on scroll 
+-Streaming Audio
 
-<h1>#GameAudioTable V2.6 <br> Audio Middleware Implementation Table </h1>
+<h1>#GameAudioTable V2.7 <br> Audio Middleware Implementation Table </h1>
 <p align="center"><a href="https://github.com/DaniKog/GameAudioTable" target="_blank">GitHub Repository with Source Code</a></p>
 <table align="center"><tr>
 <td class="Yes"> Feature Exists</td>
@@ -264,7 +264,7 @@
   </tr>
   <!--System-->
   	 <tr>
-	 <th rowspan ="7">System</th> 
+	 <th rowspan ="9">System</th> 
 	<td class="SubFeature" title="Profiler that allows you see information about the audio system and the audio events">Audio Debugging</td>
 	<td class="WorkAround">Debug.Log();</td>
 	<td class="Yes"> Window -> Fabric -> (EventLog / EventMonitor)<br> Or Debug.Log();</td>
@@ -314,26 +314,42 @@
 	<td class="No">No (Using System.IO)</td>
 
   </tr>
-  	<tr>
-  	<td class="SubFeature" title=" Can use mp3 in the engine">MP3 Support</td>
+		<tr>
+  	<td class="SubFeature" title="Can import mp3 into the engine">Import .MP3 format files</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
-	<td class="WorkAround">iOS only</td>
-	<td class="WorkAround">Works on Platfroms with built in decoders</td>
+	<td class="No">Not That I Know Of</td>
+	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Yes</td>
-
   </tr>
     </tr>
-  	<tr>
-  	<td class="SubFeature" title=" Can use Ogg in the engine">Ogg Support (Vorbis)</td>
+		<tr>
+  	<td class="SubFeature" title="Can import Ogg into the engine">Import .Ogg format files (Vorbis)</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
 	<td class="Yes">Yes</td>
-	<td class="WorkAround">iOS only</td>
+	<td class="No">Not That I Know Of</td>
+	<td class="No">Not That I Know Of</td>
 	<td class="Yes">Yes</td>
-	<td class="Yes">Yes</td>
-
+  </tr>
+    	<tr>
+  	<td class="SubFeature" title="Can convert audio to Vorbis or PCM or ADPCM compression formats inside the engine">In Engine Audio Compression Format Conversion<br>(Vorbis/PCM/ADPCM)</td>
+	<td class="Yes">Inspector On a Sound -> Override -> Compression Format</td>
+	<td class="Yes">Inspector On a Sound -> Override -> Compression Format</td>
+	<td class="Yes">Inspector On a Sound -> Override -> Compression Format</td>
+	<td class="WorkAround">Researching</td>
+	<td class="Yes">Sound Selected -> Source Settings -> Conversion Setting</td>
+	<td class="WorkAround">Researching</td>
+  </tr>
+     	<tr>
+  	<td class="SubFeature" title="Stream the audio, use less memory to play the audio">Audio Steaming</td>
+	<td class="Yes">Inspector On a Sound -> Override -> Load Type</td>
+	<td class="Yes">Inspector On a Sound -> Override -> Load Type</td>
+	<td class="Yes">Inspector On a Sound -> Override -> Load Type</td>
+	<td class="WorkAround">Researching</td>
+	<td class="Yes">Sound Selected -> General Settings -> Check-box Stream</td>
+	<td class="WorkAround">Researching</td>
   </tr>
 </table>
 
