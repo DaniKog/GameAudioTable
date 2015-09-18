@@ -1,58 +1,128 @@
-<!-- saved from url=(0046)http://danikog.github.io/GameAudioTable -->
-<br>
-<!DOCTYPE html>
+
+<!-- saved from url=(0046)http://danikog.github.io/AudioEnginesMarkdown/ -->
 <html class="hb-loaded" version="g42dymwpi--nx">
+
 <head>
-<link rel="stylesheet" type="text/css" href="./AudioStyle.css">
-<link rel="icon" href="./favicon.ico" type="image/x-icon">  
-<script src="jquery-1.11.3.js"></script>
-<script src="jquery.floatThead.js"></script>
-<script src="jquery.floatThead._.js"></script>
-<script src="ScrollingScript.js"></script>
+
+<link rel="icon" href="./favicon.ico" mce_href="./favicon.ico" type="image/x-icon">  
+
 <title>游戏音频引擎对照表</title>
 
-<meta name="description" content="音频中间件相关信息 FMOD Wwise Unity Unreal 4 Fabric Master Audio"/> <!--Please let me know if I did this Right. feel free to change this to reflect the contact better-->
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<div align="left">上次更新 - 30.06.2015 
-<div align="right"><a href="index.html" id="originVer">(English Version)英文原版</a> 
-作者：<a href="https://twitter.com/Dani_Kogan">@Dani_Kogan</a></div>
-- 格式化
-<br> <!--Please change this to be more accurate. This text is place holder-->
-- 布局
 
-<h1>Game Audio Table V2.6 <br> 各引擎音频特性实现对照表 </h1>
-<h4 align = center>#GameAudioTable</h4>
-<p align="center"><a href="https://github.com/DaniKog/GameAudioTable" target="_blank">GitHub 仓库（附源代码</a></p>
+</head>
+
+<body>
+
+<style>
+
+h2 {
+font-family: Arial,Helvetica,sans-serif;
+color: #FFF;
+font-weight: bold;
+text-shadow: .05em .05em .05em rgba(0,0,0,0.5);
+}
+a {text-decoration: none;}
+
+a:hover {color: #FF6633;}
+
+table {
+table-layout: fixed;
+    width:90%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: center;
+}
+table#t01 th	{
+	background: rgb(92,92,92);
+    color: white;
+}
+table#t01 th:nth-child(0)) { text-align: left; }
+h1{ text-align: center; }
+td.SubFeature
+{
+text-align: center;
+color: white;
+font-size: 15px;
+font-weight: lighter;
+background-color: #808080;
+}
+td.Feature
+{
+text-align: center;
+color: white;
+font-size: 15px;
+font-weight: lighter;
+background-color: #808080;
+}
+
+td.Yes
+{
+text-align: center;
+background-color: #80CC80;
+//Green
+}
+
+td.WorkAround
+{
+text-align: center;
+background-color: #FFDB4D;
+//Yellow
+}
+td.No
+{
+text-align: center;
+background-color: #FF8080;
+//Red
+}
+tr:hover {
+    opacity: 0.9;
+}
+th.norightborder 
+{ 
+border-right: 0;
+border-bottom: 0;
+}
+th.noleftborder
+{ 
+border-left: 0;
+border-bottom: 0;
+}
+</style>
+<div align="left">上次更新 - 2015年8月18日
+<div align="right"><a href="AudioEnginesMarkdown.html" id="originVer">英文原版</a> 
+作者：<a href="https://twitter.com/Dani_Kogan">Dani Kogan</a></div>
+- 增加了音频压缩的部分
+<br>
+- 增加了音频流的部分
+<br>
+- 改进了两处关于导入格式的翻译
+<!-- update the description of "ogg / mp3 " from "support this format" to "support importing this format" -->
+
+
+<h1>各引擎音频特性实现对照表 <br> 
+#GameAudioTable V2.7</h1>
+<p align="center"><a href="https://github.com/DaniKog/AudioEnginesMarkdown" target="_blank">GitHub 仓库（附源代码）</a></p>
 <table align="center"><tbody><tr>
 <td class="Yes"> 绿色：具备特性</td>
 </tr><tr><td class="WorkAround"> 黄色：存在变通的办法</td>
 </tr><tr><td class="No"> 红色：（据我所知）不存在</td></tr></tbody></table>
 <br>
 <br>
-</head>
-<body>
 
-<table Class="table audio" align="Center">
-<div align="left">
-<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：将鼠标悬浮在<b>第二列</b>的特性名上可看到相关介绍</i>
-</div>
- <colgroup>
+<div align="right">
+<p><i>注：将鼠标悬浮在<b>第二列</b>的特性名上可看到相关介绍</i></p></div>
 
-    <col style="width: 4%;"></col>
-	<col style="width: 13%;"></col>
-	<col style="width: 13.8%;"></col>
-	<col style="width: 13.8%;"></col>
-	<col style="width: 13.8%;"></col>
-	<col style="width: 13.8%;"></col>
-	<col style="width: 13.8%;"></col>
-	<col style="width: 13.8%;"></col>
-</colgroup>
- <thead>
+<table id="t01" align="Center">
   <tr>
-	<th colspan="1" width="4%" class = "norightborder"><div align="right"></div></th>
-	<th colspan="1" width="13%" class = "noleftborder"><div align="right"><font size="4" align="right">引擎</font></div></th>
-    <th rowspan="2" ><a href="https://unity3d.com/" target="_blank"><h2>Unity5</h2></th>	
+	<th colspan="1" width="4%" class = "norightborder"><p align="right"></th>
+	<th colspan="1" width="13%" class = "noleftborder"><p align="right" ><font size="4">引擎</font></p></th>
+    <th rowspan="2" ><a href="https://unity3d.com/" target="_blank">
+    <h2>Unity 5</h2></th>	
 	<th rowspan="1" > <a href="http://www.tazman-audio.co.uk/"><h2>Fabric</h2></a></th>
 	<th rowspan="1" > <a href="https://www.assetstore.unity3d.com/en/#!/content/5607"><h2>Master Audio</h2></a></th>
     <th rowspan="2" ><a href="https://www.unrealengine.com/" target="_blank"><h2>Unreal 4</h2></th>		
@@ -61,12 +131,14 @@
 
 	</tr>
 	  <tr>
-    <th colspan="2" ><p align="left"><font size="4">特性</font></td>
-	<th colspan="2"><font size="4">Unity 插件</font></td>
+    <th colspan="2" ><p align="left"><font size="4">特性</font><th colspan="2"><font size="4">Unity 插件<br>
+	</font>
+	  </td>
   </tr>
-   </thead>
+  
+  
   <!--Documentation-->
- <tr>
+  <tr>
    <th  colspan = "2" title="官方的说明文档">文档</th> 
 	<td class="Yes"><a href="http://docs.unity3d.com/460/Documentation/Manual/Audio.html" target="_blank">点击此处</a></td>
 	<td class="Yes"><a href="http://fabric-manual.com/s/Docs/m/Fabric" target="_blank">点击此处</a></td>
@@ -278,7 +350,7 @@
   </tr>
   <!--System-->
   	 <tr>
-	 <th rowspan ="7" title="别戳我，戳我右边列的那些属性们。只有它们才会显示介绍 ：）">系统</th> 
+	 <th rowspan ="9" title="别戳我，戳我右边列的那些属性们。只有它们才会显示介绍 ：）">系统</th> 
 	<td class="SubFeature" title="允许你看到关于声音系统和声音事件相关信息的分析器">音频调试信息</td>
 	<td class="WorkAround">Debug.Log();</td>
 	<td class="Yes"> Window -> Fabric -> (EventLog / EventMonitor)<br> Or Debug.Log();</td>
@@ -321,33 +393,55 @@
 	<td class="Yes">C++ / Blueprints</td>
 	<td class="Yes">Event Based System ( Most Logic is Written in Code)</td>
 	<td class="Yes">可见的逻辑轨道<br>（大部分逻辑都以可视化操作实现）</td>
-	
   </tr>
-  	<tr>
+  
+  <tr>
   	<td class="SubFeature" title="是否能创建可运行于网页浏览器的可执行文件">是否支持网页构建</td>	<td class="Yes">支持的</td>	<td class="Yes">支持的</td>
 	<td class="Yes">支持的</td>
 	<td class="No">（据我所知）不支持</td>
 	<td class="No">并不支持<br>（使用 System.IO）</td>
 	<td class="No">并不支持<br>（使用 System.IO）</td>
-
   </tr>
-  	<tr>
-  	<td class="SubFeature" title=" 能否在引擎中使用 mp3 文件">是否支持 Mp3 格式</td>	<td class="Yes">支持的</td>	<td class="Yes">支持的</td>	<td class="Yes">支持的</td>
+  
+  <tr>
+  	<td class="SubFeature" title=" 是否支持导入 mp3 格式的文件">导入 Mp3 格式</td>	<td class="Yes">支持的</td>	<td class="Yes">支持的</td>	<td class="Yes">支持的</td>
 	<td class="Workaround">只支持 iOS</td>
 	<td class="No">（据我所知）不支持</td>	<td class="Yes">支持的</td>
-
   </tr>
-    </tr>
-  	<tr>
-  	<td class="SubFeature" title="能否在引擎中使用 ogg 文件">是否支持 Ogg 格式</td>	<td class="Yes">支持的</td>	<td class="Yes">支持的</td>	<td class="Yes">支持的</td>
+  
+  <tr>
+  	<td class="SubFeature" title="是否支持导入 ogg 格式的文件">导入 Ogg 格式（Vorbis）</td>	<td class="Yes">支持的</td>	<td class="Yes">支持的</td>	<td class="Yes">支持的</td>
 	<td class="Workaround">只支持 iOS </td>
 	<td class="No">（据我所知）不支持</td>	<td class="Yes">支持的</td>
-
   </tr>
+  
+  <tr>
+  	<td class="SubFeature" title="在引擎内部将音频文件转换为 Vorbis 或 PCM 或 ADPCM 格式">引擎内转换压缩格式<br>(Vorbis/PCM/ADPCM）</td>
+	<td class="Yes">声音对象的 Inspector -> Override -> Compression Format</td>
+	<td class="Yes">声音对象的 Inspector -> Override -> Compression Format</td>
+	<td class="Yes">声音对象的 Inspector -> Override -> Compression Format</td>
+	<td class="No">（据我所知）不存在</td>
+	<!-- <td class="No">Code Yourself <br>(Unconfirmed)<a href ="https://docs.unrealengine.com/latest/INT/API/Runtime/Engine/Sound/USoundWave/index.html""></a></td>
+	-->
+	<td class="Yes">选中的音频 -> Source Settings -> Conversion Setting</td>
+	<td class="Yes">Bank 标签页 - > 选择 Bank -> 选择平台</td>
+  </tr>
+  
+  
+	<tr>
+  	<td class="SubFeature" title="在从（从网页或是内存）加载音频的时候同时进行播放">音频流</td>
+	<td class="Yes">声音对象的 Inspector -> Override -> Load Type</td>
+	<td class="Yes">声音对象的 Inspector -> Override -> Load Type</td>
+	<td class="Yes">声音对象的 Inspector -> Override -> Load Type</td>
+	<td class="WorkAround"><a href ="https://docs.unrealengine.com/latest/INT/API/Runtime/Engine/Sound/USoundWaveStreaming/index.html" target="_blank">自己敲代码实现</a></td>
+	<td class="Yes">选中的音频 -> General Settings -> Check-box Stream 勾选框</td>
+	<td class="Yes">Bank 标签页 - > 选择事件 -> 在音频轨道上点击 Steam 的按钮</a></td>
+  </tr>
+  
 </table>
 <br> 
 
-<h4 align="center">这个对照表基于个人经验和社区学习的数据整理而成。<br>若你有相关的反馈、贡献和评论，非常欢迎！<br>您可以发送邮件至 Dani.Kongandk@gmail.com 的谷歌邮箱</a>，或在 Twitter 上联系我：<a href="https://twitter.com/Dani_Kogan" target="_blank">@Dani_Kogan</a> </h4>
+<h4 align="center">这个对照表基于个人经验和社区学习的数据整理而成。<br>若你有相关的反馈、贡献和评论，非常欢迎！<br>您可以发送邮件至 <a href="MailTo:dani.kogandk@gmail.com">Dani Kongan 的谷歌邮箱</a>，或在 Twitter 上联系我：<a href="https://twitter.com/Dani_Kogan" target="_blank">@Dani_Kogan</a> </h4>
 <h1>特别感谢：</h1>
 <p align="center"> 向下列贡献者报以十分的感谢，他（她）们为此表增加信息、帮助修复问题并且指出了表中的矛盾之处。
 <br>
@@ -359,8 +453,6 @@
 <a href="https://twitter.com/Tazman_Audio" target="_blank"> @Tazman_Audio </a> 
 <br>
 <a href="https://twitter.com/ShriekStudios" target="_blank">@ShriekStudios </a> 
-<br>
-<a href="https://twitter.com/Moy_Fw" target="_blank"> @Moy_Fw</a>
 <br>
 <a href="https://twitter.com/GameAudioInst" target="_blank">@GameAudioInst </a>	
 <br>
@@ -406,14 +498,17 @@
 <hr>
 
 <div>
-译者说明：<br><br>表格内的英文大部分维持不动，一方面因为相关的软件通常都是英文版，使用英文进行检索会更方便快捷；另一方面一些单词在软件中的意思也是特有的（例如 Unity 中的 Prefab），翻译之后反而词不达意。
-
-<br><br>做这个活儿其实有点吃力不讨好，行业内的前辈基本都知道意思，而纯新手的话这里一两句话也说不清楚。
-<br>所以主要目的，是让它可以作为一个学习的<b>入门指南</b>。<br>
-我刚开始做翻译的时候，表格里的一些功能就很难理解，比如 Rolloff，在音频软件外的用法完全不同，相关资料也比较少，前两天接触了 FMOD 才明白意思。这里也希望这份译本对你有所帮助，至少有能学习入手的途径。<br>如果有翻译不到位之处，还请谅解。原文版本在<a href="#originVer">页面右上角</a>，供对照参考。
-
+<p>译者说明：<br><br>表格内的英文大部分维持不动，一方面因为相关的软件通常都是英文版，使用英文进行检索会更方便快捷；另一方面一些单词在软件中的意思也是特有的（例如 Unity 中的 Prefab），翻译之后反而词不达意。
+  
+  <br><br>做这个活儿其实有点吃力不讨好，行业内的前辈基本都知道意思，而纯新手的话这里一两句话也说不清楚。
+  <br>所以主要目的，是让它可以作为一个学习的<b>入门指南</b>。<br>
+  我刚开始做翻译的时候，表格里的一些功能就很难理解，比如 Rolloff，在音频软件外的用法完全不同，相关资料也比较少，前两天接触了 FMOD 才明白意思。这里也希望这份译本对你有所帮助，至少有能学习入手的途径。<br>如果有翻译不到位之处，还请谅解。原文版本在<a href="#originVer">页面右上角</a>，供对照参考。
+ </p>
+<p>9月18日更新：
+</b>根据 Wwise 官方微博的提示，「Wwise是支持以Vorbis压缩而输出最终音频数据的，只是导入格式需要是WAV」，修正了表格末尾两处翻译，改为「是否支持导入ogg/mp3」。
+</p>
 <p align="right">
-2015年6月23日<br>
+2015年9月18日<br>
 Moy</p>
 
 <p align="center">&nbsp;</p>
@@ -423,4 +518,3 @@ Moy</p>
 
 
 </html>
-
