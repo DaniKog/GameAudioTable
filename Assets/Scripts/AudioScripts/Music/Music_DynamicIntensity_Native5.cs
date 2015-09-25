@@ -59,7 +59,7 @@ public class Music_DynamicIntensity_Native5 : MonoBehaviour
 	}
 	void SetIntensity(int intensityLevel)
 	{
-		Intensitylevels [intensityLevel].TransitionTo (fadeSpeed);
+		Intensitylevels [intensityLevel].TransitionTo (fadeSpeed); // Sets the Intesity to the correct Level (Using the Audio librairies) )
 		displayIntensity.text = ("Music Intensity: " + (intensityLevel+1).ToString()); // Display the current intensity *adding one for better display (1-4) instead of (0-3)
 	}
 }
